@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <div className="text-center mb-10">
         <div className="text-5xl mb-4" aria-hidden="true">🔒</div>
         <h1 className="font-display text-4xl text-forest font-bold mb-2">Privacy Policy</h1>
-        <p className="text-bark text-sm italic">The Quest Family · Last updated: June 2025</p>
+        <p className="text-bark text-sm italic">The Quest Family · Last updated: June 2026</p>
       </div>
 
       <div className="prose prose-stone max-w-none space-y-8 text-bark leading-relaxed">
