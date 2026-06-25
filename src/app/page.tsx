@@ -22,9 +22,9 @@ export default function HomePage() {
       {/* ── MISSION ── */}
       <section className="max-w-3xl mx-auto px-4 py-14 text-center" aria-label="Our mission">
         <div className="leaf-divider" aria-hidden="true">🍃</div>
-        <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mt-4 mb-5 leading-snug">
+        <h1 className="font-display text-3xl md:text-4xl text-forest font-bold mt-4 mb-5 leading-snug">
           Where Every Day is an Adventure
-        </h2>
+        </h1>
         <p className="text-bark text-lg leading-relaxed max-w-2xl mx-auto">
           The Quest Family creates apps that encourage families to step outside, notice the world around them,
           and discover the wonder hiding in everyday moments — from a backyard garden to a Canadian wilderness trail.
