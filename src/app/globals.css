@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forest: #1a3a1e;
+  --leaf: #2d5a32;
+  --meadow: #4a7a3a;
+  --cream: #faf5e8;
+  --parchment: #f0e8d0;
+  --amber: #c87c2a;
+  --bark: #6b4226;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--forest);
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: Georgia, Cambria, 'Times New Roman', serif;
+}
+
+/* Nav link hover */
+.nav-link {
+  @apply text-forest hover:text-amber transition-colors duration-200 font-medium;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply inline-block bg-amber text-white font-semibold px-8 py-3 rounded-full 
+         hover:bg-bark transition-colors duration-200 text-center shadow-md
+         active:scale-95;
+}
+
+.btn-outline {
+  @apply inline-block border-2 border-forest text-forest font-semibold px-8 py-3 rounded-full 
+         hover:bg-forest hover:text-cream transition-colors duration-200 text-center;
+}
+
+/* Cards */
+.nature-card {
+  @apply bg-parchment rounded-2xl p-6 shadow-sm border border-amber/20;
+}
+
+/* Section dividers */
+.leaf-divider {
+  @apply text-center text-meadow text-2xl my-2;
+}
+
+/* Accessible focus */
+a:focus-visible, button:focus-visible {
+  @apply outline-2 outline-offset-2 outline-amber;
+}
+
+/* Hero image */
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Mobile menu */
+#mobile-menu {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
