@@ -1,6 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Page Not Found | The Quest Family',
+}
+
+
 export default function NotFound() {
   return (
     <div className="flex-1 flex flex-col items-center justify-center py-24 px-4 text-center">
