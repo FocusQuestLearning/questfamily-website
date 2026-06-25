@@ -35,8 +35,8 @@ export default function SummerQuestPage() {
           <Image
             src="/images/summerquest-promo.jpg"
             alt="SummerQuest app overview — showing Fennick, Aria, Birch, and Moss adventure guides in a Canadian wilderness scene, alongside the app's 'What Families Can Do' features: quests, discoveries, journal, badges, province exploration, and privacy-first design"
-            width={1024}
-            height={1536}
+            width={500}
+            height={750}
             className="w-full h-auto"
             sizes="(max-width: 768px) 100vw, 672px"
           />
