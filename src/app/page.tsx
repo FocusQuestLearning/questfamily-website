@@ -10,8 +10,8 @@ export default function HomePage() {
           <Image
             src="/images/hero-banner.jpg"
             alt="The Quest Family — a family and their storybook animal guides walk hand-in-hand toward a golden Canadian wilderness sunset, with mountains, forest, and a homestead behind them. Text reads: Helping families rediscover the wonder that's been there all along."
-            width={1536}
-            height={1024}
+            width={800}
+            height={533}
             className="w-full h-auto object-contain"
             priority
             sizes="100vw"
