@@ -1,270 +1,359 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'SummerQuest — Every Day is a New Quest | The Quest Family',
-  description: 'SummerQuest is a Canadian outdoor adventure app for families. Complete quests, discover wildlife, earn badges, and explore Canada coast to coast.',
+  description:
+    'SummerQuest is a Canadian outdoor adventure app for families. Complete quests, discover wildlife, earn badges, and explore Canada province by province.',
+  openGraph: {
+    title: 'SummerQuest — Every Day is a New Quest',
+    description: "Helping families fall in love with Canada's natural world.",
+    siteName: 'The Quest Family',
+    type: 'website',
+  },
 }
+
+const features = [
+  { icon: '🧭', label: 'Complete gentle\noutdoor quests' },
+  { icon: '🔭', label: 'Explore Canadian\nnature discoveries' },
+  { icon: '📗', label: 'Learn about birds, plants,\ninsects, animals and more' },
+  { icon: '🍁', label: 'Earn badges\nand Leaf Points' },
+  { icon: '📒', label: 'Build a private family\nnature journal' },
+  { icon: '🪧', label: 'Discover Canada by\nprovince and territory' },
+]
+
+const guides = [
+  { name: 'FENNICK', role: 'Lead Explorer',    emoji: '🦊', nameClass: 'text-[#c05f1a]', roleClass: 'text-[#c05f1a]/80' },
+  { name: 'ARIA',    role: 'Nature Guide',      emoji: '🦉', nameClass: 'text-[#2a6fa8]', roleClass: 'text-[#2a6fa8]/80' },
+  { name: 'BIRCH',   role: 'Builder & Maker',   emoji: '🦫', nameClass: 'text-[#1a3a1e]', roleClass: 'text-[#1a3a1e]/70' },
+  { name: 'MOSS',    role: 'Water & Wetlands',  emoji: '🐸', nameClass: 'text-[#1a3a1e]', roleClass: 'text-[#1a3a1e]/70' },
+]
 
 export default function SummerQuestPage() {
   return (
     <>
-      {/* ── PAGE HERO ── */}
-      <section className="bg-forest text-cream py-14 px-4 text-center" aria-label="SummerQuest introduction">
-        <div className="max-w-3xl mx-auto">
-          <span className="inline-block bg-amber/20 text-amber text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-4">
-            The Quest Family · App No. 1
-          </span>
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-3 text-cream">
-            SummerQuest
-          </h1>
-          <p className="font-display italic text-amber text-xl md:text-2xl mb-5">
-            "Every Day is a New Quest."
-          </p>
-          <p className="text-cream/80 text-lg leading-relaxed max-w-2xl mx-auto">
-            A nature-based family adventure app that turns everyday moments outside
-            into meaningful discoveries — built for Canadian families, coast to coast to coast.
-          </p>
-        </div>
-      </section>
+      {/* ── HERO IMAGE PRELOAD ── */}
+      <link
+        rel="preload"
+        as="image"
+        href="/images/sq-hero-1280.webp"
+        imageSrcSet="/images/sq-hero-768.webp 768w, /images/sq-hero-1280.webp 1280w, /images/sq-hero-1920.webp 1920w"
+        imageSizes="100vw"
+        fetchPriority="high"
+        type="image/webp"
+      />
 
-      {/* ── PROMO IMAGE ── */}
-      <section className="max-w-2xl mx-auto px-4 py-10" aria-label="SummerQuest app preview">
-        <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-amber/20">
-          <Image
-            src="/images/summerquest-promo.webp"
-            alt="SummerQuest app overview — showing Fennick, Aria, Birch, and Moss adventure guides in a Canadian wilderness scene, alongside the app's 'What Families Can Do' features: quests, discoveries, journal, badges, province exploration, and privacy-first design"
-            width={1000}
-            height={1500}
-            className="w-full h-auto"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 672px"
-          />
-        </div>
-        <p className="text-center text-bark/60 text-sm mt-3 italic">
-          SummerQuest — coming soon to App Store &amp; Google Play
-        </p>
-      </section>
+      {/* ── HERO ── */}
+      <section aria-label="SummerQuest hero" className="w-full">
+        <div className="relative w-full overflow-hidden bg-[#1a3a1e]">
 
-      {/* ── WHAT IS SUMMERQUEST ── */}
-      <section className="max-w-3xl mx-auto px-4 py-10" aria-label="What is SummerQuest">
-        <div className="text-center mb-8">
-          <h2 className="font-display text-3xl text-forest font-bold mb-3">What is SummerQuest?</h2>
-          <div className="leaf-divider" aria-hidden="true">🍃</div>
-        </div>
-        <div className="space-y-5 text-bark text-base leading-relaxed">
-          <p>
-            SummerQuest is a Canadian outdoor adventure app designed for families and children in kindergarten 
-            through Grade 8. It combines the warmth of storybook characters with the depth of real Canadian 
-            nature to create an experience that feels less like an educational app and more like a 
-            genuine adventure.
-          </p>
-          <p className="font-display italic text-forest text-lg text-center py-2">
-            "I wonder what I'll discover next?"
-          </p>
-          <p>
-            Every day brings a new quest — a gentle outdoor challenge that encourages children and families 
-            to step outside, pay attention, and notice the incredible world around them. 
-            From a common robin to a rare boreal owl, from a garden butterfly to a 
-            woodland mushroom — every discovery belongs in your family's nature journal.
-          </p>
-        </div>
-      </section>
+          {/* Artwork — guides from behind in Canadian wilderness */}
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="/images/sq-hero-768.webp 768w, /images/sq-hero-1280.webp 1280w, /images/sq-hero-1920.webp 1920w"
+              sizes="100vw"
+            />
+            <source
+              type="image/jpeg"
+              srcSet="/images/sq-hero-1280.jpg 1280w, /images/sq-hero-1920.jpg 1920w"
+              sizes="100vw"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/sq-hero-1920.jpg"
+              alt="Fennick, Aria, Birch, and Moss — four storybook animal guides — standing together from behind on a rocky overlook, gazing out across a breathtaking Canadian wilderness of mountains, alpine lake, forest, and golden sky."
+              width={1920}
+              height={1080}
+              className="w-full h-auto object-contain block"
+              fetchPriority="high"
+            />
+          </picture>
 
-      {/* ── BUILT FOR CANADIAN FAMILIES ── */}
-      <section className="bg-parchment border-y border-amber/20 py-12 px-4" aria-label="Built for Canadian families">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="font-display text-3xl text-forest font-bold mb-2">🇨🇦 Built for Canadian Families</h2>
-            <p className="text-bark text-base max-w-xl mx-auto">
-              From the Atlantic coast to the Pacific, from the Prairies to the Arctic — 
-              SummerQuest celebrates all of Canada's incredible natural heritage.
+          {/* Text overlay — positioned in the sky / upper portion of artwork */}
+          <div className="absolute inset-x-0 top-0 z-10 flex flex-col items-center text-center px-4 pt-[4%] sm:pt-[5%] md:pt-[6%] lg:pt-[7%]">
+
+            {/* ── SummerQuest wordmark ── */}
+            <h1
+              className="font-display font-bold leading-none"
+              style={{
+                fontSize: 'clamp(2.2rem, 7.5vw, 5.5rem)',
+                color: '#1a3a1e',
+                WebkitTextStroke: '0.5px rgba(139,94,20,0.4)',
+                textShadow:
+                  '1px 1px 0 #8B6914, 2px 2px 0 #7a5a10, 0 4px 16px rgba(0,0,0,0.20)',
+                letterSpacing: '-0.01em',
+              }}
+            >
+              SummerQuest
+            </h1>
+
+            {/* ── Wooden plank tagline ── */}
+            <div
+              className="mt-[1.2%] sm:mt-[1.5%] px-4 sm:px-7 py-1 sm:py-2 rounded"
+              style={{
+                background: 'linear-gradient(135deg, #7c4e1c 0%, #5c3510 45%, #7c4e1c 100%)',
+                boxShadow: '0 2px 10px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.12)',
+                border: '1.5px solid rgba(139,105,20,0.45)',
+              }}
+            >
+              <p
+                className="font-display italic font-bold text-[#faf5e8]"
+                style={{
+                  fontSize: 'clamp(0.75rem, 2.0vw, 1.35rem)',
+                  textShadow: '0 1px 4px rgba(0,0,0,0.55)',
+                  letterSpacing: '0.015em',
+                }}
+              >
+                🍂 Every Day is a New Quest 🍂
+              </p>
+            </div>
+
+            {/* ── Headline ── */}
+            <p
+              className="font-display font-bold text-[#faf5e8] leading-snug mt-[1.5%] max-w-[18rem] sm:max-w-[28rem]"
+              style={{
+                fontSize: 'clamp(0.9rem, 2.4vw, 1.5rem)',
+                textShadow: '0 1px 6px rgba(0,0,0,0.60)',
+              }}
+            >
+              Helping families fall in love with Canada&apos;s natural world.
+            </p>
+
+            {/* ── Subtext ── */}
+            <p
+              className="text-[#faf5e8]/85 leading-relaxed mt-[0.8%] max-w-[15rem] sm:max-w-[22rem]"
+              style={{
+                fontSize: 'clamp(0.65rem, 1.4vw, 0.95rem)',
+                textShadow: '0 1px 4px rgba(0,0,0,0.55)',
+              }}
+            >
+              Turn every walk, every weekend,
+              and every moment outside into an
+              unforgettable adventure.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {[
-              {
-                icon: '🌲',
-                title: 'Coast to Coast to Coast',
-                desc: 'Growing into Canada\'s most comprehensive nature and exploration library, covering every province and territory.',
-              },
-              {
-                icon: '🦅',
-                title: 'Real Canadian Wildlife',
-                desc: 'Living animals in their natural habitats — birds in flight, fish spawning, caribou migrating. Nature as it truly is.',
-              },
-              {
-                icon: '🌿',
-                title: 'Real Nature Photography',
-                desc: 'Storybook art inspires wonder. Real photography teaches. Every discovery card features authentic Canadian nature.',
-              },
-              {
-                icon: '🏕️',
-                title: 'Parks, Trails & Wild Places',
-                desc: 'Designed for your backyard, local park, provincial park, or a national wilderness adventure.',
-              },
-            ].map((card) => (
-              <div key={card.title} className="nature-card flex gap-4">
-                <div className="text-3xl shrink-0 mt-1" aria-hidden="true">{card.icon}</div>
-                <div>
-                  <h3 className="font-display font-bold text-forest text-base mb-1">{card.title}</h3>
-                  <p className="text-bark text-sm leading-relaxed">{card.desc}</p>
+        </div>
+      </section>
+
+      {/* ── GUIDE STRIP ── */}
+      <section
+        aria-label="Adventure guides and coming soon"
+        className="bg-cream border-b border-amber/20 py-4 px-4"
+      >
+        <div className="max-w-5xl mx-auto overflow-x-auto">
+          <div className="flex items-stretch gap-3 min-w-max sm:min-w-0 sm:flex-wrap sm:justify-center">
+
+            {/* Coming Soon card */}
+            <div className="flex items-center gap-3 bg-white rounded-xl px-5 py-3 shadow-sm border border-amber/20 shrink-0">
+              <span className="text-2xl select-none" aria-hidden="true">🍁</span>
+              <div>
+                <p className="font-bold text-forest text-xs leading-tight">Coming Soon to</p>
+                <p className="text-bark text-xs leading-tight">App Store &amp; Google Play</p>
+              </div>
+            </div>
+
+            {/* Guide name cards */}
+            {guides.map((g) => (
+              <div
+                key={g.name}
+                className="flex flex-col items-center justify-center bg-white rounded-xl px-5 py-3 shadow-sm border border-amber/20 shrink-0 min-w-[108px]"
+              >
+                <span className="text-xl mb-0.5 select-none" aria-hidden="true">{g.emoji}</span>
+                <p className={`font-display font-bold text-sm tracking-wide ${g.nameClass}`}>
+                  {g.name}
+                </p>
+                <p className={`text-xs mt-0.5 ${g.roleClass}`}>{g.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHAT FAMILIES CAN DO ── */}
+      <section
+        aria-label="What families can do with SummerQuest"
+        className="bg-parchment border-b border-amber/20 py-12 px-4"
+      >
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="flex items-center justify-center gap-3 mb-1" aria-hidden="true">
+              <span className="text-meadow text-lg">🍃</span>
+              <span className="text-meadow text-lg">🌿</span>
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl text-forest font-bold">
+              What Families Can Do
+            </h2>
+            <div className="flex items-center justify-center gap-3 mt-1" aria-hidden="true">
+              <span className="text-meadow text-lg">🌿</span>
+              <span className="text-meadow text-lg">🍃</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-4">
+            {features.map((f) => (
+              <div key={f.icon} className="flex flex-col items-center text-center gap-3">
+                <div
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm border border-amber/20"
+                  style={{ background: 'linear-gradient(145deg, #fdf6e0 0%, #ede0c4 100%)' }}
+                  aria-hidden="true"
+                >
+                  <span className="text-3xl">{f.icon}</span>
+                </div>
+                <p className="text-bark text-xs sm:text-sm leading-snug font-medium max-w-[120px]">
+                  {f.label.split('\n').map((line, i) => (
+                    <span key={i}>{line}{i < f.label.split('\n').length - 1 && <br />}</span>
+                  ))}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── MADE FOR FAMILIES + PRIVACY + APP PREVIEW ── */}
+      <section aria-label="SummerQuest values and app preview" className="bg-cream py-12 px-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+          {/* ── Made for Families ── */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-meadow text-base select-none" aria-hidden="true">🌿</span>
+              <h2 className="font-display text-2xl text-forest font-bold">Made for Families</h2>
+              <span className="text-meadow text-base select-none" aria-hidden="true">🌿</span>
+            </div>
+            <p className="text-bark text-sm leading-relaxed mb-3">
+              SummerQuest is designed to feel warm, calm, and encouraging. There are no pressure
+              timers, no school-style testing, and no stressful countdowns.
+            </p>
+            <p className="text-bark text-sm leading-relaxed mb-3">
+              The heart of SummerQuest is simple:
+            </p>
+            <p className="font-display italic text-forest text-lg leading-snug mb-5">
+              Storybook characters are guides.
+              <br />
+              Nature is the teacher.
+            </p>
+            {/* Guides artwork thumbnail */}
+            <div className="rounded-2xl overflow-hidden border border-amber/20 shadow-sm">
+              <picture>
+                <source type="image/webp" srcSet="/images/sq-hero-768.webp" />
+                <source type="image/jpeg" srcSet="/images/sq-hero-1280.jpg" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/sq-hero-1280.jpg"
+                  alt="All four SummerQuest guides looking out at the Canadian wilderness together"
+                  width={768}
+                  height={432}
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
+
+          {/* ── Privacy and Safety ── */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-meadow text-base select-none" aria-hidden="true">🌿</span>
+              <h2 className="font-display text-2xl text-forest font-bold">Privacy &amp; Safety</h2>
+              <span className="text-meadow text-base select-none" aria-hidden="true">🌿</span>
+            </div>
+            <p className="text-bark text-sm leading-relaxed mb-5">
+              SummerQuest is built with family privacy in mind. Camera access is optional.
+              Families choose whether to document discoveries, and journal entries are intended
+              to remain private to the family unless a parent clearly chooses otherwise.
+            </p>
+
+            {/* Contact card */}
+            <div
+              className="rounded-2xl p-5 border border-amber/30 shadow-sm"
+              style={{
+                background: 'linear-gradient(145deg, #fdf2dc, #f5e4b8)',
+                boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.7), 0 2px 8px rgba(107,66,38,0.12)',
+              }}
+            >
+              <p className="text-bark text-xs leading-relaxed text-center mb-3">
+                For privacy questions, support, or account/data deletion requests, families
+                can contact:
+              </p>
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-lg select-none" aria-hidden="true">✉️</span>
+                <a
+                  href="mailto:support@summerquest.ca"
+                  className="text-amber font-bold text-sm hover:text-bark transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber"
+                >
+                  support@summerquest.ca
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Device / App Preview ── */}
+          <div className="text-center">
+            {/* Stylised in-app screen preview */}
+            <div
+              className="rounded-3xl overflow-hidden border-4 shadow-lg mb-5"
+              style={{
+                borderColor: '#1a3a1e',
+                background: 'linear-gradient(160deg, #eaf5ea 0%, #d4ebd4 100%)',
+              }}
+            >
+              <div className="p-4 text-left">
+                {/* Today's Quest mock */}
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-base select-none" aria-hidden="true">🌿</span>
+                  <p className="font-display font-bold text-forest text-xs">Today&apos;s Quest</p>
+                </div>
+                <div className="bg-white rounded-xl p-3 shadow-sm mb-2">
+                  <div className="flex gap-3 items-start mb-2">
+                    <span className="text-xl select-none" aria-hidden="true">🐦</span>
+                    <div>
+                      <p className="font-bold text-forest text-xs">Listen for a Bird</p>
+                      <p className="text-bark/70 text-[11px] mt-0.5 leading-snug">
+                        Find a quiet spot outside and listen for birds. What can you hear?
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="text-center py-1 rounded-lg text-xs font-bold text-white"
+                    style={{ background: '#2d5a32' }}
+                    aria-hidden="true"
+                  >
+                    Start Quest
+                  </div>
+                </div>
+                {/* Progress row */}
+                <div className="bg-white rounded-xl p-2.5 shadow-sm">
+                  <p className="font-bold text-forest text-[11px] mb-1.5">Your Progress</p>
+                  <div className="flex gap-4">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-base select-none" aria-hidden="true">🍁</span>
+                      <div>
+                        <p className="font-bold text-forest text-[11px]">1,250</p>
+                        <p className="text-bark/60 text-[10px]">Leaf Points</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-base select-none" aria-hidden="true">🏅</span>
+                      <div>
+                        <p className="font-bold text-forest text-[11px]">12</p>
+                        <p className="text-bark/60 text-[10px]">Badges</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── GUIDES ── */}
-      <section className="max-w-5xl mx-auto px-4 py-12" aria-label="Your adventure guides">
-        <div className="text-center mb-8">
-          <h2 className="font-display text-3xl text-forest font-bold mb-2">Meet Your Adventure Guides</h2>
-          <p className="text-bark text-base max-w-xl mx-auto">
-            Four storybook friends who love the outdoors as much as you do.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { emoji: '🦊', name: 'Fennick', role: 'Lead Explorer', desc: 'Parks, trails & landmarks' },
-            { emoji: '🦉', name: 'Aria', role: 'Nature Guide', desc: 'Wildlife & nature discoveries' },
-            { emoji: '🦫', name: 'Birch', role: 'Builder & Maker', desc: 'Heritage, traditions & care' },
-            { emoji: '🐸', name: 'Moss', role: 'Water & Wetlands', desc: 'Aquatic life & water worlds' },
-          ].map((guide) => (
-            <div key={guide.name} className="nature-card text-center py-6">
-              <div className="text-5xl mb-3" aria-hidden="true">{guide.emoji}</div>
-              <h3 className="font-display font-bold text-forest text-base">{guide.name}</h3>
-              <p className="text-amber text-xs font-bold uppercase tracking-wide mt-1">{guide.role}</p>
-              <p className="text-bark text-xs mt-2 leading-snug">{guide.desc}</p>
             </div>
-          ))}
-        </div>
-      </section>
 
-      {/* ── FEATURES ── */}
-      <section className="bg-forest text-cream py-12 px-4" aria-label="SummerQuest features">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="font-display text-3xl font-bold mb-2 text-cream">What Families Can Do</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-            {[
-              { icon: '🧭', title: 'Daily Quests', desc: 'Fresh gentle outdoor challenges every day, designed for all ages and all seasons.' },
-              { icon: '🔍', title: 'Nature Discoveries', desc: 'Birds, plants, insects, animals, fungi, trees, weather — Canada\'s full natural library.' },
-              { icon: '📔', title: 'Family Journal', desc: 'A private nature journal that belongs to your family. Document discoveries, thoughts, and memories.' },
-              { icon: '🏅', title: 'Badges & Leaf Points', desc: 'Celebrate every discovery. Earn beautiful collectible badges as you explore.' },
-              { icon: '🗺️', title: 'Province Books', desc: 'Explore and discover Canada province by province and territory by territory.' },
-              { icon: '🔥', title: 'Family Campfire', desc: 'A shared space for your family to celebrate discoveries together.' },
-            ].map((f) => (
-              <div key={f.title} className="bg-white/10 rounded-xl p-5">
-                <div className="text-3xl mb-2" aria-hidden="true">{f.icon}</div>
-                <h3 className="font-display font-bold text-cream text-sm mb-1">{f.title}</h3>
-                <p className="text-cream/75 text-sm leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
+            <p className="text-bark text-sm leading-relaxed mb-2">
+              SummerQuest is preparing for launch on mobile app stores.
+            </p>
+            <p className="font-display italic text-forest text-xl">
+              Every day is a new quest.
+            </p>
+            <p className="text-meadow mt-2 select-none" aria-hidden="true">🍁</p>
           </div>
         </div>
-      </section>
-
-      {/* ── SAFETY / FAMILY FIRST ── */}
-      <section className="max-w-3xl mx-auto px-4 py-12" aria-label="Safety and family-first design">
-        <div className="nature-card border-meadow/40 text-center">
-          <div className="text-4xl mb-4" aria-hidden="true">🛡️</div>
-          <h2 className="font-display text-2xl text-forest font-bold mb-3">Safety &amp; Family First</h2>
-          <div className="space-y-3 text-bark text-sm leading-relaxed max-w-lg mx-auto text-left">
-            <p>✅ <strong>No pressure timers</strong> — no school-style testing or stressful countdowns</p>
-            <p>✅ <strong>Camera access is optional</strong> — families choose whether to document discoveries</p>
-            <p>✅ <strong>Private journals</strong> — journal entries stay within your family unless you choose otherwise</p>
-            <p>✅ <strong>No data selling</strong> — your family's information is never sold to third parties</p>
-            <p>✅ <strong>Child-safe imagery</strong> — only living animals in natural habitats; no distressing content</p>
-            <p>✅ <strong>Screen-time aware</strong> — SummerQuest encourages families to put the phone away and go explore</p>
-          </div>
-          <p className="text-bark/60 text-xs italic mt-4">
-            For privacy questions or data deletion requests, contact{' '}
-            <a href="mailto:support.questfamily@gmail.com" className="text-amber hover:underline">
-              support.questfamily@gmail.com
-            </a>
-          </p>
-        </div>
-      </section>
-
-      {/* ── APP STORE BUTTONS ── */}
-      <section className="max-w-3xl mx-auto px-4 py-10 text-center" aria-label="Download SummerQuest">
-        <h2 className="font-display text-2xl text-forest font-bold mb-2">Coming Soon</h2>
-        <p className="text-bark text-base mb-8">SummerQuest is preparing for launch on mobile app stores.</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          {/* App Store placeholder */}
-          <div
-            className="flex items-center gap-3 bg-forest text-cream px-7 py-4 rounded-2xl opacity-70 cursor-not-allowed select-none w-52"
-            aria-label="App Store — coming soon"
-            role="img"
-          >
-            <svg className="w-8 h-8 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-            </svg>
-            <div className="text-left">
-              <p className="text-xs text-cream/60">Coming to</p>
-              <p className="font-bold text-sm">App Store</p>
-            </div>
-          </div>
-          {/* Google Play placeholder */}
-          <div
-            className="flex items-center gap-3 bg-forest text-cream px-7 py-4 rounded-2xl opacity-70 cursor-not-allowed select-none w-52"
-            aria-label="Google Play — coming soon"
-            role="img"
-          >
-            <svg className="w-8 h-8 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M3,20.5v-17c0-1.1 1.02-1.65 1.75-1L20,12 4.75,21.5C4.02,22.15 3,21.6 3,20.5zM16.95,12L5,5.45V18.55L16.95,12z"/>
-            </svg>
-            <div className="text-left">
-              <p className="text-xs text-cream/60">Coming to</p>
-              <p className="font-bold text-sm">Google Play</p>
-            </div>
-          </div>
-        </div>
-        <p className="text-bark/50 text-xs mt-5 italic">App store availability to be announced. Check back soon.</p>
-      </section>
-
-      {/* ── FREE TIER INFO ── */}
-      <section className="bg-parchment border-y border-amber/20 py-10 px-4" aria-label="Free and Explorer membership tiers">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display text-2xl text-forest font-bold mb-6">Free to Begin. More to Explore.</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
-            <div className="nature-card">
-              <h3 className="font-display font-bold text-forest text-lg mb-3">🌱 Free Forever</h3>
-              <ul className="space-y-2 text-bark text-sm">
-                <li>✓ First 15 quests</li>
-                <li>✓ First 35 discoveries</li>
-                <li>✓ Full Nature Journal access</li>
-                <li>✓ Family Campfire</li>
-                <li>✓ Browse all provinces</li>
-                <li>✓ Leaf Points &amp; badges</li>
-              </ul>
-            </div>
-            <div className="nature-card border-amber/40 bg-amber/5">
-              <h3 className="font-display font-bold text-amber text-lg mb-3">🗺️ Explorer Membership</h3>
-              <ul className="space-y-2 text-bark text-sm">
-                <li>✓ All quests unlocked</li>
-                <li>✓ All discoveries unlocked</li>
-                <li>✓ Full badge collection</li>
-                <li>✓ Complete province books</li>
-                <li>✓ All future content updates</li>
-                <li>✓ Support the Quest Family 🍁</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── BOTTOM CTA ── */}
-      <section className="max-w-3xl mx-auto px-4 py-14 text-center" aria-label="Get SummerQuest">
-        <p className="font-display italic text-forest text-2xl mb-6">
-          "Every day is a new quest."
-        </p>
-        <Link href="/support/" className="btn-outline">
-          Questions? Contact Support →
-        </Link>
       </section>
     </>
   )
