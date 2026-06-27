@@ -24,7 +24,7 @@ export default function HomePage() {
 
       {/* ── HERO ── */}
       <section aria-label="The Quest Family hero" className="w-full">
-        <div className="relative w-full overflow-hidden flex justify-center bg-[#1a3a1e]">
+        <div className="relative w-full overflow-hidden flex justify-center bg-[#1a3a1e] lg:max-h-[90vh]">
           <picture>
             {/*
               5K master (5056×3392 px) — all breakpoints are genuine downscales.
