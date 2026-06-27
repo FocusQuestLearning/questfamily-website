@@ -12,21 +12,43 @@ export const metadata: Metadata = {
   },
 }
 
-const features = [
-  { icon: '🧭', label: 'Complete gentle\noutdoor quests' },
-  { icon: '🔭', label: 'Explore Canadian\nnature discoveries' },
-  { icon: '📗', label: 'Learn about birds, plants,\ninsects, animals and more' },
-  { icon: '🍁', label: 'Earn badges\nand Leaf Points' },
-  { icon: '📒', label: 'Build a private family\nnature journal' },
-  { icon: '🪧', label: 'Discover Canada by\nprovince and territory' },
+const guides = [
+  { name: 'FENNICK', role: 'Lead Explorer',   nameClass: 'text-[#c0461a]', roleClass: 'text-[#c0461a]/85' },
+  { name: 'ARIA',    role: 'Nature Guide',     nameClass: 'text-[#2a6fa8]', roleClass: 'text-[#2a6fa8]/85' },
+  { name: 'BIRCH',   role: 'Builder & Maker',  nameClass: 'text-[#1a3a1e]', roleClass: 'text-[#1a3a1e]/70' },
+  { name: 'MOSS',    role: 'Water & Wetlands', nameClass: 'text-[#1a3a1e]', roleClass: 'text-[#1a3a1e]/70' },
 ]
 
-const guides = [
-  { name: 'FENNICK', role: 'Lead Explorer',    emoji: '🦊', nameClass: 'text-[#c05f1a]', roleClass: 'text-[#c05f1a]/80' },
-  { name: 'ARIA',    role: 'Nature Guide',      emoji: '🦉', nameClass: 'text-[#2a6fa8]', roleClass: 'text-[#2a6fa8]/80' },
-  { name: 'BIRCH',   role: 'Builder & Maker',   emoji: '🦫', nameClass: 'text-[#1a3a1e]', roleClass: 'text-[#1a3a1e]/70' },
-  { name: 'MOSS',    role: 'Water & Wetlands',  emoji: '🐸', nameClass: 'text-[#1a3a1e]', roleClass: 'text-[#1a3a1e]/70' },
+const features = [
+  { icon: '/images/icon-compass.png',    alt: 'Compass',    label: 'Complete gentle\noutdoor quests' },
+  { icon: '/images/icon-binoculars.png', alt: 'Binoculars', label: 'Explore Canadian\nnature discoveries' },
+  { icon: '/images/icon-book.png',       alt: 'Nature book', label: 'Learn about birds, plants,\ninsects, animals and more' },
+  { icon: '/images/icon-leaf.png',       alt: 'Leaf',       label: 'Earn badges\nand Leaf Points' },
+  { icon: '/images/icon-notebook.png',   alt: 'Journal',    label: 'Build a private\nfamily nature journal' },
+  { icon: '/images/icon-signpost.png',   alt: 'Signpost',   label: 'Discover Canada by\nprovince and territory' },
 ]
+
+/* Coming-Soon + guide cards — shared between desktop overlay and mobile strip */
+function ComingSoonCard() {
+  return (
+    <div className="flex items-center gap-2.5 bg-cream/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md border border-amber/30 shrink-0">
+      <span className="text-2xl leading-none select-none" aria-hidden="true">🍁</span>
+      <div className="text-left">
+        <p className="font-bold text-forest text-[11px] leading-tight">Coming Soon to</p>
+        <p className="text-bark text-[11px] leading-tight">App Store &amp; Google Play</p>
+      </div>
+    </div>
+  )
+}
+
+function GuideCard({ g }: { g: (typeof guides)[number] }) {
+  return (
+    <div className="flex flex-col items-center justify-center bg-cream/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md border border-amber/30 shrink-0 min-w-[100px]">
+      <p className={`font-display font-bold text-sm tracking-wide leading-tight ${g.nameClass}`}>{g.name}</p>
+      <p className={`text-[11px] mt-0.5 leading-tight ${g.roleClass}`}>{g.role}</p>
+    </div>
+  )
+}
 
 export default function SummerQuestPage() {
   return (
@@ -46,7 +68,7 @@ export default function SummerQuestPage() {
       <section aria-label="SummerQuest hero" className="w-full">
         <div className="relative w-full overflow-hidden bg-[#1a3a1e]">
 
-          {/* Artwork — guides from behind in Canadian wilderness */}
+          {/* Artwork — four guides from behind in the Canadian wilderness */}
           <picture>
             <source
               type="image/webp"
@@ -69,27 +91,23 @@ export default function SummerQuestPage() {
             />
           </picture>
 
-          {/* Text overlay — positioned in the sky / upper portion of artwork */}
-          <div className="absolute inset-x-0 top-0 z-10 flex flex-col items-center text-center px-4 pt-[4%] sm:pt-[5%] md:pt-[6%] lg:pt-[7%]">
-
-            {/* ── SummerQuest wordmark ── */}
+          {/* Text overlay — upper / sky portion */}
+          <div className="absolute inset-x-0 top-0 z-10 flex flex-col items-center text-center px-4 pt-[3.5%] sm:pt-[4.5%] md:pt-[5%] lg:pt-[5.5%]">
             <h1
               className="font-display font-bold leading-none"
               style={{
                 fontSize: 'clamp(2.2rem, 7.5vw, 5.5rem)',
                 color: '#1a3a1e',
                 WebkitTextStroke: '0.5px rgba(139,94,20,0.4)',
-                textShadow:
-                  '1px 1px 0 #8B6914, 2px 2px 0 #7a5a10, 0 4px 16px rgba(0,0,0,0.20)',
+                textShadow: '1px 1px 0 #8B6914, 2px 2px 0 #7a5a10, 0 4px 16px rgba(0,0,0,0.20)',
                 letterSpacing: '-0.01em',
               }}
             >
               SummerQuest
             </h1>
 
-            {/* ── Wooden plank tagline ── */}
             <div
-              className="mt-[1.2%] sm:mt-[1.5%] px-4 sm:px-7 py-1 sm:py-2 rounded"
+              className="mt-[1%] sm:mt-[1.2%] px-4 sm:px-7 py-1 sm:py-2 rounded"
               style={{
                 background: 'linear-gradient(135deg, #7c4e1c 0%, #5c3510 45%, #7c4e1c 100%)',
                 boxShadow: '0 2px 10px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.12)',
@@ -108,63 +126,39 @@ export default function SummerQuestPage() {
               </p>
             </div>
 
-            {/* ── Headline ── */}
             <p
-              className="font-display font-bold text-[#faf5e8] leading-snug mt-[1.5%] max-w-[18rem] sm:max-w-[28rem]"
-              style={{
-                fontSize: 'clamp(0.9rem, 2.4vw, 1.5rem)',
-                textShadow: '0 1px 6px rgba(0,0,0,0.60)',
-              }}
+              className="font-display font-bold text-[#faf5e8] leading-snug mt-[1.3%] max-w-[18rem] sm:max-w-[28rem]"
+              style={{ fontSize: 'clamp(0.9rem, 2.4vw, 1.5rem)', textShadow: '0 1px 6px rgba(0,0,0,0.60)' }}
             >
               Helping families fall in love with Canada&apos;s natural world.
             </p>
 
-            {/* ── Subtext ── */}
             <p
-              className="text-[#faf5e8]/85 leading-relaxed mt-[0.8%] max-w-[15rem] sm:max-w-[22rem]"
-              style={{
-                fontSize: 'clamp(0.65rem, 1.4vw, 0.95rem)',
-                textShadow: '0 1px 4px rgba(0,0,0,0.55)',
-              }}
+              className="text-[#faf5e8]/85 leading-relaxed mt-[0.7%] max-w-[15rem] sm:max-w-[22rem]"
+              style={{ fontSize: 'clamp(0.65rem, 1.4vw, 0.95rem)', textShadow: '0 1px 4px rgba(0,0,0,0.55)' }}
             >
-              Turn every walk, every weekend,
-              and every moment outside into an
-              unforgettable adventure.
+              Turn every walk, every weekend, and every moment outside into an unforgettable adventure.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* ── GUIDE STRIP ── */}
-      <section
-        aria-label="Adventure guides and coming soon"
-        className="bg-cream border-b border-amber/20 py-4 px-4"
-      >
-        <div className="max-w-5xl mx-auto overflow-x-auto">
-          <div className="flex items-stretch gap-3 min-w-max sm:min-w-0 sm:flex-wrap sm:justify-center">
-
-            {/* Coming Soon card */}
-            <div className="flex items-center gap-3 bg-white rounded-xl px-5 py-3 shadow-sm border border-amber/20 shrink-0">
-              <span className="text-2xl select-none" aria-hidden="true">🍁</span>
-              <div>
-                <p className="font-bold text-forest text-xs leading-tight">Coming Soon to</p>
-                <p className="text-bark text-xs leading-tight">App Store &amp; Google Play</p>
-              </div>
-            </div>
-
-            {/* Guide name cards */}
+          {/* Guide + Coming Soon cards — overlaid at the bottom of the hero (desktop) */}
+          <div className="hidden lg:flex absolute bottom-[3.5%] inset-x-[4%] z-20 items-stretch justify-center gap-3 xl:gap-5">
+            <ComingSoonCard />
             {guides.map((g) => (
-              <div
-                key={g.name}
-                className="flex flex-col items-center justify-center bg-white rounded-xl px-5 py-3 shadow-sm border border-amber/20 shrink-0 min-w-[108px]"
-              >
-                <span className="text-xl mb-0.5 select-none" aria-hidden="true">{g.emoji}</span>
-                <p className={`font-display font-bold text-sm tracking-wide ${g.nameClass}`}>
-                  {g.name}
-                </p>
-                <p className={`text-xs mt-0.5 ${g.roleClass}`}>{g.role}</p>
-              </div>
+              <GuideCard key={g.name} g={g} />
             ))}
+          </div>
+        </div>
+
+        {/* Guide + Coming Soon cards — strip below hero (mobile / tablet) */}
+        <div className="lg:hidden bg-cream border-b border-amber/20 py-4 px-4">
+          <div className="overflow-x-auto">
+            <div className="flex items-stretch gap-3 min-w-max sm:min-w-0 sm:flex-wrap sm:justify-center">
+              <ComingSoonCard />
+              {guides.map((g) => (
+                <GuideCard key={g.name} g={g} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -172,36 +166,41 @@ export default function SummerQuestPage() {
       {/* ── WHAT FAMILIES CAN DO ── */}
       <section
         aria-label="What families can do with SummerQuest"
-        className="bg-parchment border-b border-amber/20 py-12 px-4"
+        className="border-b border-amber/20 py-14 px-4"
+        style={{ background: 'linear-gradient(180deg, #f3ecd8 0%, #ede4cc 100%)' }}
       >
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
-            <div className="flex items-center justify-center gap-3 mb-1" aria-hidden="true">
-              <span className="text-meadow text-lg">🍃</span>
-              <span className="text-meadow text-lg">🌿</span>
-            </div>
-            <h2 className="font-display text-3xl md:text-4xl text-forest font-bold">
+          <div className="flex items-center justify-center gap-3 mb-10">
+            <span className="text-meadow text-xl select-none" aria-hidden="true">🍃</span>
+            <h2 className="font-display text-3xl md:text-4xl text-forest font-bold text-center">
               What Families Can Do
             </h2>
-            <div className="flex items-center justify-center gap-3 mt-1" aria-hidden="true">
-              <span className="text-meadow text-lg">🌿</span>
-              <span className="text-meadow text-lg">🍃</span>
-            </div>
+            <span className="text-meadow text-xl select-none" aria-hidden="true">🍃</span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-4">
-            {features.map((f) => (
-              <div key={f.icon} className="flex flex-col items-center text-center gap-3">
-                <div
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm border border-amber/20"
-                  style={{ background: 'linear-gradient(145deg, #fdf6e0 0%, #ede0c4 100%)' }}
-                  aria-hidden="true"
-                >
-                  <span className="text-3xl">{f.icon}</span>
-                </div>
-                <p className="text-bark text-xs sm:text-sm leading-snug font-medium max-w-[120px]">
-                  {f.label.split('\n').map((line, i) => (
-                    <span key={i}>{line}{i < f.label.split('\n').length - 1 && <br />}</span>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6">
+            {features.map((f, i) => (
+              <div
+                key={f.alt}
+                className={`flex flex-col items-center text-center gap-3 px-3 py-4 ${
+                  i > 0 ? 'md:border-l md:border-bark/15' : ''
+                }`}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={f.icon}
+                  alt={f.alt}
+                  width={128}
+                  height={128}
+                  className="w-16 h-16 object-contain drop-shadow-sm"
+                  loading="lazy"
+                />
+                <p className="text-bark text-xs sm:text-sm leading-snug font-medium max-w-[140px]">
+                  {f.label.split('\n').map((line, j, arr) => (
+                    <span key={j}>
+                      {line}
+                      {j < arr.length - 1 && <br />}
+                    </span>
                   ))}
                 </p>
               </div>
@@ -210,9 +209,9 @@ export default function SummerQuestPage() {
         </div>
       </section>
 
-      {/* ── MADE FOR FAMILIES + PRIVACY + APP PREVIEW ── */}
-      <section aria-label="SummerQuest values and app preview" className="bg-cream py-12 px-4">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      {/* ── MADE FOR FAMILIES + PRIVACY + DEVICE PREVIEW ── */}
+      <section aria-label="SummerQuest values and app preview" className="bg-cream py-14 px-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 items-start">
 
           {/* ── Made for Families ── */}
           <div>
@@ -233,7 +232,6 @@ export default function SummerQuestPage() {
               <br />
               Nature is the teacher.
             </p>
-            {/* Guides artwork thumbnail */}
             <div className="rounded-2xl overflow-hidden border border-amber/20 shadow-sm">
               <picture>
                 <source type="image/webp" srcSet="/images/sq-hero-768.webp" />
@@ -255,7 +253,7 @@ export default function SummerQuestPage() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-meadow text-base select-none" aria-hidden="true">🌿</span>
-              <h2 className="font-display text-2xl text-forest font-bold">Privacy &amp; Safety</h2>
+              <h2 className="font-display text-2xl text-forest font-bold">Privacy and Safety</h2>
               <span className="text-meadow text-base select-none" aria-hidden="true">🌿</span>
             </div>
             <p className="text-bark text-sm leading-relaxed mb-5">
@@ -264,82 +262,117 @@ export default function SummerQuestPage() {
               to remain private to the family unless a parent clearly chooses otherwise.
             </p>
 
-            {/* Contact card */}
+            {/* Wooden contact sign */}
             <div
-              className="rounded-2xl p-5 border border-amber/30 shadow-sm"
+              className="rounded-xl p-5 border-2 shadow-md relative overflow-hidden"
               style={{
-                background: 'linear-gradient(145deg, #fdf2dc, #f5e4b8)',
-                boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.7), 0 2px 8px rgba(107,66,38,0.12)',
+                borderColor: 'rgba(58,36,16,0.45)',
+                backgroundImage:
+                  'linear-gradient(180deg, rgba(255,255,255,0.10), rgba(0,0,0,0.12)), repeating-linear-gradient(90deg, #b07d45 0px, #a9763d 4px, #b48049 9px), linear-gradient(135deg, #b07d45, #8a5a28)',
+                boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.25), 0 3px 10px rgba(58,36,16,0.30)',
               }}
             >
-              <p className="text-bark text-xs leading-relaxed text-center mb-3">
-                For privacy questions, support, or account/data deletion requests, families
-                can contact:
-              </p>
-              <div className="flex items-center justify-center gap-2">
-                <span className="text-lg select-none" aria-hidden="true">✉️</span>
-                <a
-                  href="mailto:support@summerquest.ca"
-                  className="text-amber font-bold text-sm hover:text-bark transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber"
-                >
-                  support@summerquest.ca
-                </a>
+              <div className="flex items-start gap-3">
+                <span className="text-xl select-none mt-0.5" aria-hidden="true">✉️</span>
+                <div>
+                  <p className="text-[#2e1c0c] text-xs leading-relaxed font-medium mb-2">
+                    For privacy questions, support, or account/data deletion requests, families
+                    can contact:
+                  </p>
+                  <a
+                    href="mailto:support@summerquest.ca"
+                    className="text-[#13301a] font-bold text-sm hover:text-forest underline decoration-[#13301a]/30 underline-offset-2 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber"
+                  >
+                    support@summerquest.ca
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
           {/* ── Device / App Preview ── */}
           <div className="text-center">
-            {/* Stylised in-app screen preview */}
-            <div
-              className="rounded-3xl overflow-hidden border-4 shadow-lg mb-5"
-              style={{
-                borderColor: '#1a3a1e',
-                background: 'linear-gradient(160deg, #eaf5ea 0%, #d4ebd4 100%)',
-              }}
-            >
-              <div className="p-4 text-left">
-                {/* Today's Quest mock */}
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-base select-none" aria-hidden="true">🌿</span>
-                  <p className="font-display font-bold text-forest text-xs">Today&apos;s Quest</p>
-                </div>
-                <div className="bg-white rounded-xl p-3 shadow-sm mb-2">
-                  <div className="flex gap-3 items-start mb-2">
-                    <span className="text-xl select-none" aria-hidden="true">🐦</span>
-                    <div>
-                      <p className="font-bold text-forest text-xs">Listen for a Bird</p>
-                      <p className="text-bark/70 text-[11px] mt-0.5 leading-snug">
-                        Find a quiet spot outside and listen for birds. What can you hear?
-                      </p>
-                    </div>
+            <div className="relative mx-auto mb-6" style={{ maxWidth: '320px' }}>
+
+              {/* Tablet — Today's Quest */}
+              <div
+                className="rounded-[1.4rem] p-2 shadow-xl mr-auto"
+                style={{ background: 'linear-gradient(150deg, #3a3a3a, #1f1f1f)', width: '82%' }}
+              >
+                <div
+                  className="rounded-[1rem] overflow-hidden text-left"
+                  style={{ background: 'linear-gradient(170deg, #cfe8d2 0%, #aacdaf 100%)' }}
+                >
+                  <div className="px-3 pt-3 pb-1 flex items-center gap-1.5">
+                    <span className="text-sm select-none" aria-hidden="true">🌿</span>
+                    <p className="font-display font-bold text-forest text-[11px]">Today&apos;s Quest</p>
                   </div>
-                  <div
-                    className="text-center py-1 rounded-lg text-xs font-bold text-white"
-                    style={{ background: '#2d5a32' }}
-                    aria-hidden="true"
-                  >
-                    Start Quest
-                  </div>
-                </div>
-                {/* Progress row */}
-                <div className="bg-white rounded-xl p-2.5 shadow-sm">
-                  <p className="font-bold text-forest text-[11px] mb-1.5">Your Progress</p>
-                  <div className="flex gap-4">
-                    <div className="flex items-center gap-1.5">
-                      <span className="text-base select-none" aria-hidden="true">🍁</span>
-                      <div>
-                        <p className="font-bold text-forest text-[11px]">1,250</p>
-                        <p className="text-bark/60 text-[10px]">Leaf Points</p>
+                  <div className="px-3 pb-3">
+                    <div className="bg-white rounded-lg p-2 shadow-sm mb-1.5">
+                      <div className="flex gap-2 items-start mb-1.5">
+                        <span className="text-base select-none" aria-hidden="true">🐦</span>
+                        <div>
+                          <p className="font-bold text-forest text-[10px] leading-tight">Listen for a Bird</p>
+                          <p className="text-bark/70 text-[8px] leading-snug mt-0.5">
+                            Find a quiet spot outside and listen for birds. What can you hear?
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        className="text-center py-1 rounded text-[8px] font-bold text-white"
+                        style={{ background: '#2d5a32' }}
+                        aria-hidden="true"
+                      >
+                        Start Quest
                       </div>
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      <span className="text-base select-none" aria-hidden="true">🏅</span>
-                      <div>
-                        <p className="font-bold text-forest text-[11px]">12</p>
-                        <p className="text-bark/60 text-[10px]">Badges</p>
+                    <div className="bg-white rounded-lg p-2 shadow-sm">
+                      <p className="font-bold text-forest text-[9px] mb-1">Your Progress</p>
+                      <div className="flex gap-3">
+                        <div className="flex items-center gap-1">
+                          <span className="text-sm select-none" aria-hidden="true">🍁</span>
+                          <div>
+                            <p className="font-bold text-forest text-[9px] leading-none">1,250</p>
+                            <p className="text-bark/60 text-[7px]">Leaf Points</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <span className="text-sm select-none" aria-hidden="true">🏅</span>
+                          <div>
+                            <p className="font-bold text-forest text-[9px] leading-none">12</p>
+                            <p className="text-bark/60 text-[7px]">Badges</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Phone — Discovery Library (overlapping, front-right) */}
+              <div
+                className="absolute bottom-0 right-0 rounded-[1.1rem] p-1.5 shadow-2xl"
+                style={{ background: 'linear-gradient(150deg, #3a3a3a, #1f1f1f)', width: '44%' }}
+              >
+                <div
+                  className="rounded-[0.8rem] overflow-hidden text-left"
+                  style={{ background: 'linear-gradient(170deg, #eaf4ff 0%, #cfe3f5 100%)' }}
+                >
+                  <div className="px-2 pt-2 pb-1">
+                    <p className="font-display font-bold text-forest text-[9px] leading-tight">Discovery Library</p>
+                  </div>
+                  <div className="px-2 pb-2 grid grid-cols-2 gap-1">
+                    {[
+                      { e: '🐦', n: 'Birds' },
+                      { e: '🌸', n: 'Plants' },
+                      { e: '🦋', n: 'Insects' },
+                      { e: '🍄', n: 'Fungi' },
+                    ].map((c) => (
+                      <div key={c.n} className="bg-white rounded p-1 shadow-sm flex flex-col items-center">
+                        <span className="text-sm select-none" aria-hidden="true">{c.e}</span>
+                        <p className="text-forest text-[7px] font-bold mt-0.5">{c.n}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
