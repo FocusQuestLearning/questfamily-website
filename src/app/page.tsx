@@ -5,18 +5,29 @@ export default function HomePage() {
     <>
       {/*
         ── HERO PRELOAD ──
-        Hoist the hero image fetch to <head> parsing time (React 18 / Next.js 14
-        automatically move <link> elements from the component tree to <head>).
-        Without this, the browser only discovers the hero after parsing the full
-        body to reach the <picture> element, causing it to "pop in" late.
-        imageSrcSet + imageSizes let the browser pick the correct breakpoint
-        (768 / 1280 / 1920 / 2560 / 3840 / 5056) before <body> is even parsed.
+        Two preload hints — one per breakpoint tier — so the browser hoists
+        the correct asset to <head> parse time regardless of viewport.
+          • Desktop (≥1024px): wide 16:9 artwork for immersive full-bleed look
+          • Mobile/Tablet (<1024px): original 3:2 artwork (unchanged)
       */}
+      {/* Desktop wide hero preload */}
       <link
         rel="preload"
         as="image"
-        href="/images/hero-1920.webp"
-        imageSrcSet="/images/hero-768.webp 768w, /images/hero-1280.webp 1280w, /images/hero-1920.webp 1920w, /images/hero-2560.webp 2560w, /images/hero-3840.webp 3840w, /images/hero-5056.webp 5056w"
+        media="(min-width: 1024px)"
+        href="/images/hero-wide-1920.webp"
+        imageSrcSet="/images/hero-wide-1280.webp 1280w, /images/hero-wide-1920.webp 1920w, /images/hero-wide-2560.webp 2560w, /images/hero-wide-3840.webp 3840w, /images/hero-wide-5504.webp 5504w"
+        imageSizes="100vw"
+        fetchPriority="high"
+        type="image/webp"
+      />
+      {/* Mobile/tablet original hero preload */}
+      <link
+        rel="preload"
+        as="image"
+        media="(max-width: 1023px)"
+        href="/images/hero-1280.webp"
+        imageSrcSet="/images/hero-768.webp 768w, /images/hero-1280.webp 1280w, /images/hero-1920.webp 1920w"
         imageSizes="100vw"
         fetchPriority="high"
         type="image/webp"
@@ -27,35 +38,56 @@ export default function HomePage() {
         <div className="relative w-full overflow-hidden flex justify-center bg-[#1a3a1e]">
           <picture>
             {/*
-              5K master (5056×3392 px) — all breakpoints are genuine downscales.
-              Browser selects source by multiplying CSS viewport width × DPR:
-                Retina 1440p (1440×2 = 2880px)  → hero-3840.webp  ✅ downscale
-                4K display  (3840×1 = 3840px)   → hero-3840.webp  ✅ exact
-                1440p std   (1440×1 = 1440px)   → hero-1920.webp  ✅ downscale
-                iPhone 15   (390×3  = 1170px)   → hero-1280.webp  ✅ downscale
-                Android     (360×3  = 1080px)   → hero-1280.webp  ✅ downscale
+              Desktop (≥1024px): wide 16:9 master (5504×3072 px).
+              The wider aspect ratio lets the banner fill the browser width
+              while naturally reducing vertical height — the entire artwork
+              remains 100% visible with no cropping.
+                Retina 1440p (1440×2 = 2880px)  → hero-wide-3840.webp  ✅
+                4K display  (3840×1 = 3840px)   → hero-wide-3840.webp  ✅
+                1440p std   (1440×1 = 1440px)   → hero-wide-1920.webp  ✅
+                1280p std   (1280×1 = 1280px)   → hero-wide-1280.webp  ✅
 
-              WebP (all 6 sizes) — served to 97%+ of browsers incl. all modern devices.
-              JPEG (up to 2560px) — fallback for legacy browsers (<IE11 era);
-                those browsers have no 5K displays so 2560px covers any legacy viewport.
+              Mobile/Tablet (<1024px): original 3:2 artwork — unchanged.
+                iPhone 15   (390×3  = 1170px)   → hero-1280.webp  ✅
+                Android     (360×3  = 1080px)   → hero-1280.webp  ✅
+                iPad        (768×2  = 1536px)   → hero-1920.webp  ✅
             */}
+
+            {/* Desktop — wide 16:9 — WebP */}
+            <source
+              media="(min-width: 1024px)"
+              type="image/webp"
+              srcSet="/images/hero-wide-1280.webp 1280w, /images/hero-wide-1920.webp 1920w, /images/hero-wide-2560.webp 2560w, /images/hero-wide-3840.webp 3840w, /images/hero-wide-5504.webp 5504w"
+              sizes="100vw"
+            />
+            {/* Desktop — wide 16:9 — JPEG fallback */}
+            <source
+              media="(min-width: 1024px)"
+              type="image/jpeg"
+              srcSet="/images/hero-wide-1280.jpg 1280w, /images/hero-wide-1920.jpg 1920w, /images/hero-wide-2560.jpg 2560w, /images/hero-wide-3840.jpg 3840w"
+              sizes="100vw"
+            />
+
+            {/* Mobile/Tablet — original 3:2 — WebP */}
             <source
               type="image/webp"
               srcSet="/images/hero-768.webp 768w, /images/hero-1280.webp 1280w, /images/hero-1920.webp 1920w, /images/hero-2560.webp 2560w, /images/hero-3840.webp 3840w, /images/hero-5056.webp 5056w"
               sizes="100vw"
             />
+            {/* Mobile/Tablet — original 3:2 — JPEG fallback */}
             <source
               type="image/jpeg"
               srcSet="/images/hero-768.jpg 768w, /images/hero-1280.jpg 1280w, /images/hero-1920.jpg 1920w, /images/hero-2560.jpg 2560w"
               sizes="100vw"
             />
+
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/hero-1920.jpg"
               alt="The Quest Family — a family and their storybook animal guides walk hand-in-hand toward a golden Canadian wilderness sunset, with mountains, forest, and a homestead behind them. Signs read: Helping families rediscover the wonder that's been there all along."
               width={5056}
               height={3392}
-              className="w-full h-auto object-contain block lg:w-[93vw]"
+              className="w-full h-auto object-contain block"
               fetchPriority="high"
             />
           </picture>
