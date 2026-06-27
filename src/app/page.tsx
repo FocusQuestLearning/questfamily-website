@@ -3,6 +3,25 @@ import Link from 'next/link'
 export default function HomePage() {
   return (
     <>
+      {/*
+        ── HERO PRELOAD ──
+        Hoist the hero image fetch to <head> parsing time (React 18 / Next.js 14
+        automatically move <link> elements from the component tree to <head>).
+        Without this, the browser only discovers the hero after parsing the full
+        body to reach the <picture> element, causing it to "pop in" late.
+        imageSrcSet + imageSizes let the browser pick the correct breakpoint
+        (768 / 1280 / 1920 / 2560 / 3840 / 5056) before <body> is even parsed.
+      */}
+      <link
+        rel="preload"
+        as="image"
+        href="/images/hero-1920.webp"
+        imageSrcSet="/images/hero-768.webp 768w, /images/hero-1280.webp 1280w, /images/hero-1920.webp 1920w, /images/hero-2560.webp 2560w, /images/hero-3840.webp 3840w, /images/hero-5056.webp 5056w"
+        imageSizes="100vw"
+        fetchPriority="high"
+        type="image/webp"
+      />
+
       {/* ── HERO ── */}
       <section aria-label="The Quest Family hero" className="w-full">
         <div className="relative w-full overflow-hidden flex justify-center bg-[#1a3a1e]">
