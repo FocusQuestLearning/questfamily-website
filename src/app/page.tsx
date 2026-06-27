@@ -38,7 +38,7 @@ export default function HomePage() {
         <div className="relative w-full overflow-hidden flex justify-center bg-[#1a3a1e]">
           <picture>
             {/*
-              Desktop (≥1024px): wide 16:9 master (5504×3072 px).
+              Desktop (≥1024px): wide 16:9 master (5504×3072 px original; deployed up to 3840w).
               The wider aspect ratio lets the banner fill the browser width
               while naturally reducing vertical height — the entire artwork
               remains 100% visible with no cropping.
@@ -64,7 +64,7 @@ export default function HomePage() {
             <source
               media="(min-width: 1024px)"
               type="image/jpeg"
-              srcSet="/images/hero-wide-1280.jpg 1280w, /images/hero-wide-1920.jpg 1920w, /images/hero-wide-2560.jpg 2560w, /images/hero-wide-3840.jpg 3840w"
+              srcSet="/images/hero-wide-1280.jpg 1280w, /images/hero-wide-1920.jpg 1920w, /images/hero-wide-2560.jpg 2560w"
               sizes="100vw"
             />
 
