@@ -7,26 +7,37 @@ export default function HomePage() {
       <section aria-label="The Quest Family hero" className="w-full">
         <div className="relative w-full overflow-hidden flex justify-center bg-[#1a3a1e]">
           <picture>
-            {/* WebP — served to all modern browsers (97%+ support) */}
+            {/*
+              5K master (5056×3392 px) — all breakpoints are genuine downscales.
+              Browser selects source by multiplying CSS viewport width × DPR:
+                Retina 1440p (1440×2 = 2880px)  → hero-3840.webp  ✅ downscale
+                4K display  (3840×1 = 3840px)   → hero-3840.webp  ✅ exact
+                1440p std   (1440×1 = 1440px)   → hero-1920.webp  ✅ downscale
+                iPhone 15   (390×3  = 1170px)   → hero-1280.webp  ✅ downscale
+                Android     (360×3  = 1080px)   → hero-1280.webp  ✅ downscale
+
+              WebP (all 6 sizes) — served to 97%+ of browsers incl. all modern devices.
+              JPEG (up to 2560px) — fallback for legacy browsers (<IE11 era);
+                those browsers have no 5K displays so 2560px covers any legacy viewport.
+            */}
             <source
               type="image/webp"
-              srcSet="/images/hero-768.webp 768w, /images/hero-1280.webp 1280w, /images/hero-1536.webp 1536w"
-              sizes="(min-width: 1536px) 1536px, 100vw"
+              srcSet="/images/hero-768.webp 768w, /images/hero-1280.webp 1280w, /images/hero-1920.webp 1920w, /images/hero-2560.webp 2560w, /images/hero-3840.webp 3840w, /images/hero-5056.webp 5056w"
+              sizes="100vw"
             />
-            {/* JPEG fallback — legacy browsers */}
             <source
               type="image/jpeg"
-              srcSet="/images/hero-768.jpg 768w, /images/hero-1280.jpg 1280w, /images/hero-1536.jpg 1536w"
-              sizes="(min-width: 1536px) 1536px, 100vw"
+              srcSet="/images/hero-768.jpg 768w, /images/hero-1280.jpg 1280w, /images/hero-1920.jpg 1920w, /images/hero-2560.jpg 2560w"
+              sizes="100vw"
             />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/hero-1536.jpg"
-              alt="The Quest Family — a family and their storybook animal guides walk hand-in-hand toward a golden Canadian wilderness sunset, with mountains, forest, and a homestead behind them. Text reads: Helping families rediscover the wonder that\'s been there all along."
-              width={1536}
-              height={1024}
+              src="/images/hero-1920.jpg"
+              alt="The Quest Family — a family and their storybook animal guides walk hand-in-hand toward a golden Canadian wilderness sunset, with mountains, forest, and a homestead behind them. Signs read: Helping families rediscover the wonder that's been there all along."
+              width={5056}
+              height={3392}
               className="w-full h-auto object-contain block"
-              style={{ maxWidth: '1536px' }}
+              fetchPriority="high"
             />
           </picture>
         </div>
@@ -58,20 +69,20 @@ export default function HomePage() {
             <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-3">
               SummerQuest
             </h2>
-            <p className="text-bark text-lg italic font-display">"Every Day is a New Quest."</p>
+            <p className="text-bark text-lg italic font-display">&quot;Every Day is a New Quest.&quot;</p>
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="md:w-1/2 space-y-5">
               <p className="text-bark text-base leading-relaxed">
-                SummerQuest is a Canadian outdoor adventure app for families and K–8 learners. 
-                Guided by four storybook friends — <strong className="text-forest">Fennick</strong>, 
-                <strong className="text-forest"> Aria</strong>, <strong className="text-forest">Birch</strong>, 
-                and <strong className="text-forest"> Moss</strong> — children explore local parks, 
+                SummerQuest is a Canadian outdoor adventure app for families and K&ndash;8 learners.
+                Guided by four storybook friends &mdash; <strong className="text-forest">Fennick</strong>,{' '}
+                <strong className="text-forest">Aria</strong>, <strong className="text-forest">Birch</strong>,
+                and <strong className="text-forest">Moss</strong> &mdash; children explore local parks,
                 discover wildlife, earn badges, and build a family nature journal.
               </p>
               <p className="text-bark text-base leading-relaxed">
-                From coast to coast to coast, SummerQuest is growing into Canada's most 
+                From coast to coast to coast, SummerQuest is growing into Canada&apos;s most
                 comprehensive interactive nature and exploration library for children.
               </p>
 
@@ -92,7 +103,7 @@ export default function HomePage() {
 
               <div className="pt-4 flex flex-col sm:flex-row gap-3">
                 <Link href="/summerquest/" className="btn-primary">
-                  Learn About SummerQuest →
+                  Learn About SummerQuest &rarr;
                 </Link>
               </div>
             </div>
@@ -151,7 +162,7 @@ export default function HomePage() {
             {
               icon: '📚',
               title: 'Nature is the Teacher',
-              desc: 'Storybook characters inspire curiosity. Real Canadian nature photography teaches, connects, and amazes.',
+              desc: "Storybook characters inspire curiosity. Real Canadian nature photography teaches, connects, and amazes.",
             },
             {
               icon: '✨',
@@ -173,11 +184,11 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto text-center">
           <div className="text-4xl mb-4" aria-hidden="true">🔒</div>
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
-            Your Family's Privacy Comes First
+            Your Family&apos;s Privacy Comes First
           </h2>
           <p className="text-cream/80 text-base leading-relaxed max-w-2xl mx-auto mb-6">
-            We are a small family-run team and we take your trust seriously. 
-            SummerQuest is designed with children in mind — camera access is optional, 
+            We are a small family-run team and we take your trust seriously.
+            SummerQuest is designed with children in mind — camera access is optional,
             journal entries stay private to your family, and we never sell your data.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -185,7 +196,7 @@ export default function HomePage() {
               Read Our Privacy Policy
             </Link>
             <Link href="/support/" className="text-amber hover:text-cream transition-colors py-3 font-semibold">
-              Contact Support →
+              Contact Support &rarr;
             </Link>
           </div>
         </div>
@@ -197,14 +208,14 @@ export default function HomePage() {
           Ready to Begin the Quest?
         </h2>
         <p className="text-bark text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-          SummerQuest is coming soon to the App Store and Google Play. 
-          Follow along as we continue building Canada's greatest family adventure.
+          SummerQuest is coming soon to the App Store and Google Play.
+          Follow along as we continue building Canada&apos;s greatest family adventure.
         </p>
         <Link href="/summerquest/" className="btn-primary text-lg px-10 py-4">
-          Explore SummerQuest →
+          Explore SummerQuest &rarr;
         </Link>
         <p className="text-bark/60 text-sm mt-6 italic">
-          "From our little hobby farm to adventures around the world — every day is a new quest."
+          &quot;From our little hobby farm to adventures around the world — every day is a new quest.&quot;
         </p>
       </section>
     </>
