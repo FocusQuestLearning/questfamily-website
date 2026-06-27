@@ -55,7 +55,7 @@ export default function HomePage() {
               alt="The Quest Family — a family and their storybook animal guides walk hand-in-hand toward a golden Canadian wilderness sunset, with mountains, forest, and a homestead behind them. Signs read: Helping families rediscover the wonder that's been there all along."
               width={5056}
               height={3392}
-              className="w-full h-auto object-contain block"
+              className="w-full h-auto object-contain block lg:w-[93vw]"
               fetchPriority="high"
             />
           </picture>
