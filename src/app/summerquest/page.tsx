@@ -77,7 +77,7 @@ export default function SummerQuestPage() {
             <h1
               className="font-display font-bold leading-none"
               style={{
-                fontSize: 'clamp(2.2rem, 7.2vw, 5rem)',
+                fontSize: 'clamp(2rem, 6.8vw, 4.8rem)',
                 color: '#1a3a1e',
                 WebkitTextStroke: '0.5px rgba(139,94,20,0.4)',
                 textShadow: '1px 1px 0 #8B6914, 2px 2px 0 #7a5a10, 0 4px 16px rgba(0,0,0,0.20)',
@@ -88,7 +88,7 @@ export default function SummerQuestPage() {
             </h1>
 
             <div
-              className="mt-[0.8%] sm:mt-[1%] px-4 sm:px-7 py-1 sm:py-2 rounded"
+              className="mt-[0.5%] sm:mt-[0.7%] px-4 sm:px-7 py-1 sm:py-1.5 rounded"
               style={{
                 background: 'linear-gradient(135deg, #7c4e1c 0%, #5c3510 45%, #7c4e1c 100%)',
                 boxShadow: '0 2px 10px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.12)',
@@ -108,15 +108,15 @@ export default function SummerQuestPage() {
             </div>
 
             <p
-              className="font-display font-bold text-[#faf5e8] leading-snug mt-[1%] max-w-[18rem] sm:max-w-[26rem]"
+              className="font-display font-bold text-[#faf5e8] leading-snug mt-[0.6%] max-w-[18rem] sm:max-w-[26rem]"
               style={{ fontSize: 'clamp(0.9rem, 2.3vw, 1.45rem)', textShadow: '0 1px 6px rgba(0,0,0,0.60)' }}
             >
               Helping families fall in love with Canada&apos;s natural world.
             </p>
 
             <p
-              className="text-[#faf5e8]/85 leading-relaxed mt-[0.5%] max-w-[14rem] sm:max-w-[20rem]"
-              style={{ fontSize: 'clamp(0.65rem, 1.3vw, 0.9rem)', textShadow: '0 1px 4px rgba(0,0,0,0.55)' }}
+              className="text-[#faf5e8]/85 leading-relaxed mt-[0.3%] max-w-[14rem] sm:max-w-[20rem]"
+              style={{ fontSize: 'clamp(0.62rem, 1.15vw, 0.85rem)', textShadow: '0 1px 4px rgba(0,0,0,0.55)' }}
             >
               Turn every walk, every weekend, and every moment outside into an unforgettable adventure.
             </p>
@@ -125,14 +125,14 @@ export default function SummerQuestPage() {
 
         {/* ── GUIDE CARD STRIP ── cream band below the artwork */}
         <div
-          className="border-b border-amber/20 py-3 md:py-4"
+          className="border-b border-amber/20 py-4 md:py-5"
           style={{ background: 'linear-gradient(180deg, #f5ecd8 0%, #ede4cc 100%)' }}
         >
           <div className="max-w-5xl mx-auto px-4 overflow-x-auto">
             <div className="flex items-stretch gap-2.5 md:gap-3 min-w-max md:min-w-0 md:w-full">
 
               {/* Coming Soon card */}
-              <div className="flex items-center gap-2.5 bg-cream/90 rounded-xl px-4 py-2.5 shadow-sm border border-amber/25 flex-none min-w-[155px] md:flex-1">
+              <div className="flex items-center gap-2.5 bg-cream/90 rounded-xl px-4 py-3 shadow-sm border border-amber/25 flex-none min-w-[155px] md:flex-1">
                 <span className="text-[1.6rem] leading-none select-none" aria-hidden="true">🍁</span>
                 <div className="text-left">
                   <p className="font-bold text-forest text-xs leading-tight">Coming Soon to</p>
@@ -144,9 +144,9 @@ export default function SummerQuestPage() {
               {guides.map((g) => (
                 <div
                   key={g.name}
-                  className="flex flex-col items-center justify-center bg-cream/90 rounded-xl px-4 py-2.5 shadow-sm border border-amber/25 flex-none min-w-[120px] md:flex-1 text-center"
+                  className="flex flex-col items-center justify-center bg-cream/90 rounded-xl px-4 py-3 shadow-sm border border-amber/25 flex-none min-w-[120px] md:flex-1 text-center"
                 >
-                  <p className={`font-display font-bold text-base md:text-lg lg:text-xl tracking-wide leading-tight ${g.nameClass}`}>
+                  <p className={`font-display font-bold text-lg md:text-xl lg:text-2xl tracking-wide leading-tight ${g.nameClass}`}>
                     {g.name}
                   </p>
                   <p className={`text-[11px] md:text-xs mt-1 leading-tight ${g.roleClass}`}>
@@ -166,7 +166,7 @@ export default function SummerQuestPage() {
         style={{ background: 'linear-gradient(180deg, #f3ecd8 0%, #ede4cc 100%)' }}
       >
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-center justify-center gap-3 mb-10 md:mb-12">
+          <div className="flex items-center justify-center gap-3 mb-12 md:mb-14">
             <span className="text-meadow text-xl select-none" aria-hidden="true">🍃</span>
             <h2 className="font-display text-3xl md:text-4xl text-forest font-bold text-center">
               What Families Can Do
@@ -178,7 +178,7 @@ export default function SummerQuestPage() {
             {features.map((f, i) => (
               <div
                 key={f.alt}
-                className={`flex flex-col items-center text-center gap-3 px-3 py-5 ${
+                className={`flex flex-col items-center text-center gap-4 px-3 py-7 md:py-8 ${
                   i > 0 ? 'md:border-l md:border-bark/20' : ''
                 }`}
               >
@@ -188,7 +188,7 @@ export default function SummerQuestPage() {
                   alt={f.alt}
                   width={128}
                   height={128}
-                  className="w-20 h-20 object-contain drop-shadow-sm"
+                  className="w-24 h-24 object-contain drop-shadow-sm"
                   loading="lazy"
                 />
                 <p className="text-bark text-sm leading-snug font-medium max-w-[130px]">
