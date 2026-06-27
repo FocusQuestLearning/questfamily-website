@@ -33,11 +33,12 @@ export default function SummerQuestPage() {
       <section className="max-w-2xl mx-auto px-4 py-10" aria-label="SummerQuest app preview">
         <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-amber/20">
           <Image
-            src="/images/summerquest-promo.jpg"
+            src="/images/summerquest-promo.webp"
             alt="SummerQuest app overview — showing Fennick, Aria, Birch, and Moss adventure guides in a Canadian wilderness scene, alongside the app's 'What Families Can Do' features: quests, discoveries, journal, badges, province exploration, and privacy-first design"
-            width={500}
-            height={750}
+            width={1000}
+            height={1500}
             className="w-full h-auto"
+            loading="lazy"
             sizes="(max-width: 768px) 100vw, 672px"
           />
         </div>
