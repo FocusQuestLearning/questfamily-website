@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function HomePage() {
@@ -6,16 +5,30 @@ export default function HomePage() {
     <>
       {/* ── HERO ── */}
       <section aria-label="The Quest Family hero" className="w-full">
-        <div className="relative w-full overflow-hidden">
-          <Image
-            src="/images/hero-banner.webp"
-            alt="The Quest Family — a family and their storybook animal guides walk hand-in-hand toward a golden Canadian wilderness sunset, with mountains, forest, and a homestead behind them. Text reads: Helping families rediscover the wonder that's been there all along."
-            width={1920}
-            height={1280}
-            className="w-full h-auto object-contain"
-            priority
-            sizes="100vw"
-          />
+        <div className="relative w-full overflow-hidden flex justify-center bg-[#1a3a1e]">
+          <picture>
+            {/* WebP — served to all modern browsers (97%+ support) */}
+            <source
+              type="image/webp"
+              srcSet="/images/hero-768.webp 768w, /images/hero-1280.webp 1280w, /images/hero-1536.webp 1536w"
+              sizes="(min-width: 1536px) 1536px, 100vw"
+            />
+            {/* JPEG fallback — legacy browsers */}
+            <source
+              type="image/jpeg"
+              srcSet="/images/hero-768.jpg 768w, /images/hero-1280.jpg 1280w, /images/hero-1536.jpg 1536w"
+              sizes="(min-width: 1536px) 1536px, 100vw"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/hero-1536.jpg"
+              alt="The Quest Family — a family and their storybook animal guides walk hand-in-hand toward a golden Canadian wilderness sunset, with mountains, forest, and a homestead behind them. Text reads: Helping families rediscover the wonder that\'s been there all along."
+              width={1536}
+              height={1024}
+              className="w-full h-auto object-contain block"
+              style={{ maxWidth: '1536px' }}
+            />
+          </picture>
         </div>
       </section>
 
