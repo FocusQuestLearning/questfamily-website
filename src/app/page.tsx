@@ -35,7 +35,7 @@ export default function HomePage() {
 
       {/* ── HERO ── */}
       <section aria-label="The Quest Family hero" className="w-full">
-        <div className="relative w-full overflow-hidden flex justify-center bg-[#1a3a1e]">
+        <div className="relative w-full overflow-hidden flex justify-center bg-[#1a3a1e] lg:px-6">
           <picture>
             {/*
               Desktop (≥1024px): wide 16:9 master (5504×3072 px original; deployed up to 3840w).
