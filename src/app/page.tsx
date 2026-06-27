@@ -24,7 +24,7 @@ export default function HomePage() {
 
       {/* ── HERO ── */}
       <section aria-label="The Quest Family hero" className="w-full">
-        <div className="relative w-full flex justify-center bg-[#1a3a1e] lg:h-[90vh]">
+        <div className="relative w-full overflow-hidden flex justify-center bg-[#1a3a1e]">
           <picture>
             {/*
               5K master (5056×3392 px) — all breakpoints are genuine downscales.
@@ -55,7 +55,7 @@ export default function HomePage() {
               alt="The Quest Family — a family and their storybook animal guides walk hand-in-hand toward a golden Canadian wilderness sunset, with mountains, forest, and a homestead behind them. Signs read: Helping families rediscover the wonder that's been there all along."
               width={5056}
               height={3392}
-              className="w-full h-auto object-contain block lg:h-full"
+              className="w-full h-auto object-contain block"
               fetchPriority="high"
             />
           </picture>
