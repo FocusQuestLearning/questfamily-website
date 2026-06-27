@@ -8,10 +8,10 @@ export default function HomePage() {
       <section aria-label="The Quest Family hero" className="w-full">
         <div className="relative w-full overflow-hidden">
           <Image
-            src="/images/hero-banner.jpg"
+            src="/images/hero-banner.webp"
             alt="The Quest Family — a family and their storybook animal guides walk hand-in-hand toward a golden Canadian wilderness sunset, with mountains, forest, and a homestead behind them. Text reads: Helping families rediscover the wonder that's been there all along."
-            width={800}
-            height={533}
+            width={1920}
+            height={1280}
             className="w-full h-auto object-contain"
             priority
             sizes="100vw"
