@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import FooterConditional from '@/components/FooterConditional'
 
 export const metadata: Metadata = {
   title: 'The Quest Family — Helping Families Rediscover Wonder',
@@ -27,7 +27,7 @@ export default function RootLayout({
         <main className="flex-1">
           {children}
         </main>
-        <Footer />
+        <FooterConditional />
       </body>
     </html>
   )
