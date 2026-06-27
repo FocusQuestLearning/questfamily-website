@@ -91,6 +91,15 @@ export default function HomePage() {
               fetchPriority="high"
             />
           </picture>
+
+          {/* Hairline contrast scrim — lifts sign-text readability against bright sky.
+              Extremely subtle: 12% black at base, fading to transparent over the
+              lower 40% of the hero. Pointer-events off; no layout impact. */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 bottom-0 h-[40%] pointer-events-none"
+            style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.12) 0%, transparent 100%)' }}
+          />
         </div>
       </section>
 
