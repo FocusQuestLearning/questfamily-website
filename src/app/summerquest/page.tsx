@@ -66,7 +66,7 @@ export default function SummerQuestPage() {
 
       {/* ── HERO ── */}
       <section aria-label="SummerQuest hero" className="w-full">
-        <div className="relative w-full overflow-hidden bg-[#1a3a1e]">
+        <div className="relative w-full overflow-hidden bg-[#1a3a1e] flex flex-col justify-end min-h-[34rem] sm:min-h-0">
 
           {/* Artwork — four guides from behind in the Canadian wilderness */}
           <picture>
@@ -91,12 +91,12 @@ export default function SummerQuestPage() {
             />
           </picture>
 
-          {/* Text overlay — upper / sky portion */}
-          <div className="absolute inset-x-0 top-0 z-10 flex flex-col items-center text-center px-4 pt-[3.5%] sm:pt-[4.5%] md:pt-[5%] lg:pt-[5.5%]">
+          {/* Text overlay — green panel (mobile) / text-on-sky (desktop) */}
+          <div className="absolute inset-x-0 top-0 z-10 flex flex-col items-center text-center px-4 pt-8 sm:pt-[4%] md:pt-[4.5%] lg:pt-[4%]">
             <h1
               className="font-display font-bold leading-none"
               style={{
-                fontSize: 'clamp(2.2rem, 7.5vw, 5.5rem)',
+                fontSize: 'clamp(2.2rem, 7vw, 5rem)',
                 color: '#1a3a1e',
                 WebkitTextStroke: '0.5px rgba(139,94,20,0.4)',
                 textShadow: '1px 1px 0 #8B6914, 2px 2px 0 #7a5a10, 0 4px 16px rgba(0,0,0,0.20)',
@@ -141,8 +141,8 @@ export default function SummerQuestPage() {
             </p>
           </div>
 
-          {/* Guide + Coming Soon cards — overlaid at the bottom of the hero (desktop) */}
-          <div className="hidden lg:flex absolute bottom-[3.5%] inset-x-[4%] z-20 items-stretch justify-center gap-3 xl:gap-5">
+          {/* Guide + Coming Soon cards — overlaid across the bottom of the hero (desktop) */}
+          <div className="hidden lg:flex absolute bottom-[3.5%] inset-x-[3%] z-20 items-stretch justify-between gap-2">
             <ComingSoonCard />
             {guides.map((g) => (
               <GuideCard key={g.name} g={g} />
