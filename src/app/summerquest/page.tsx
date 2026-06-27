@@ -135,8 +135,8 @@ export default function SummerQuestPage() {
               <div className="flex items-center gap-2.5 bg-cream/90 rounded-xl px-4 py-2.5 shadow-sm border border-amber/25 flex-none min-w-[155px] md:flex-1">
                 <span className="text-[1.6rem] leading-none select-none" aria-hidden="true">🍁</span>
                 <div className="text-left">
-                  <p className="font-bold text-forest text-xs leading-tight whitespace-nowrap">Coming Soon to</p>
-                  <p className="text-bark/80 text-xs leading-tight whitespace-nowrap">App Store &amp; Google Play</p>
+                  <p className="font-bold text-forest text-xs leading-tight">Coming Soon to</p>
+                  <p className="text-bark/80 text-xs leading-tight">App Store &amp; Google Play</p>
                 </div>
               </div>
 
