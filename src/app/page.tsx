@@ -16,7 +16,7 @@ export default function HomePage() {
         as="image"
         media="(min-width: 1024px)"
         href="/images/hero-wide-1920.webp"
-        imageSrcSet="/images/hero-wide-1280.webp 1280w, /images/hero-wide-1920.webp 1920w, /images/hero-wide-2560.webp 2560w, /images/hero-wide-3840.webp 3840w, /images/hero-wide-5504.webp 5504w"
+        imageSrcSet="/images/hero-wide-1280.webp 1280w, /images/hero-wide-1920.webp 1920w, /images/hero-wide-2560.webp 2560w, /images/hero-wide-3840.webp 3840w"
         imageSizes="100vw"
         fetchPriority="high"
         type="image/webp"
@@ -57,7 +57,7 @@ export default function HomePage() {
             <source
               media="(min-width: 1024px)"
               type="image/webp"
-              srcSet="/images/hero-wide-1280.webp 1280w, /images/hero-wide-1920.webp 1920w, /images/hero-wide-2560.webp 2560w, /images/hero-wide-3840.webp 3840w, /images/hero-wide-5504.webp 5504w"
+              srcSet="/images/hero-wide-1280.webp 1280w, /images/hero-wide-1920.webp 1920w, /images/hero-wide-2560.webp 2560w, /images/hero-wide-3840.webp 3840w"
               sizes="100vw"
             />
             {/* Desktop — wide 16:9 — JPEG fallback */}
