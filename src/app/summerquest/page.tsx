@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SUMMERQUEST_APP_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'SummerQuest — Every Day is a New Quest',
@@ -22,8 +23,9 @@ export const metadata: Metadata = {
   transparent clickable overlays over each real nav target. Coordinates are
   percentages of the image box, so they stay aligned at every screen size.
   "SummerQuest" is the current page, so it intentionally has no overlay.
-  TODO: point the "Explore the App" overlay to the App Store / Google Play URL
-  once those links exist.
+  "Explore the App" routes through the shared SUMMERQUEST_APP_URL constant
+  (same destination as the homepage CTAs); today that is the /get-summerquest/
+  "coming soon" page, and it becomes the store URL in one edit once live.
 */
 const NAV_OVERLAYS: {
   href: string
@@ -33,10 +35,10 @@ const NAV_OVERLAYS: {
   width: string
   height: string
 }[] = [
-  { href: '/',         label: 'The Quest Family — Home', left: '2.5%',  top: '0.6%', width: '26%',   height: '4.4%' },
-  { href: '/',         label: 'Home',                    left: '54%',   top: '1.2%', width: '7.5%',  height: '3.2%' },
-  { href: '/support/', label: 'Support',                 left: '74.5%', top: '1.2%', width: '7.5%',  height: '3.2%' },
-  { href: '/',         label: 'Explore the App',         left: '82.5%', top: '0.8%', width: '16%',   height: '4%'   },
+  { href: '/',                 label: 'The Quest Family — Home', left: '2.5%',  top: '0.6%', width: '26%',   height: '4.4%' },
+  { href: '/',                 label: 'Home',                    left: '54%',   top: '1.2%', width: '7.5%',  height: '3.2%' },
+  { href: '/support/',         label: 'Support',                 left: '74.5%', top: '1.2%', width: '7.5%',  height: '3.2%' },
+  { href: SUMMERQUEST_APP_URL, label: 'Explore the App',         left: '82.5%', top: '0.8%', width: '16%',   height: '4%'   },
 ]
 
 export default function SummerQuestPage() {
