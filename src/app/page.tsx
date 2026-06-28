@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { SUMMERQUEST_APP_URL } from '@/lib/constants'
 
 export default function HomePage() {
   return (
