@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { SUMMERQUEST_APP_URL } from '@/lib/constants'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -36,7 +37,7 @@ export default function Header() {
             Support
           </Link>
           <Link
-            href="/summerquest/#explore-app"
+            href={SUMMERQUEST_APP_URL}
             className="bg-amber text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-bark transition-colors duration-200 shadow"
           >
             Explore the App →
@@ -78,7 +79,7 @@ export default function Header() {
             Support
           </Link>
           <Link
-            href="/summerquest/#explore-app"
+            href={SUMMERQUEST_APP_URL}
             className="bg-amber text-white font-semibold px-5 py-3 rounded-full hover:bg-bark transition-colors text-center mt-2"
             onClick={() => setMenuOpen(false)}
           >

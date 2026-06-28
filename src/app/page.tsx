@@ -271,7 +271,7 @@ export default function HomePage() {
           SummerQuest is coming soon to the App Store and Google Play.
           Follow along as we continue building Canada&apos;s greatest family adventure.
         </p>
-        <Link href="/summerquest/" className="btn-primary text-lg px-10 py-4">
+        <Link href={SUMMERQUEST_APP_URL} className="btn-primary text-lg px-10 py-4">
           Explore SummerQuest &rarr;
         </Link>
         <p className="text-bark/60 text-sm mt-6 italic">
