@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 export default function SummerQuestPage() {
   return (
     <div
+      id="explore-app"
       style={{
         backgroundColor: '#2C4A2E',
         display: 'flex',

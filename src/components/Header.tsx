@@ -36,7 +36,7 @@ export default function Header() {
             Support
           </Link>
           <Link
-            href="/summerquest/"
+            href="/summerquest/#explore-app"
             className="bg-amber text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-bark transition-colors duration-200 shadow"
           >
             Explore the App →
@@ -78,7 +78,7 @@ export default function Header() {
             Support
           </Link>
           <Link
-            href="/summerquest/"
+            href="/summerquest/#explore-app"
             className="bg-amber text-white font-semibold px-5 py-3 rounded-full hover:bg-bark transition-colors text-center mt-2"
             onClick={() => setMenuOpen(false)}
           >
