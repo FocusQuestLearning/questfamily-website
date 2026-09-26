@@ -2,16 +2,42 @@
  * The Quiet Grove — section styles.
  * Scoped to /the-quiet-grove/ pages only.
  */
+@font-face {
+  font-family: 'Quiet Grove Lora';
+  src: url('/the-quiet-grove/fonts/Lora_400Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quiet Grove Lora';
+  src: url('/the-quiet-grove/fonts/Lora_400Regular_Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quiet Grove Inter';
+  src: url('/the-quiet-grove/fonts/Inter_400Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 .quiet-grove {
   background-color: #f3eee2;
   color: #1f3025;
+  font-family: 'Quiet Grove Inter', Inter, Arial, sans-serif;
 }
 
 .quiet-grove .qg-serif,
 .quiet-grove h1,
 .quiet-grove h2,
 .quiet-grove h3 {
-  font-family: Lora, Georgia, 'Times New Roman', serif;
+  font-family: 'Quiet Grove Lora', Lora, Georgia, 'Times New Roman', serif;
+  font-weight: 400;
 }
 
 .quiet-grove .qg-hero {
