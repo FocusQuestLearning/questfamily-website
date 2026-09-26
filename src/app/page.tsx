@@ -1,7 +1,11 @@
 import Link from 'next/link'
 import { QUIET_GROVE_GOOGLE_PLAY_URL, SUMMERQUEST_APP_URL } from '@/lib/constants'
 import { BotanicalMark } from '@/components/quiet-grove/BotanicalMark'
-import { AppleAppStoreComingSoon, GooglePlayButton } from '@/components/GooglePlayButton'
+import {
+  AppleAppStoreComingSoon,
+  DesktopComingSoon,
+  GooglePlayButton,
+} from '@/components/GooglePlayButton'
 
 export default function HomePage() {
   return (
@@ -314,8 +318,15 @@ export default function HomePage() {
               appName="The Quiet Grove"
               className="ring-1 ring-[#e6dcc2]/35"
             />
+            <DesktopComingSoon
+              appName="The Quiet Grove"
+              className="ring-1 ring-[#e6dcc2]/35"
+            />
           </div>
-          <p className="mt-4 text-sm text-[#e6dcc2]">No account required. Your journal stays on your device.</p>
+          <p className="mt-4 text-sm leading-relaxed text-[#e6dcc2] max-w-xl">
+            Android journal use currently requires no account. The paid desktop edition will be included
+            with an active Quiet Grove Premium membership.
+          </p>
         </div>
       </section>
 

@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BotanicalMark, BotanicalSprig } from '@/components/quiet-grove/BotanicalMark'
-import { AppleAppStoreComingSoon, GooglePlayButton } from '@/components/GooglePlayButton'
+import {
+  AppleAppStoreComingSoon,
+  DesktopComingSoon,
+  GooglePlayButton,
+} from '@/components/GooglePlayButton'
 import { QUIET_GROVE_GOOGLE_PLAY_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -73,6 +77,28 @@ export default function QuietGrovePage() {
           </div>
           <p className="mt-5 text-sm leading-relaxed text-[#d9d0bb] max-w-lg">
             Google Play shows the final price before confirmation. Subscriptions can be managed or cancelled in Google Play.
+          </p>
+        </div>
+      </section>
+
+      {/* Paid desktop edition — the app itself remains a separate, review-only workstream */}
+      <section className="bg-[#faf6ed] border-b border-[#ddd6c8]" aria-label="The Quiet Grove for desktop">
+        <div className="max-w-2xl mx-auto px-6 py-14 md:py-16 text-center flex flex-col items-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#87724f]">Desktop Edition</p>
+          <h2 className="mt-3 text-3xl md:text-4xl text-[#1f3025]">More room to write.</h2>
+          <p className="qg-serif italic mt-4 text-xl text-[#64775f]">
+            The same quiet place, at your keyboard.
+          </p>
+          <p className="mt-6 text-base md:text-lg leading-relaxed max-w-xl text-[#3b4a3f]">
+            A browser-based desktop edition is in preparation. It will be available only with an
+            active Quiet Grove Premium monthly or annual membership, with no separate desktop purchase.
+          </p>
+          <DesktopComingSoon
+            appName="The Quiet Grove"
+            className="mt-8 !border-[#345b43]/25 !bg-[#345b43]"
+          />
+          <p className="mt-5 text-sm leading-relaxed text-[#627064] max-w-lg">
+            Desktop access is not available yet. Payment and sign-in details will be shown before launch.
           </p>
         </div>
       </section>

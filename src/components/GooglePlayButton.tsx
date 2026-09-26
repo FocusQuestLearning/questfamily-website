@@ -50,3 +50,29 @@ export function AppleAppStoreComingSoon({ appName, className = '' }: AppleComing
     </div>
   )
 }
+
+type DesktopComingSoonProps = {
+  appName: string
+  className?: string
+}
+
+export function DesktopComingSoon({ appName, className = '' }: DesktopComingSoonProps) {
+  return (
+    <div
+      role="status"
+      aria-label={`${appName} paid desktop edition is coming soon`}
+      className={`inline-flex min-h-14 items-center justify-center gap-3 rounded-xl border border-[#e6dcc2]/25 bg-[#17261d]/80 px-6 py-3 text-left text-[#fffaf0] ${className}`}
+    >
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-7 w-7 shrink-0 fill-none stroke-current" strokeWidth="1.8">
+        <rect x="3" y="4" width="18" height="13" rx="2" />
+        <path d="M8 21h8M12 17v4" />
+      </svg>
+      <span>
+        <span className="block text-[0.65rem] font-medium uppercase tracking-[0.14em] opacity-75">
+          Paid Premium access
+        </span>
+        <span className="block text-base font-semibold leading-tight">Desktop coming soon</span>
+      </span>
+    </div>
+  )
+}
