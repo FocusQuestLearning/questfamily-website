@@ -1,7 +1,6 @@
 /*
  * The Quiet Grove — section styles.
- * Scoped to /the-quiet-grove/ pages only (imported by this route's layout).
- * Colours are the app's own palette (Mindful-Journal constants/colors.ts).
+ * Scoped to /the-quiet-grove/ pages only.
  */
 .quiet-grove {
   background-color: #f3eee2;
@@ -12,21 +11,26 @@
 .quiet-grove h1,
 .quiet-grove h2,
 .quiet-grove h3 {
-  /* Lora is the app's typeface; its font files are a follow-up asset commit. */
   font-family: Lora, Georgia, 'Times New Roman', serif;
 }
 
 .quiet-grove .qg-hero {
-  /* Evergreen forest atmosphere. The approved forest photographs
-     (quiet-grove-forest-approved-desktop/mobile.jpg) are to be added in a
-     follow-up commit and layered here. */
   background-color: #1f3025;
   background-image:
-    radial-gradient(ellipse at 50% 0%, rgba(194, 177, 129, 0.22) 0%, rgba(194, 177, 129, 0) 55%),
-    linear-gradient(180deg, #345b43 0%, #294a37 55%, #1f3025 100%);
+    linear-gradient(180deg, rgba(31,48,37,.18), rgba(31,48,37,.42)),
+    url('/the-quiet-grove/quiet-grove-forest-approved-desktop.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-/* Legal text: prioritise readability */
+@media (max-width: 640px) {
+  .quiet-grove .qg-hero {
+    background-image:
+      linear-gradient(180deg, rgba(31,48,37,.18), rgba(31,48,37,.42)),
+      url('/the-quiet-grove/quiet-grove-forest-approved-mobile.jpg');
+  }
+}
+
 .quiet-grove .qg-legal p,
 .quiet-grove .qg-legal li {
   font-size: 1.0625rem;
