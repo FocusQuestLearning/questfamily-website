@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { SUMMERQUEST_APP_URL } from '@/lib/constants'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -26,27 +25,30 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6" aria-label="Main navigation">
           <Link href="/" className="text-cream/90 hover:text-amber transition-colors duration-200 font-medium text-sm">
             Home
           </Link>
           <Link href="/summerquest/" className="text-cream/90 hover:text-amber transition-colors duration-200 font-medium text-sm">
             SummerQuest
           </Link>
+          <Link href="/the-quiet-grove/" className="text-cream/90 hover:text-amber transition-colors duration-200 font-medium text-sm">
+            The Quiet Grove
+          </Link>
           <Link href="/support/" className="text-cream/90 hover:text-amber transition-colors duration-200 font-medium text-sm">
             Support
           </Link>
           <Link
-            href={SUMMERQUEST_APP_URL}
+            href="/#our-apps"
             className="bg-amber text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-bark transition-colors duration-200 shadow"
           >
-            Explore the App →
+            Explore Our Apps →
           </Link>
         </nav>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-cream p-2 rounded-lg hover:bg-white/10 transition-colors"
+          className="lg:hidden text-cream p-2 rounded-lg hover:bg-white/10 transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -66,7 +68,7 @@ export default function Header() {
       {menuOpen && (
         <nav
           id="mobile-menu"
-          className="md:hidden bg-forest border-t border-white/10 px-4 py-4 flex flex-col gap-4"
+          className="lg:hidden bg-forest border-t border-white/10 px-4 py-4 flex flex-col gap-4"
           aria-label="Mobile navigation"
         >
           <Link href="/" className="text-cream/90 hover:text-amber py-2 font-medium" onClick={() => setMenuOpen(false)}>
@@ -75,15 +77,18 @@ export default function Header() {
           <Link href="/summerquest/" className="text-cream/90 hover:text-amber py-2 font-medium" onClick={() => setMenuOpen(false)}>
             SummerQuest
           </Link>
+          <Link href="/the-quiet-grove/" className="text-cream/90 hover:text-amber py-2 font-medium" onClick={() => setMenuOpen(false)}>
+            The Quiet Grove
+          </Link>
           <Link href="/support/" className="text-cream/90 hover:text-amber py-2 font-medium" onClick={() => setMenuOpen(false)}>
             Support
           </Link>
           <Link
-            href={SUMMERQUEST_APP_URL}
+            href="/#our-apps"
             className="bg-amber text-white font-semibold px-5 py-3 rounded-full hover:bg-bark transition-colors text-center mt-2"
             onClick={() => setMenuOpen(false)}
           >
-            Explore SummerQuest →
+            Explore Our Apps →
           </Link>
         </nav>
       )}

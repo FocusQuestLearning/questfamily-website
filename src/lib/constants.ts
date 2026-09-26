@@ -10,7 +10,6 @@
  * the store URL — every CTA below updates automatically from this one line.
  *
  * Used by:
- *   - Header "Explore the App →" (desktop + mobile)
  *   - Homepage final CTA "Explore SummerQuest →"
  *   - SummerQuest page "Explore the App" overlay
  */
