@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { SUMMERQUEST_APP_URL } from '@/lib/constants'
+import { QUIET_GROVE_GOOGLE_PLAY_URL, SUMMERQUEST_APP_URL } from '@/lib/constants'
 import { BotanicalMark } from '@/components/quiet-grove/BotanicalMark'
+import { AppleAppStoreComingSoon, GooglePlayButton } from '@/components/GooglePlayButton'
 
 export default function HomePage() {
   return (
@@ -180,6 +181,9 @@ export default function HomePage() {
                 <Link href="/summerquest/" className="btn-primary">
                   Learn About SummerQuest &rarr;
                 </Link>
+                <Link href={SUMMERQUEST_APP_URL} className="btn-outline">
+                  Get SummerQuest
+                </Link>
               </div>
             </div>
 
@@ -294,12 +298,23 @@ export default function HomePage() {
           <p className="qg-home-serif italic mt-5 text-lg text-[#efe6cf]">
             Come when you need it. Leave when you&rsquo;re ready. Return when you want.
           </p>
-          <Link
-            href="/the-quiet-grove/"
-            className="mt-9 inline-block rounded-full bg-[#f3eee2] px-8 py-3.5 font-semibold text-[#1f3025] shadow-md transition-colors hover:bg-[#e6dcc2]"
-          >
-            Enter The Quiet Grove &rarr;
-          </Link>
+          <div className="mt-9 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/the-quiet-grove/"
+              className="inline-block rounded-full bg-[#f3eee2] px-8 py-3.5 font-semibold text-[#1f3025] shadow-md transition-colors hover:bg-[#e6dcc2]"
+            >
+              Enter The Quiet Grove &rarr;
+            </Link>
+            <GooglePlayButton
+              appName="The Quiet Grove"
+              href={QUIET_GROVE_GOOGLE_PLAY_URL}
+              className="!bg-[#1f3025]/90 ring-1 ring-[#e6dcc2]/50 hover:!bg-[#294a37]"
+            />
+            <AppleAppStoreComingSoon
+              appName="The Quiet Grove"
+              className="ring-1 ring-[#e6dcc2]/35"
+            />
+          </div>
           <p className="mt-4 text-sm text-[#e6dcc2]">No account required. Your journal stays on your device.</p>
         </div>
       </section>
@@ -346,7 +361,7 @@ export default function HomePage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href={SUMMERQUEST_APP_URL} className="btn-primary text-lg px-8 py-4">
-            Explore SummerQuest &rarr;
+            Get SummerQuest &rarr;
           </Link>
           <Link
             href="/the-quiet-grove/"

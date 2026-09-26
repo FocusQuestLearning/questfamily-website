@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BotanicalMark, BotanicalSprig } from '@/components/quiet-grove/BotanicalMark'
+import { AppleAppStoreComingSoon, GooglePlayButton } from '@/components/GooglePlayButton'
+import { QUIET_GROVE_GOOGLE_PLAY_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'The Quiet Grove — mindful journal | The Quest Family',
@@ -41,6 +43,37 @@ export default function QuietGrovePage() {
         </div>
         <div className="flex justify-center mt-10">
           <BotanicalSprig color="#64775f" size={40} />
+        </div>
+      </section>
+
+      {/* Android download and purchase path */}
+      <section className="bg-[#1f3025] text-[#f8f2e6] border-y border-[#87724f]/40" aria-label="Download The Quiet Grove">
+        <div className="max-w-2xl mx-auto px-6 py-16 md:py-20 text-center flex flex-col items-center">
+          <BotanicalMark color="#e6dcc2" size={46} />
+          <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#d8c79f]">Android App</p>
+          <h2 className="mt-3 text-3xl md:text-4xl">Carry the Grove with you.</h2>
+          <p className="qg-serif italic mt-4 text-xl text-[#efe6cf]">
+            A quiet place, whenever you need one.
+          </p>
+          <p className="mt-6 text-base md:text-lg leading-relaxed max-w-xl text-[#f8f2e6]/90">
+            Download The Quiet Grove from Google Play. The core journal is free. Optional monthly
+            or annual Premium access unlocks deeper personal patterns and is purchased securely
+            inside the app through Google Play.
+          </p>
+          <div className="mt-9 flex w-full flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+            <GooglePlayButton
+              appName="The Quiet Grove"
+              href={QUIET_GROVE_GOOGLE_PLAY_URL}
+              className="!bg-[#f3eee2] !text-[#1f3025] hover:!bg-[#e6dcc2] [&_span_span:first-child]:!text-[#64775f]"
+            />
+            <AppleAppStoreComingSoon
+              appName="The Quiet Grove"
+              className="!border-[#e6dcc2]/40 !bg-[#16241b]/80"
+            />
+          </div>
+          <p className="mt-5 text-sm leading-relaxed text-[#d9d0bb] max-w-lg">
+            Google Play shows the final price before confirmation. Subscriptions can be managed or cancelled in Google Play.
+          </p>
         </div>
       </section>
 
