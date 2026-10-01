@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* The Quiet Grove fonts are available site-wide but only used by its branded sections. */
+@font-face {
+  font-family: 'Quiet Grove Lora';
+  src: url('/the-quiet-grove/fonts/Lora_400Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quiet Grove Lora';
+  src: url('/the-quiet-grove/fonts/Lora_400Regular_Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quiet Grove Inter';
+  src: url('/the-quiet-grove/fonts/Inter_400Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --forest: #1a3a1e;
   --leaf: #2d5a32;
@@ -52,6 +77,16 @@ h1, h2, h3 {
 /* Section dividers */
 .leaf-divider {
   @apply text-center text-meadow text-2xl my-2;
+}
+
+/* Homepage preview for The Quiet Grove; typography remains isolated from the rest of the site. */
+.qg-home-feature {
+  font-family: 'Quiet Grove Inter', Inter, Arial, sans-serif;
+}
+
+.qg-home-feature .qg-home-serif {
+  font-family: 'Quiet Grove Lora', Lora, Georgia, 'Times New Roman', serif;
+  font-weight: 400;
 }
 
 /* Accessible focus */

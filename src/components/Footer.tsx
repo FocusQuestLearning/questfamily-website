@@ -34,6 +34,11 @@ export default function Footer() {
                     SummerQuest
                   </Link>
                 </li>
+                <li>
+                  <Link href="/the-quiet-grove/" className="text-cream/80 hover:text-amber transition-colors text-sm">
+                    The Quiet Grove
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
@@ -62,6 +67,11 @@ export default function Footer() {
                 <li>
                   <Link href="/terms/" className="text-cream/80 hover:text-amber transition-colors text-sm">
                     Terms of Use
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/the-quiet-grove/privacy/" className="text-cream/80 hover:text-amber transition-colors text-sm">
+                    The Quiet Grove Privacy
                   </Link>
                 </li>
               </ul>

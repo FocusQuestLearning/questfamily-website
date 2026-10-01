@@ -1,0 +1,51 @@
+/*
+ * The Quiet Grove — section styles.
+ * Scoped to /the-quiet-grove/ pages only.
+ */
+.quiet-grove {
+  background-color: #f3eee2;
+  color: #1f3025;
+  font-family: 'Quiet Grove Inter', Inter, Arial, sans-serif;
+}
+
+.quiet-grove .qg-serif,
+.quiet-grove h1,
+.quiet-grove h2,
+.quiet-grove h3 {
+  font-family: 'Quiet Grove Lora', Lora, Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+}
+
+.quiet-grove .qg-hero {
+  background-color: #1f3025;
+  background-image:
+    linear-gradient(180deg, rgba(31,48,37,.18), rgba(31,48,37,.42)),
+    url('/the-quiet-grove/quiet-grove-forest-approved-desktop.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 640px) {
+  .quiet-grove .qg-hero {
+    background-image:
+      linear-gradient(180deg, rgba(31,48,37,.18), rgba(31,48,37,.42)),
+      url('/the-quiet-grove/quiet-grove-forest-approved-mobile.jpg');
+  }
+}
+
+.quiet-grove .qg-legal p,
+.quiet-grove .qg-legal li {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #2e3d33;
+}
+
+.quiet-grove .qg-legal a {
+  color: #345b43;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.quiet-grove .qg-legal a:hover {
+  color: #87724f;
+}

@@ -1,5 +1,11 @@
 import Link from 'next/link'
-import { SUMMERQUEST_APP_URL } from '@/lib/constants'
+import { QUIET_GROVE_GOOGLE_PLAY_URL, SUMMERQUEST_APP_URL } from '@/lib/constants'
+import { BotanicalMark } from '@/components/quiet-grove/BotanicalMark'
+import {
+  AppleAppStoreComingSoon,
+  DesktopComingSoon,
+  GooglePlayButton,
+} from '@/components/GooglePlayButton'
 
 export default function HomePage() {
   return (
@@ -108,16 +114,29 @@ export default function HomePage() {
       <section className="max-w-3xl mx-auto px-4 py-14 text-center" aria-label="Our mission">
         <div className="leaf-divider" aria-hidden="true">🍃</div>
         <h1 className="font-display text-3xl md:text-4xl text-forest font-bold mt-4 mb-5 leading-snug">
-          Where Every Day is an Adventure
+          Apps for the Moments That Matter
         </h1>
         <p className="text-bark text-lg leading-relaxed max-w-2xl mx-auto">
-          The Quest Family creates apps that encourage families to step outside, notice the world around them,
-          and discover the wonder hiding in everyday moments — from a backyard garden to a Canadian wilderness trail.
+          The Quest Family creates thoughtful apps that help people explore, reflect and reconnect
+          &mdash; from outdoor adventures together to quiet moments of your own.
         </p>
         <p className="text-meadow font-display italic text-xl mt-4">
-          Storybook characters are guides. Nature is the teacher.
+          Nature. Reflection. Connection.
         </p>
         <div className="leaf-divider mt-6" aria-hidden="true">🍃</div>
+      </section>
+
+      {/* ── OUR APPS ── */}
+      <section id="our-apps" className="max-w-3xl mx-auto px-4 pb-12 text-center scroll-mt-24" aria-label="Our apps">
+        <span className="inline-block bg-amber/15 text-bark text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-4">
+          Our Apps
+        </span>
+        <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-4">
+          Two ways to return to what matters.
+        </h2>
+        <p className="text-bark text-lg leading-relaxed max-w-2xl mx-auto">
+          One invites families outside. One offers somewhere quiet within.
+        </p>
       </section>
 
       {/* ── SUMMERQUEST FEATURE ── */}
@@ -125,7 +144,7 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="inline-block bg-amber/15 text-bark text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-3">
-              Our First App
+              For Family Adventure
             </span>
             <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-3">
               SummerQuest
@@ -166,6 +185,9 @@ export default function HomePage() {
                 <Link href="/summerquest/" className="btn-primary">
                   Learn About SummerQuest &rarr;
                 </Link>
+                <Link href={SUMMERQUEST_APP_URL} className="btn-outline">
+                  Get SummerQuest
+                </Link>
               </div>
             </div>
 
@@ -189,10 +211,10 @@ export default function HomePage() {
       </section>
 
       {/* ── WHY FAMILIES LOVE IT ── */}
-      <section className="max-w-5xl mx-auto px-4 py-14" aria-label="Why families love The Quest Family apps">
+      <section className="max-w-5xl mx-auto px-4 py-14" aria-label="Why families love SummerQuest">
         <div className="text-center mb-10">
           <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-3">
-            Why Families Love It
+            Why Families Love SummerQuest
           </h2>
           <p className="text-bark text-base max-w-xl mx-auto">
             Built around one simple question: would this naturally come up around the campfire?
@@ -240,21 +262,98 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── THE QUIET GROVE FEATURE ── */}
+      <section className="qg-home-feature relative isolate overflow-hidden border-y border-[#87724f]/40" aria-label="The Quiet Grove — mindful journal">
+        <picture className="absolute inset-0 block" aria-hidden="true">
+          <source
+            media="(max-width: 640px)"
+            srcSet="/the-quiet-grove/quiet-grove-forest-approved-mobile.jpg"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/the-quiet-grove/quiet-grove-forest-approved-desktop.jpg"
+            alt=""
+            width={1536}
+            height={1024}
+            loading="lazy"
+            className="h-full w-full object-cover object-center"
+          />
+        </picture>
+        <div
+          className="absolute inset-0"
+          aria-hidden="true"
+          style={{ background: 'linear-gradient(180deg, rgba(31,48,37,.58), rgba(31,48,37,.82))' }}
+        />
+
+        <div className="relative z-10 max-w-3xl mx-auto px-6 py-20 md:py-24 text-center text-[#f8f2e6] flex flex-col items-center">
+          <BotanicalMark color="#f8f2e6" size={56} />
+          <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#e6dcc2]">
+            For Quiet Reflection
+          </p>
+          <h2 className="qg-home-serif mt-3 text-4xl md:text-6xl leading-tight">The Quiet Grove</h2>
+          <p className="qg-home-serif italic text-xl md:text-2xl mt-1 text-[#efe6cf]">mindful journal</p>
+          <p className="qg-home-serif mt-8 text-2xl md:text-3xl leading-snug max-w-2xl">
+            Somewhere quiet to set down what you&rsquo;re carrying.
+          </p>
+          <p className="mt-6 text-base md:text-lg leading-relaxed max-w-2xl text-[#f8f2e6]/95">
+            A mindful journal for reflection, gratitude and quiet moments, with gentle rituals and writing
+            that stays private on your own device.
+          </p>
+          <p className="qg-home-serif italic mt-5 text-lg text-[#efe6cf]">
+            Come when you need it. Leave when you&rsquo;re ready. Return when you want.
+          </p>
+          <div className="mt-9 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/the-quiet-grove/"
+              className="inline-block rounded-full bg-[#f3eee2] px-8 py-3.5 font-semibold text-[#1f3025] shadow-md transition-colors hover:bg-[#e6dcc2]"
+            >
+              Enter The Quiet Grove &rarr;
+            </Link>
+            <GooglePlayButton
+              appName="The Quiet Grove"
+              href={QUIET_GROVE_GOOGLE_PLAY_URL}
+              className="!bg-[#1f3025]/90 ring-1 ring-[#e6dcc2]/50 hover:!bg-[#294a37]"
+            />
+            <AppleAppStoreComingSoon
+              appName="The Quiet Grove"
+              className="ring-1 ring-[#e6dcc2]/35"
+            />
+            <DesktopComingSoon
+              appName="The Quiet Grove"
+              className="ring-1 ring-[#e6dcc2]/35"
+            />
+          </div>
+          <p className="mt-4 text-sm leading-relaxed text-[#e6dcc2] max-w-xl">
+            Android journal use currently requires no account. The paid desktop edition will be included
+            with an active Quiet Grove Premium membership.
+          </p>
+        </div>
+      </section>
+
       {/* ── TRUST / PRIVACY NOTE ── */}
       <section className="bg-forest text-cream py-12 px-4" aria-label="Privacy and trust commitment">
         <div className="max-w-3xl mx-auto text-center">
           <div className="text-4xl mb-4" aria-hidden="true">🔒</div>
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
-            Your Family&apos;s Privacy Comes First
+            Your Privacy Comes First
           </h2>
           <p className="text-cream/80 text-base leading-relaxed max-w-2xl mx-auto mb-6">
-            We are a small family-run team and we take your trust seriously.
-            SummerQuest is designed with children in mind — camera access is optional,
-            journal entries stay private to your family, and we never sell your data.
+            We are a small family-run team and we take your trust seriously. SummerQuest keeps family
+            journals private, while The Quiet Grove stores personal journal content on your own device.
+            We do not sell journal content or use it for advertising.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/privacy/" className="btn-outline border-cream text-cream hover:bg-cream hover:text-forest">
-              Read Our Privacy Policy
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center">
+            <Link
+              href="/privacy/"
+              className="inline-block rounded-full border-2 border-[#faf5e8] px-7 py-3 font-semibold text-[#faf5e8] transition-colors hover:bg-[#faf5e8] hover:text-[#1a3a1e]"
+            >
+              Website Privacy Policy
+            </Link>
+            <Link
+              href="/the-quiet-grove/privacy/"
+              className="inline-block rounded-full border-2 border-[#faf5e8] px-7 py-3 font-semibold text-[#faf5e8] transition-colors hover:bg-[#faf5e8] hover:text-[#1a3a1e]"
+            >
+              Quiet Grove Privacy
             </Link>
             <Link href="/support/" className="text-amber hover:text-cream transition-colors py-3 font-semibold">
               Contact Support &rarr;
@@ -264,19 +363,26 @@ export default function HomePage() {
       </section>
 
       {/* ── FINAL CTA ── */}
-      <section className="max-w-3xl mx-auto px-4 py-16 text-center" aria-label="Get started with SummerQuest">
+      <section className="max-w-3xl mx-auto px-4 py-16 text-center" aria-label="Explore The Quest Family apps">
         <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-4">
-          Ready to Begin the Quest?
+          Where Will You Begin?
         </h2>
         <p className="text-bark text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-          SummerQuest is coming soon to the App Store and Google Play.
-          Follow along as we continue building Canada&apos;s greatest family adventure.
+          Step outside together with SummerQuest, or step into somewhere quiet with The Quiet Grove.
         </p>
-        <Link href={SUMMERQUEST_APP_URL} className="btn-primary text-lg px-10 py-4">
-          Explore SummerQuest &rarr;
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href={SUMMERQUEST_APP_URL} className="btn-primary text-lg px-8 py-4">
+            Get SummerQuest &rarr;
+          </Link>
+          <Link
+            href="/the-quiet-grove/"
+            className="inline-block rounded-full bg-[#345b43] px-8 py-4 text-lg font-semibold text-[#fffaf0] shadow-md transition-colors hover:bg-[#294a37] active:scale-95"
+          >
+            Enter The Quiet Grove &rarr;
+          </Link>
+        </div>
         <p className="text-bark/60 text-sm mt-6 italic">
-          &quot;From our little hobby farm to adventures around the world — every day is a new quest.&quot;
+          &quot;Helping families rediscover the wonder that&rsquo;s been there all along.&quot;
         </p>
       </section>
     </>
