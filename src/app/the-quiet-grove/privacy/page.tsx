@@ -10,8 +10,8 @@ import { BotanicalMark, BotanicalSprig } from '@/components/quiet-grove/Botanica
  * changes, update this page to match the app — not the other way round.
  */
 
-const PRIVACY_EMAIL = 'hello.focusquest@gmail.com'
-const LAST_UPDATED = 'September 25, 2026'
+const PRIVACY_EMAIL = 'support.questfamily@gmail.com'
+const LAST_UPDATED = 'October 1, 2026'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy — The Quiet Grove, mindful journal',
@@ -36,7 +36,7 @@ const sections: Section[] = [
           <li>a simple note of when you last opened the app, used only to show a gentle welcome back after time away.</li>
         </ul>
         <p>
-          The app does not ask for your name, email address, phone number, age, contacts, photos or location.
+          The app does not ask for your name, phone number, age, contacts, photos or location. If you choose App Lock, it asks for a recovery email address and verifies it before enabling the lock.
         </p>
       </>
     ),
@@ -47,7 +47,7 @@ const sections: Section[] = [
     body: (
       <>
         <p>
-          Everything listed above is stored locally in the app&rsquo;s storage on your device.
+          Your journal entries, moods, reflection answers and personal questions are stored locally in the app&rsquo;s storage on your device.
           The Quiet Grove does not upload your journal entries, moods, answers or personal questions
           to our servers, and we cannot see or read them.
         </p>
@@ -61,7 +61,32 @@ const sections: Section[] = [
   {
     id: 'accounts',
     title: 'Accounts',
-    body: <p>The Quiet Grove does not have accounts. There is no sign-up and no login.</p>,
+    body: <p>The Quiet Grove does not have user accounts. There is no account sign-up or login. Optional App Lock email verification registers a recovery address for that device; it does not create a journal account or cloud backup.</p>,
+  },
+  {
+    id: 'app-lock',
+    title: 'Optional App Lock and email recovery',
+    body: (
+      <>
+        <p>
+          App Lock is optional. You can choose a PIN or supported device biometrics. Setup verifies a recovery email
+          before enabling the lock. If you forget the PIN or cannot use biometrics, a fresh email code lets you choose a
+          new PIN while keeping the journal on your device.
+        </p>
+        <p>
+          The recovery service processes your recovery email address, a random device registration identifier,
+          a digest of the device recovery credential, and temporary verification and abuse-prevention records.
+          It uses a keyed digest of the request network address for rate limits. Hosting and email providers may
+          also process network and delivery information needed to operate the service.
+          The recovery API never receives your PIN, journal entries, moods, answers or personal questions.
+        </p>
+        <p>
+          Verification codes expire after ten minutes, allow a limited number of attempts and can be used once.
+          Codes are stored as keyed digests by the recovery API; the email provider processes the delivered message.
+          Recovery addresses are used for App Lock verification and recovery, not marketing.
+        </p>
+      </>
+    ),
   },
   {
     id: 'purchases',
@@ -118,8 +143,10 @@ const sections: Section[] = [
     title: 'Third-party services',
     body: (
       <p>
-        The only third-party services the app communicates with are RevenueCat and the Apple App Store or
-        Google Play store on your device, for subscriptions, as described above. The app&rsquo;s typefaces
+        For subscriptions, the app communicates with RevenueCat and the Apple App Store or Google Play.
+        Optional email recovery also uses an API host, a PostgreSQL database provider and an authorized email
+        provider to register recovery addresses, check verification codes and deliver recovery messages.
+        These services receive recovery details, not journal content. The app&rsquo;s typefaces
         and images are built into the app and are not loaded from outside services.
       </p>
     ),
@@ -144,8 +171,9 @@ const sections: Section[] = [
     body: (
       <p>
         The Quiet Grove does not request access to your camera, microphone, location, photos or files.
-        It uses the internet only for subscription services, and may use your device&rsquo;s vibration for gentle
-        haptic feedback when you save.
+        It uses the internet for subscription services and optional email recovery, and may use your device&rsquo;s vibration
+        for gentle haptic feedback when you save. If you choose biometric App Lock, the operating system handles fingerprint
+        or Face ID authentication. The Quiet Grove receives the authentication result and does not receive or store biometric templates.
       </p>
     ),
   },
@@ -168,6 +196,12 @@ const sections: Section[] = [
           Export a backup first if you want to keep a copy.
         </p>
         <p>
+          Verified recovery registrations are retained until you request deletion through the contact address below.
+          Clearing app storage or uninstalling removes the device&rsquo;s local recovery credential, but does not automatically
+          delete the server registration. Expired pending challenges and old rate-limit records are cleared during daily
+          maintenance. Abandoned unverified registrations become eligible for deletion after 24 hours.
+        </p>
+        <p>
           Subscription records held by Apple, Google or RevenueCat are kept under their own policies.
           Subscriptions are managed or cancelled in your App Store or Google Play subscription settings.
         </p>
@@ -179,9 +213,11 @@ const sections: Section[] = [
     title: 'Security',
     body: (
       <p>
-        Your journal is protected by your device and its operating-system security. The app does not add its own
-        separate encryption or passcode. We recommend using a device passcode and keeping your operating system up
-        to date.
+        Your journal is protected by your device and its operating-system security. Optional App Lock adds a PIN or device
+        biometrics to control opening the app. Native lock credentials use operating-system secure storage; the browser
+        stores a salted PIN digest. App Lock does not separately encrypt your journal entries. Recovery uses HTTPS and
+        one-time codes with expiry, attempt limits and resend limits. We recommend using a device passcode and keeping
+        your operating system up to date.
       </p>
     ),
   },
@@ -190,8 +226,9 @@ const sections: Section[] = [
     title: 'Children\u2019s privacy',
     body: (
       <p>
-        The Quiet Grove does not knowingly collect personal information from anyone, including children. It has no
-        accounts and does not ask for a name, age or contact details, and journal content stays on the device.
+        The Quiet Grove does not ask for a name or age, and journal content stays on the device. If optional App Lock is used,
+        a recovery email address and device registration are processed as described above. A parent or guardian can use
+        the contact address below for questions or a recovery-registration deletion request.
       </p>
     ),
   },
@@ -236,8 +273,8 @@ export default function QuietGrovePrivacyPage() {
           <p className="qg-serif text-xl md:text-2xl text-[#1f3025] !leading-snug">Your journal belongs to you.</p>
           <p className="mt-3">
             This policy explains how The Quiet Grove &mdash; mindful journal, an app by The Quest Family, handles
-            information. In short: your writing stays on your device, there are no accounts, and there are no ads,
-            analytics or trackers.
+            information. Your writing stays on your device. There are no user accounts, ads, analytics or trackers.
+            Optional App Lock uses a verified email address to help you recover access without erasing your journal.
           </p>
         </div>
 
@@ -273,3 +310,4 @@ export default function QuietGrovePrivacyPage() {
     </>
   )
 }
+
