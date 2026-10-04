@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { BotanicalMark, BotanicalSprig } from '@/components/quiet-grove/BotanicalMark'
 
 /*
- * The Quiet Grove — mindful journal: public Privacy Policy.
+ * Quietly Woven — A Place for Your Thoughts: public Privacy Policy.
  *
  * Every statement below was checked against the current app source
  * (FocusQuestLearning/Mindful-Journal, main). If the app's data handling
@@ -11,12 +11,12 @@ import { BotanicalMark, BotanicalSprig } from '@/components/quiet-grove/Botanica
  */
 
 const PRIVACY_EMAIL = 'support.questfamily@gmail.com'
-const LAST_UPDATED = 'October 1, 2026'
+const LAST_UPDATED = 'October 4, 2026'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — The Quiet Grove, mindful journal',
-  description: 'Privacy Policy for The Quiet Grove — mindful journal, an app by The Quest Family.',
-  alternates: { canonical: '/the-quiet-grove/privacy/' },
+  title: 'Privacy Policy — Quietly Woven',
+  description: 'Privacy Policy for Quietly Woven — A Place for Your Thoughts, an app by The Quest Family.',
+  alternates: { canonical: '/quietly-woven/privacy/' },
 }
 
 type Section = { id: string; title: string; body: React.ReactNode }
@@ -24,10 +24,10 @@ type Section = { id: string; title: string; body: React.ReactNode }
 const sections: Section[] = [
   {
     id: 'overview',
-    title: 'What information The Quiet Grove handles',
+    title: 'What information Quietly Woven handles',
     body: (
       <>
-        <p>The Quiet Grove handles only what you choose to write or select inside the app:</p>
+        <p>Quietly Woven handles only what you choose to write or select inside the app:</p>
         <ul>
           <li>journal entries and reflections you write;</li>
           <li>moods you log;</li>
@@ -48,11 +48,11 @@ const sections: Section[] = [
       <>
         <p>
           Your journal entries, moods, reflection answers and personal questions are stored locally in the app&rsquo;s storage on your device.
-          The Quiet Grove does not upload your journal entries, moods, answers or personal questions
+          Quietly Woven does not upload your journal entries, moods, answers or personal questions
           to our servers, and we cannot see or read them.
         </p>
         <p>
-          The Quiet Grove does not provide cloud backup or sync. Your journal is not copied to another device
+          Quietly Woven does not provide cloud backup or sync. Your journal is not copied to another device
           automatically.
         </p>
       </>
@@ -61,7 +61,7 @@ const sections: Section[] = [
   {
     id: 'accounts',
     title: 'Accounts',
-    body: <p>The Quiet Grove does not have user accounts. There is no account sign-up or login. Optional App Lock email verification registers a recovery address for that device; it does not create a journal account or cloud backup.</p>,
+    body: <p>Quietly Woven does not have user accounts. There is no account sign-up or login. Optional App Lock email verification registers a recovery address for that device; it does not create a journal account or cloud backup.</p>,
   },
   {
     id: 'app-lock',
@@ -94,7 +94,7 @@ const sections: Section[] = [
     body: (
       <>
         <p>
-          The Quiet Grove Premium is an optional monthly or annual subscription. Core journaling does not
+          Quietly Woven Premium is an optional monthly or annual subscription. Core journaling does not
           require a purchase.
         </p>
         <p>
@@ -133,7 +133,7 @@ const sections: Section[] = [
     title: 'Analytics, tracking and advertising',
     body: (
       <p>
-        The Quiet Grove does not include analytics, crash-reporting, advertising or tracking tools.
+        Quietly Woven does not include analytics, crash-reporting, advertising or tracking tools.
         It shows no ads, and we do not use your information for advertising or sell it.
       </p>
     ),
@@ -170,10 +170,10 @@ const sections: Section[] = [
     title: 'Device permissions',
     body: (
       <p>
-        The Quiet Grove does not request access to your camera, microphone, location, photos or files.
+        Quietly Woven does not request access to your camera, microphone, location, photos or files.
         It uses the internet for subscription services and optional email recovery, and may use your device&rsquo;s vibration
         for gentle haptic feedback when you save. If you choose biometric App Lock, the operating system handles fingerprint
-        or Face ID authentication. The Quiet Grove receives the authentication result and does not receive or store biometric templates.
+        or Face ID authentication. Quietly Woven receives the authentication result and does not receive or store biometric templates.
       </p>
     ),
   },
@@ -226,7 +226,7 @@ const sections: Section[] = [
     title: 'Children\u2019s privacy',
     body: (
       <p>
-        The Quiet Grove does not ask for a name or age, and journal content stays on the device. If optional App Lock is used,
+        Quietly Woven does not ask for a name or age, and journal content stays on the device. If optional App Lock is used,
         a recovery email address and device registration are processed as described above. A parent or guardian can use
         the contact address below for questions or a recovery-registration deletion request.
       </p>
@@ -237,7 +237,7 @@ const sections: Section[] = [
     title: 'Changes to this policy',
     body: (
       <p>
-        If the way The Quiet Grove handles information changes, we will update this page and the
+        If the way Quietly Woven handles information changes, we will update this page and the
         &ldquo;Last updated&rdquo; date above.
       </p>
     ),
@@ -248,7 +248,7 @@ const sections: Section[] = [
     body: (
       <p>
         Questions or privacy requests can be sent to The Quest Family at{' '}
-        <a href={`mailto:${PRIVACY_EMAIL}?subject=The%20Quiet%20Grove%20Privacy`}>{PRIVACY_EMAIL}</a>.
+        <a href={`mailto:${PRIVACY_EMAIL}?subject=Quietly%20Woven%20Privacy`}>{PRIVACY_EMAIL}</a>.
       </p>
     ),
   },
@@ -261,18 +261,18 @@ export default function QuietGrovePrivacyPage() {
         <div className="max-w-3xl mx-auto px-6 py-12 md:py-16 flex flex-col items-center text-center">
           <BotanicalMark color="#f8f2e6" size={44} />
           <p className="qg-serif mt-4 text-lg">
-            The Quiet Grove <span className="italic text-[#e6dcc2]">&mdash; mindful journal</span>
+            Quietly Woven <span className="italic text-[#e6dcc2]">&mdash; A Place for Your Thoughts</span>
           </p>
           <h1 className="mt-3 text-3xl md:text-5xl">Privacy Policy</h1>
           <p className="mt-4 text-sm text-[#e6dcc2]">Last updated: {LAST_UPDATED}</p>
         </div>
       </header>
 
-      <article className="qg-legal max-w-3xl mx-auto px-5 md:px-6 py-12 md:py-16" aria-label="The Quiet Grove Privacy Policy">
+      <article className="qg-legal max-w-3xl mx-auto px-5 md:px-6 py-12 md:py-16" aria-label="Quietly Woven Privacy Policy">
         <div className="rounded-2xl border border-[#ddd6c8] bg-[#faf6ed] p-6 md:p-8">
           <p className="qg-serif text-xl md:text-2xl text-[#1f3025] !leading-snug">Your journal belongs to you.</p>
           <p className="mt-3">
-            This policy explains how The Quiet Grove &mdash; mindful journal, an app by The Quest Family, handles
+            This policy explains how Quietly Woven, an app by The Quest Family, handles
             information. Your writing stays on your device. There are no user accounts, ads, analytics or trackers.
             Optional App Lock uses a verified email address to help you recover access without erasing your journal.
           </p>
@@ -302,8 +302,8 @@ export default function QuietGrovePrivacyPage() {
 
         <div className="flex flex-col items-center mt-16 gap-4 text-center">
           <BotanicalSprig color="#64775f" size={36} />
-          <Link href="/the-quiet-grove/" className="qg-serif text-[#345b43] hover:text-[#87724f]">
-            Return to The Quiet Grove &rarr;
+          <Link href="/quietly-woven/" className="qg-serif text-[#345b43] hover:text-[#87724f]">
+            Return to Quietly Woven &rarr;
           </Link>
         </div>
       </article>

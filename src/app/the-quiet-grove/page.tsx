@@ -9,20 +9,20 @@ import {
 import { QUIET_GROVE_GOOGLE_PLAY_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'The Quiet Grove — mindful journal | The Quest Family',
-  description: 'The Quiet Grove — a mindful journal for reflection, gratitude & quiet moments. From The Quest Family.',
-  alternates: { canonical: '/the-quiet-grove/' },
+  title: 'Quietly Woven — A Place for Your Thoughts | The Quest Family',
+  description: 'Quietly Woven — A Place for Your Thoughts. A mindful journal for reflection, gratitude and quiet moments, from The Quest Family.',
+  alternates: { canonical: '/quietly-woven/' },
 }
 
 export default function QuietGrovePage() {
   return (
     <>
       {/* Hero — approved Quiet Grove forest imagery */}
-      <section className="qg-hero text-[#f8f2e6]" aria-label="The Quiet Grove">
+      <section className="qg-hero text-[#f8f2e6]" aria-label="Quietly Woven">
         <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 flex flex-col items-center text-center">
           <BotanicalMark color="#f8f2e6" size={64} />
-          <h1 className="mt-6 text-4xl md:text-6xl leading-tight">The Quiet Grove</h1>
-          <p className="qg-serif italic text-lg md:text-2xl mt-2 text-[#efe6cf]">mindful journal</p>
+          <h1 className="mt-6 text-4xl md:text-6xl leading-tight">Quietly Woven</h1>
+          <p className="qg-serif italic text-lg md:text-2xl mt-2 text-[#efe6cf]">A Place for Your Thoughts</p>
           <p className="mt-8 text-lg md:text-xl leading-relaxed max-w-xl text-[#f8f2e6]/95">
             A mindful journal for reflection, gratitude &amp; quiet moments.
           </p>
@@ -30,7 +30,7 @@ export default function QuietGrovePage() {
       </section>
 
       {/* Philosophy — wording taken from the app&apos;s own About the Grove screen */}
-      <section className="max-w-2xl mx-auto px-6 py-16 md:py-20 text-center" aria-label="Why The Quiet Grove is different">
+      <section className="max-w-2xl mx-auto px-6 py-16 md:py-20 text-center" aria-label="Why Quietly Woven is different">
         <h2 className="text-3xl md:text-4xl text-[#1f3025]">Somewhere quiet to set down what you&rsquo;re carrying.</h2>
         <div className="mt-10 space-y-6 text-lg leading-relaxed text-[#3b4a3f]">
           <p className="qg-serif italic text-xl md:text-2xl text-[#345b43]">
@@ -41,7 +41,7 @@ export default function QuietGrovePage() {
             Some are meant simply to be lived.
           </p>
           <p>
-            The Quiet Grove will be here whenever you&rsquo;re ready &mdash; no pressure,
+            Quietly Woven will be here whenever you&rsquo;re ready &mdash; no pressure,
             no expectations, no shoulds.
           </p>
         </div>
@@ -51,27 +51,27 @@ export default function QuietGrovePage() {
       </section>
 
       {/* Android download and purchase path */}
-      <section className="bg-[#1f3025] text-[#f8f2e6] border-y border-[#87724f]/40" aria-label="Download The Quiet Grove">
+      <section className="bg-[#1f3025] text-[#f8f2e6] border-y border-[#87724f]/40" aria-label="Download Quietly Woven">
         <div className="max-w-2xl mx-auto px-6 py-16 md:py-20 text-center flex flex-col items-center">
           <BotanicalMark color="#e6dcc2" size={46} />
           <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#d8c79f]">Android App</p>
-          <h2 className="mt-3 text-3xl md:text-4xl">Carry the Grove with you.</h2>
+          <h2 className="mt-3 text-3xl md:text-4xl">Carry your quiet place with you.</h2>
           <p className="qg-serif italic mt-4 text-xl text-[#efe6cf]">
             A quiet place, whenever you need one.
           </p>
           <p className="mt-6 text-base md:text-lg leading-relaxed max-w-xl text-[#f8f2e6]/90">
-            Download The Quiet Grove from Google Play. The core journal is free. Optional monthly
+            Download Quietly Woven from Google Play. The core journal is free. Optional monthly
             or annual Premium access unlocks deeper personal patterns and is purchased securely
             inside the app through Google Play.
           </p>
           <div className="mt-9 flex w-full flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
             <GooglePlayButton
-              appName="The Quiet Grove"
+              appName="Quietly Woven"
               href={QUIET_GROVE_GOOGLE_PLAY_URL}
               className="!bg-[#f3eee2] !text-[#1f3025] hover:!bg-[#e6dcc2] [&_span_span:first-child]:!text-[#64775f]"
             />
             <AppleAppStoreComingSoon
-              appName="The Quiet Grove"
+              appName="Quietly Woven"
               className="!border-[#e6dcc2]/40 !bg-[#16241b]/80"
             />
           </div>
@@ -82,7 +82,7 @@ export default function QuietGrovePage() {
       </section>
 
       {/* Paid desktop edition — the app itself remains a separate, review-only workstream */}
-      <section className="bg-[#faf6ed] border-b border-[#ddd6c8]" aria-label="The Quiet Grove for desktop">
+      <section className="bg-[#faf6ed] border-b border-[#ddd6c8]" aria-label="Quietly Woven for desktop">
         <div className="max-w-2xl mx-auto px-6 py-14 md:py-16 text-center flex flex-col items-center">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#87724f]">Desktop Edition</p>
           <h2 className="mt-3 text-3xl md:text-4xl text-[#1f3025]">More room to write.</h2>
@@ -91,10 +91,10 @@ export default function QuietGrovePage() {
           </p>
           <p className="mt-6 text-base md:text-lg leading-relaxed max-w-xl text-[#3b4a3f]">
             A browser-based desktop edition is in preparation. It will be available only with an
-            active Quiet Grove Premium monthly or annual membership, with no separate desktop purchase.
+            active Quietly Woven Premium monthly or annual membership, with no separate desktop purchase.
           </p>
           <DesktopComingSoon
-            appName="The Quiet Grove"
+            appName="Quietly Woven"
             className="mt-8 !border-[#345b43]/25 !bg-[#345b43]"
           />
           <p className="mt-5 text-sm leading-relaxed text-[#627064] max-w-lg">
@@ -109,20 +109,20 @@ export default function QuietGrovePage() {
           <h2 className="text-2xl md:text-3xl text-[#1f3025]">Your journal belongs to you</h2>
           <p className="mt-5 text-lg leading-relaxed text-[#3b4a3f]">
             Your reflections, moods and personal questions are saved on your own device.
-            There is no account to create, and The Quiet Grove does not upload your writing to our servers.
+            There is no account to create, and Quietly Woven does not upload your writing to our servers.
           </p>
           <Link
-            href="/the-quiet-grove/privacy/"
+            href="/quietly-woven/privacy/"
             className="inline-block mt-8 px-7 py-3 rounded-full bg-[#345b43] text-[#fffaf0] font-semibold hover:bg-[#294a37] transition-colors"
           >
-            Read The Quiet Grove Privacy Policy
+            Read Quietly Woven Privacy Policy
           </Link>
         </div>
       </section>
 
       <section className="max-w-2xl mx-auto px-6 py-12 text-center text-sm text-[#627064]" aria-label="About">
         <p>
-          The Quiet Grove is made by{' '}
+          Quietly Woven is made by{' '}
           <Link href="/" className="underline underline-offset-2 hover:text-[#87724f]">The Quest Family</Link>.
         </p>
       </section>

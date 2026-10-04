@@ -262,8 +262,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── THE QUIET GROVE FEATURE ── */}
-      <section className="qg-home-feature relative isolate overflow-hidden border-y border-[#87724f]/40" aria-label="The Quiet Grove — mindful journal">
+      {/* ── QUIETLY WOVEN FEATURE ── */}
+      <section className="qg-home-feature relative isolate overflow-hidden border-y border-[#87724f]/40" aria-label="Quietly Woven — A Place for Your Thoughts">
         <picture className="absolute inset-0 block" aria-hidden="true">
           <source
             media="(max-width: 640px)"
@@ -290,8 +290,8 @@ export default function HomePage() {
           <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#e6dcc2]">
             For Quiet Reflection
           </p>
-          <h2 className="qg-home-serif mt-3 text-4xl md:text-6xl leading-tight">The Quiet Grove</h2>
-          <p className="qg-home-serif italic text-xl md:text-2xl mt-1 text-[#efe6cf]">mindful journal</p>
+          <h2 className="qg-home-serif mt-3 text-4xl md:text-6xl leading-tight">Quietly Woven</h2>
+          <p className="qg-home-serif italic text-xl md:text-2xl mt-1 text-[#efe6cf]">A Place for Your Thoughts</p>
           <p className="qg-home-serif mt-8 text-2xl md:text-3xl leading-snug max-w-2xl">
             Somewhere quiet to set down what you&rsquo;re carrying.
           </p>
@@ -304,28 +304,28 @@ export default function HomePage() {
           </p>
           <div className="mt-9 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-4">
             <Link
-              href="/the-quiet-grove/"
+              href="/quietly-woven/"
               className="inline-block rounded-full bg-[#f3eee2] px-8 py-3.5 font-semibold text-[#1f3025] shadow-md transition-colors hover:bg-[#e6dcc2]"
             >
-              Enter The Quiet Grove &rarr;
+              Enter Quietly Woven &rarr;
             </Link>
             <GooglePlayButton
-              appName="The Quiet Grove"
+              appName="Quietly Woven"
               href={QUIET_GROVE_GOOGLE_PLAY_URL}
               className="!bg-[#1f3025]/90 ring-1 ring-[#e6dcc2]/50 hover:!bg-[#294a37]"
             />
             <AppleAppStoreComingSoon
-              appName="The Quiet Grove"
+              appName="Quietly Woven"
               className="ring-1 ring-[#e6dcc2]/35"
             />
             <DesktopComingSoon
-              appName="The Quiet Grove"
+              appName="Quietly Woven"
               className="ring-1 ring-[#e6dcc2]/35"
             />
           </div>
           <p className="mt-4 text-sm leading-relaxed text-[#e6dcc2] max-w-xl">
             Android journal use currently requires no account. The paid desktop edition will be included
-            with an active Quiet Grove Premium membership.
+            with an active Quietly Woven Premium membership.
           </p>
         </div>
       </section>
@@ -339,7 +339,7 @@ export default function HomePage() {
           </h2>
           <p className="text-cream/80 text-base leading-relaxed max-w-2xl mx-auto mb-6">
             We are a small family-run team and we take your trust seriously. SummerQuest keeps family
-            journals private, while The Quiet Grove stores personal journal content on your own device.
+            journals private, while Quietly Woven stores personal journal content on your own device.
             We do not sell journal content or use it for advertising.
           </p>
           <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center">
@@ -350,10 +350,10 @@ export default function HomePage() {
               Website Privacy Policy
             </Link>
             <Link
-              href="/the-quiet-grove/privacy/"
+              href="/quietly-woven/privacy/"
               className="inline-block rounded-full border-2 border-[#faf5e8] px-7 py-3 font-semibold text-[#faf5e8] transition-colors hover:bg-[#faf5e8] hover:text-[#1a3a1e]"
             >
-              Quiet Grove Privacy
+              Quietly Woven Privacy
             </Link>
             <Link href="/support/" className="text-amber hover:text-cream transition-colors py-3 font-semibold">
               Contact Support &rarr;
@@ -368,17 +368,17 @@ export default function HomePage() {
           Where Will You Begin?
         </h2>
         <p className="text-bark text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-          Step outside together with SummerQuest, or step into somewhere quiet with The Quiet Grove.
+          Step outside together with SummerQuest, or step into somewhere quiet with Quietly Woven.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href={SUMMERQUEST_APP_URL} className="btn-primary text-lg px-8 py-4">
             Get SummerQuest &rarr;
           </Link>
           <Link
-            href="/the-quiet-grove/"
+            href="/quietly-woven/"
             className="inline-block rounded-full bg-[#345b43] px-8 py-4 text-lg font-semibold text-[#fffaf0] shadow-md transition-colors hover:bg-[#294a37] active:scale-95"
           >
-            Enter The Quiet Grove &rarr;
+            Enter Quietly Woven &rarr;
           </Link>
         </div>
         <p className="text-bark/60 text-sm mt-6 italic">

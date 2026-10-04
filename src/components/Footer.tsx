@@ -35,8 +35,8 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/the-quiet-grove/" className="text-cream/80 hover:text-amber transition-colors text-sm">
-                    The Quiet Grove
+                  <Link href="/quietly-woven/" className="text-cream/80 hover:text-amber transition-colors text-sm">
+                    Quietly Woven
                   </Link>
                 </li>
               </ul>
@@ -70,8 +70,8 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/the-quiet-grove/privacy/" className="text-cream/80 hover:text-amber transition-colors text-sm">
-                    The Quiet Grove Privacy
+                  <Link href="/quietly-woven/privacy/" className="text-cream/80 hover:text-amber transition-colors text-sm">
+                    Quietly Woven Privacy
                   </Link>
                 </li>
               </ul>
