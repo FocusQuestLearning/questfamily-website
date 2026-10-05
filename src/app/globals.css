@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* The Quiet Grove fonts are available site-wide but only used by its branded sections. */
+/* Quietly Woven fonts are available site-wide but only used by its branded sections. */
 @font-face {
   font-family: 'Quiet Grove Lora';
   src: url('/the-quiet-grove/fonts/Lora_400Regular.ttf') format('truetype');
@@ -79,7 +79,7 @@ h1, h2, h3 {
   @apply text-center text-meadow text-2xl my-2;
 }
 
-/* Homepage preview for The Quiet Grove; typography remains isolated from the rest of the site. */
+/* Homepage preview for Quietly Woven; typography remains isolated from the rest of the site. */
 .qg-home-feature {
   font-family: 'Quiet Grove Inter', Inter, Arial, sans-serif;
 }

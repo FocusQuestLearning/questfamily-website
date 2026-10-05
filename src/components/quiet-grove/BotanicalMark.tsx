@@ -1,5 +1,5 @@
 /**
- * The Quiet Grove's established five-leaf botanical mark and sprig.
+ * Quietly Woven's established five-leaf botanical mark and sprig.
  *
  * Ported path-for-path from the app's code-native mark
  * (FocusQuestLearning/Mindful-Journal: artifacts/mobile/components/Botanical.tsx)
