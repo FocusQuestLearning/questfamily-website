@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { QUEST_FAMILY_SLOGAN } from '@/lib/brand'
 import Image from 'next/image'
 
 export default function Footer() {
@@ -19,7 +20,7 @@ export default function Footer() {
             <div>
               <p className="font-display font-bold text-lg text-cream leading-tight">The Quest Family</p>
               <p className="text-cream/70 text-sm mt-1 italic leading-snug">
-                Helping families rediscover the wonder<br />that's been there all along.
+                {QUEST_FAMILY_SLOGAN}
               </p>
             </div>
           </div>

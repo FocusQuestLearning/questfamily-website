@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { QUEST_FAMILY_SLOGAN, UPCOMING_APPS } from '@/lib/brand'
 import { QUIET_GROVE_GOOGLE_PLAY_URL, SUMMERQUEST_APP_URL } from '@/lib/constants'
 import { BotanicalMark } from '@/components/quiet-grove/BotanicalMark'
 import {
@@ -121,7 +122,7 @@ export default function HomePage() {
           &mdash; from outdoor adventures together to quiet moments of your own.
         </p>
         <p className="text-meadow font-display italic text-xl mt-4">
-          Nature. Reflection. Connection.
+          {QUEST_FAMILY_SLOGAN}
         </p>
         <div className="leaf-divider mt-6" aria-hidden="true">🍃</div>
       </section>
@@ -132,10 +133,10 @@ export default function HomePage() {
           Our Apps
         </span>
         <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-4">
-          Two ways to return to what matters.
+          Find your next small adventure.
         </h2>
         <p className="text-bark text-lg leading-relaxed max-w-2xl mx-auto">
-          One invites families outside. One offers somewhere quiet within.
+          Explore outside, make room to reflect, and discover what we’re building for learning together.
         </p>
       </section>
 
@@ -149,7 +150,7 @@ export default function HomePage() {
             <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-3">
               SummerQuest
             </h2>
-            <p className="text-bark text-lg italic font-display">&quot;Every Day is a New Quest.&quot;</p>
+            <p className="text-bark text-lg italic font-display">&quot;Every Day Is a New Quest!&quot;</p>
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-10">
@@ -162,8 +163,7 @@ export default function HomePage() {
                 discover wildlife, earn badges, and build a family nature journal.
               </p>
               <p className="text-bark text-base leading-relaxed">
-                From coast to coast to coast, SummerQuest is growing into Canada&apos;s most
-                comprehensive interactive nature and exploration library for children.
+                Choose a quest, explore a Canadian landscape, and keep a note of what your family notices.
               </p>
 
               <ul className="space-y-2 text-bark">
@@ -207,6 +207,24 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-4 py-14" aria-labelledby="in-development-heading">
+        <div className="max-w-2xl mb-8">
+          <p className="text-meadow text-sm font-semibold mb-2">Growing with your family</p>
+          <h2 id="in-development-heading" className="font-display text-3xl text-forest font-bold">More ways to learn and discover.</h2>
+          <p className="text-bark mt-3 leading-relaxed">Two apps in development, with familiar guides and room to explore at your own pace.</p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {UPCOMING_APPS.map(app => (
+            <article key={app.name} className="nature-card flex flex-col items-start">
+              <p className="text-sm font-semibold text-bark mb-3">In development</p>
+              <h3 className="font-display text-2xl text-forest font-bold leading-tight">{app.name}</h3>
+              <p className="text-bark mt-3 mb-6 leading-relaxed">{app.description}</p>
+              <Link href={app.href} className="btn-outline mt-auto">About {app.name} &rarr;</Link>
+            </article>
+          ))}
         </div>
       </section>
 
