@@ -4,8 +4,8 @@ import HeaderConditional from '@/components/HeaderConditional'
 import FooterConditional from '@/components/FooterConditional'
 
 export const metadata: Metadata = {
-  title: 'The Quest Family — Helping Families Rediscover Wonder',
-  description: 'The Quest Family creates thoughtful apps for exploration, reflection and everyday life, including SummerQuest and Quietly Woven.',
+  title: 'The Quest Family — Apps for Learning, Nature and Reflection',
+  description: 'The Quest Family creates thoughtful apps for exploration, reflection and everyday life, including SummerQuest and Quietly Woven, with The Quest Family Learning and Maple Discoveries in development.',
   keywords: 'family adventure, nature app, mindful journal, SummerQuest, Quietly Woven, Canadian families, outdoor exploration, reflection',
   openGraph: {
     title: 'The Quest Family',
