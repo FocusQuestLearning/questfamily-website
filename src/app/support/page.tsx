@@ -12,7 +12,7 @@ export default function SupportPage() {
     <article className="max-w-3xl mx-auto px-4 py-14" aria-label="Support">
       {/* Header */}
       <div className="text-center mb-10">
-        <Image src="/images/icon-signpost.png" alt="" width={72} height={72} className="mx-auto mb-4 object-contain" />
+        <Image src="/images/icon-signpost.webp" alt="" width={72} height={72} priority className="mx-auto mb-4 object-contain" />
         <h1 className="font-display text-4xl text-forest font-bold mb-3">We're Here to Help</h1>
         <p className="text-bark text-lg leading-relaxed max-w-xl mx-auto">
           The Quest Family is a small, family-run studio. If you run into any trouble 

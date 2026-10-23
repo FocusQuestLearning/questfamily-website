@@ -175,7 +175,7 @@ export default function HomePage() {
                   { artwork: 'binoculars', text: 'Explore wildlife, trees, wildflowers & more' },
                 ].map((item) => (
                   <li key={item.text} className="flex items-center gap-3 text-sm leading-relaxed">
-                    <Image src={'/images/icon-' + item.artwork + '.png'} alt="" width={36} height={36} className="shrink-0 object-contain" />
+                    <Image src={'/images/icon-' + item.artwork + '.webp'} alt="" width={36} height={36} loading="eager" className="shrink-0 object-contain" />
                     <span>{item.text}</span>
                   </li>
                 ))}
@@ -200,7 +200,7 @@ export default function HomePage() {
                 { artwork: 'leaf', title: 'Badges & Rewards', desc: 'Celebrate every discovery made together' },
               ].map((card) => (
                 <div key={card.title} className="nature-card text-center">
-                  <Image src={'/images/icon-' + card.artwork + '.png'} alt="" width={72} height={72} className="mx-auto mb-3 object-contain" />
+                  <Image src={'/images/icon-' + card.artwork + '.webp'} alt="" width={72} height={72} className="mx-auto mb-3 object-contain" />
                   <h3 className="font-display font-bold text-forest text-sm mb-1">{card.title}</h3>
                   <p className="text-bark text-xs leading-snug">{card.desc}</p>
                 </div>
@@ -254,7 +254,7 @@ export default function HomePage() {
             },
           ].map((card) => (
             <div key={card.title} className="nature-card">
-              <Image src={'/images/icon-' + card.artwork + '.png'} alt="" width={64} height={64} className="mb-3 object-contain" />
+              <Image src={'/images/icon-' + card.artwork + '.webp'} alt="" width={64} height={64} className="mb-3 object-contain" />
               <h3 className="font-display font-bold text-forest text-base mb-2">{card.title}</h3>
               <p className="text-bark text-sm leading-relaxed">{card.desc}</p>
             </div>

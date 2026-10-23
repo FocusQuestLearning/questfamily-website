@@ -20,7 +20,7 @@ export default function GetSummerQuestPage() {
   return (
     <article className="max-w-3xl mx-auto px-4 py-16 text-center" aria-label="Get SummerQuest">
       <Image
-        src="/images/icon-compass.png"
+        src="/images/icon-compass.webp"
         alt=""
         width={96}
         height={96}
