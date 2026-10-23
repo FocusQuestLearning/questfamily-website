@@ -152,7 +152,7 @@ export default function HomePage() {
             Big Adventures for Busy Brilliant Brains!
           </p>
           <p className="text-bark text-lg leading-relaxed max-w-2xl mx-auto">
-            Formerly FocusQuest, this K&ndash;8 learning adventure is being rebuilt and refined
+            This K&ndash;8 learning adventure is being rebuilt and refined
             with neurodivergent learners in mind. North and Fennick will continue guiding children
             through engaging learning experiences that respect different learning styles and paces.
           </p>
