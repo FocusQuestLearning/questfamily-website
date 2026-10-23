@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Support | The Quest Family',
@@ -11,7 +12,7 @@ export default function SupportPage() {
     <article className="max-w-3xl mx-auto px-4 py-14" aria-label="Support">
       {/* Header */}
       <div className="text-center mb-10">
-        <div className="text-5xl mb-4" aria-hidden="true">🌿</div>
+        <Image src="/images/icon-signpost.png" alt="" width={72} height={72} className="mx-auto mb-4 object-contain" />
         <h1 className="font-display text-4xl text-forest font-bold mb-3">We're Here to Help</h1>
         <p className="text-bark text-lg leading-relaxed max-w-xl mx-auto">
           The Quest Family is a small, family-run studio. If you run into any trouble 
@@ -21,7 +22,6 @@ export default function SupportPage() {
 
       {/* Contact card */}
       <div className="nature-card bg-amber/5 border-amber/30 text-center mb-10">
-        <div className="text-3xl mb-3" aria-hidden="true">✉️</div>
         <h2 className="font-display text-xl text-forest font-bold mb-2">Email Support</h2>
         <p className="text-bark text-sm mb-4">
           Tell us which app you use and what you need help with.

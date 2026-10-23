@@ -94,5 +94,5 @@ const sections: LegalSection[] = [
 ]
 
 export default function PrivacyPage() {
-  return <LegalPage title="Privacy Policy" icon="🔒" sections={sections} summary="SummerQuest saves your journal and progress on your device. This website, support email and app-store purchases each handle different information. The sections below explain those differences." />
+  return <LegalPage title="Privacy Policy" sections={sections} summary="SummerQuest saves your journal and progress on your device. This website, support email and app-store purchases each handle different information. The sections below explain those differences." />
 }

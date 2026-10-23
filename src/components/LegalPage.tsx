@@ -2,16 +2,14 @@ import type { ReactNode } from 'react'
 
 export type LegalSection = { id: string; title: string; body: ReactNode }
 
-export default function LegalPage({ title, icon, summary, sections }: {
+export default function LegalPage({ title, summary, sections }: {
   title: string
-  icon: string
   summary: ReactNode
   sections: LegalSection[]
 }) {
   return (
     <article className="max-w-3xl mx-auto px-4 py-14 [&_a]:underline [&_a]:underline-offset-4 [&_a]:break-words" aria-label={title}>
       <header className="text-center mb-10">
-        <div className="text-5xl mb-4" aria-hidden="true">{icon}</div>
         <h1 className="font-display text-4xl text-forest font-bold mb-2">{title}</h1>
         <p className="text-bark text-sm italic">The Quest Family · Last updated: October 23, 2026</p>
       </header>

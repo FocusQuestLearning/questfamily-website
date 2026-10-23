@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { QUIET_GROVE_GOOGLE_PLAY_URL, SUMMERQUEST_APP_URL } from '@/lib/constants'
 import { BotanicalMark } from '@/components/quiet-grove/BotanicalMark'
 import {
@@ -49,15 +50,15 @@ export default function HomePage() {
               The wider aspect ratio lets the banner fill the browser width
               while naturally reducing vertical height — the entire artwork
               remains 100% visible with no cropping.
-                Retina 1440p (1440×2 = 2880px)  → hero-wide-3840.webp  ✅
-                4K display  (3840×1 = 3840px)   → hero-wide-3840.webp  ✅
-                1440p std   (1440×1 = 1440px)   → hero-wide-1920.webp  ✅
-                1280p std   (1280×1 = 1280px)   → hero-wide-1280.webp  ✅
+                Retina 1440p (1440×2 = 2880px)  → hero-wide-3840.webp
+                4K display  (3840×1 = 3840px)   → hero-wide-3840.webp
+                1440p std   (1440×1 = 1440px)   → hero-wide-1920.webp
+                1280p std   (1280×1 = 1280px)   → hero-wide-1280.webp
 
               Mobile/Tablet (<1024px): original 3:2 artwork — unchanged.
-                iPhone 15   (390×3  = 1170px)   → hero-1280.webp  ✅
-                Android     (360×3  = 1080px)   → hero-1280.webp  ✅
-                iPad        (768×2  = 1536px)   → hero-1920.webp  ✅
+                iPhone 15   (390×3  = 1170px)   → hero-1280.webp
+                Android     (360×3  = 1080px)   → hero-1280.webp
+                iPad        (768×2  = 1536px)   → hero-1920.webp
             */}
 
             {/* Desktop — wide 16:9 — WebP */}
@@ -112,8 +113,7 @@ export default function HomePage() {
 
       {/* ── MISSION ── */}
       <section className="max-w-3xl mx-auto px-4 py-14 text-center" aria-label="Our mission">
-        <div className="leaf-divider" aria-hidden="true">🍃</div>
-        <h1 className="font-display text-3xl md:text-4xl text-forest font-bold mt-4 mb-5 leading-snug">
+        <h1 className="font-display text-3xl md:text-4xl text-forest font-bold mb-5 leading-snug">
           Apps for the Moments That Matter
         </h1>
         <p className="text-bark text-lg leading-relaxed max-w-2xl mx-auto">
@@ -123,7 +123,6 @@ export default function HomePage() {
         <p className="text-meadow font-display italic text-xl mt-4">
           Nature. Reflection. Connection.
         </p>
-        <div className="leaf-divider mt-6" aria-hidden="true">🍃</div>
       </section>
 
       {/* ── OUR APPS ── */}
@@ -166,17 +165,18 @@ export default function HomePage() {
                 comprehensive interactive nature and exploration library for children.
               </p>
 
-              <ul className="space-y-2 text-bark">
+              <ul className="space-y-3 text-bark">
                 {[
-                  '🧭 Complete gentle outdoor quests',
-                  '🦊 Meet your four adventure guides',
-                  '📖 Build a private family nature journal',
-                  '🏅 Earn collectible badges & Leaf Points',
-                  '🍁 Discover Canada by province & territory',
-                  '🐦 Explore wildlife, trees, wildflowers & more',
+                  { artwork: 'compass', text: 'Complete gentle outdoor quests' },
+                  { artwork: 'signpost', text: 'Meet your four adventure guides' },
+                  { artwork: 'notebook', text: 'Build a private family nature journal' },
+                  { artwork: 'leaf', text: 'Earn collectible badges & Leaf Points' },
+                  { artwork: 'book', text: 'Discover Canada by province & territory' },
+                  { artwork: 'binoculars', text: 'Explore wildlife, trees, wildflowers & more' },
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm leading-relaxed">
-                    <span>{item}</span>
+                  <li key={item.text} className="flex items-center gap-3 text-sm leading-relaxed">
+                    <Image src={'/images/icon-' + item.artwork + '.png'} alt="" width={36} height={36} className="shrink-0 object-contain" />
+                    <span>{item.text}</span>
                   </li>
                 ))}
               </ul>
@@ -191,16 +191,16 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Feature icons grid */}
+            {/* Feature cards */}
             <div className="md:w-1/2 grid grid-cols-2 gap-4">
               {[
-                { icon: '🧭', title: 'Daily Quests', desc: 'Gentle outdoor adventures for every age' },
-                { icon: '🌿', title: 'Nature Library', desc: "Canada's nature, coast to coast to coast" },
-                { icon: '📔', title: 'Family Journal', desc: 'Private, yours forever, no pressure' },
-                { icon: '🏅', title: 'Badges & Rewards', desc: 'Celebrate every discovery made together' },
+                { artwork: 'compass', title: 'Daily Quests', desc: 'Gentle outdoor adventures for every age' },
+                { artwork: 'book', title: 'Nature Library', desc: "Canada's nature, coast to coast to coast" },
+                { artwork: 'notebook', title: 'Family Journal', desc: 'Private, yours forever, no pressure' },
+                { artwork: 'leaf', title: 'Badges & Rewards', desc: 'Celebrate every discovery made together' },
               ].map((card) => (
                 <div key={card.title} className="nature-card text-center">
-                  <div className="text-3xl mb-2" aria-hidden="true">{card.icon}</div>
+                  <Image src={'/images/icon-' + card.artwork + '.png'} alt="" width={72} height={72} className="mx-auto mb-3 object-contain" />
                   <h3 className="font-display font-bold text-forest text-sm mb-1">{card.title}</h3>
                   <p className="text-bark text-xs leading-snug">{card.desc}</p>
                 </div>
@@ -223,38 +223,38 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[
             {
-              icon: '🌲',
+              artwork: 'compass',
               title: 'Adventure First',
               desc: 'The app is the guide. The adventure is real life. We encourage families to put the phone away and go explore.',
             },
             {
-              icon: '🇨🇦',
+              artwork: 'leaf',
               title: 'Built for Canada',
               desc: 'Every quest, discovery, and guide reflects the real landscapes, wildlife, and seasons of Canada.',
             },
             {
-              icon: '👨‍👩‍👧‍👦',
+              artwork: 'signpost',
               title: 'Family-Centred',
               desc: 'No pressure timers, no school-style testing, no stressful countdowns. Just gentle wonder and discovery.',
             },
             {
-              icon: '🔒',
+              artwork: 'notebook',
               title: 'Privacy & Safety',
               desc: 'Camera access is optional. Family journals are private. We collect only what we need — nothing more.',
             },
             {
-              icon: '📚',
+              artwork: 'book',
               title: 'Nature is the Teacher',
               desc: "Storybook characters inspire curiosity. Real Canadian nature photography teaches, connects, and amazes.",
             },
             {
-              icon: '✨',
+              artwork: 'binoculars',
               title: 'Wonder Every Day',
               desc: '"I wonder what I\'ll discover next?" — not "I have another worksheet to finish." That\'s the feeling we build toward.',
             },
           ].map((card) => (
             <div key={card.title} className="nature-card">
-              <div className="text-3xl mb-3" aria-hidden="true">{card.icon}</div>
+              <Image src={'/images/icon-' + card.artwork + '.png'} alt="" width={64} height={64} className="mb-3 object-contain" />
               <h3 className="font-display font-bold text-forest text-base mb-2">{card.title}</h3>
               <p className="text-bark text-sm leading-relaxed">{card.desc}</p>
             </div>
@@ -333,7 +333,6 @@ export default function HomePage() {
       {/* ── TRUST / PRIVACY NOTE ── */}
       <section className="bg-forest text-cream py-12 px-4" aria-label="Privacy and trust commitment">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="text-4xl mb-4" aria-hidden="true">🔒</div>
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
             Your Privacy Comes First
           </h2>

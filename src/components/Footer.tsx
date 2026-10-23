@@ -87,7 +87,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-cream/50">
           <p>© {year} The Quest Family. All rights reserved.</p>
-          <p className="text-xs italic">Made with 🍁 for Canadian families</p>
+          <p className="text-xs italic">Made for Canadian families</p>
         </div>
       </div>
     </footer>

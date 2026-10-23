@@ -10,7 +10,13 @@ Prepared October 23, 2026. This is a website copy proposal based on source inspe
 - New `/quietly-woven/terms/` explains mobile and browser subscription management without promising cross-platform purchase transfer or journal sync.
 - Support answers distinguish local journal deletion, account/recovery-record deletion, subscription cancellation and refunds. The Quietly Woven landing page and site footer link to its terms.
 
-Existing artwork, brand identities, app code, subscription configuration and production hosting settings are outside this change. The page dates describe the proposed policy revision; they do not prove deployment or acceptance of the terms.
+Artwork files, brand identities, app code, subscription configuration and production hosting settings are unchanged. The page dates describe the proposed policy revision; they do not prove deployment or acceptance of the terms.
+
+## SummerQuest website artwork
+
+The website uses its existing illustrated compass, field guide, notebook, leaf, binoculars and trail-signpost PNGs in place of generic emoji. The homepage feature list/cards and download heading use these assets; support uses the illustrated signpost. Remaining decorative emoji were removed from the policy headings, mission dividers and footer. The underlying artwork files and app code are unchanged. Decorative illustrations have empty alternative text because adjacent copy provides their meaning.
+
+The revised export builds successfully. A site-wide check resolves 255 internal links/fragments and all 47 image elements across 13 HTML files. The existing SummerQuest flat-image page retains its original heading structure. Browser checks confirm the six feature-list illustrations load and the homepage/download layouts have no horizontal overflow at 390px/320px iframe widths or at desktop width.
 
 ## Evidence reviewed
 

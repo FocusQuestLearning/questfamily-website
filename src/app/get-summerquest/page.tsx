@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { AppleAppStoreComingSoon, GooglePlayButton } from '@/components/GooglePlayButton'
 import { SUMMERQUEST_GOOGLE_PLAY_URL } from '@/lib/constants'
 
@@ -18,8 +19,14 @@ export const metadata: Metadata = {
 export default function GetSummerQuestPage() {
   return (
     <article className="max-w-3xl mx-auto px-4 py-16 text-center" aria-label="Get SummerQuest">
-      <div className="text-5xl mb-4" aria-hidden="true">🧭</div>
-
+      <Image
+        src="/images/icon-compass.png"
+        alt=""
+        width={96}
+        height={96}
+        className="mx-auto mb-5 object-contain"
+        priority
+      />
       <span className="inline-block bg-amber/15 text-bark text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-4">
         Android App
       </span>

@@ -77,5 +77,5 @@ const sections: LegalSection[] = [
 ]
 
 export default function TermsPage() {
-  return <LegalPage title="Terms of Use" icon="📜" sections={sections} summary="Please read these terms before using this website or SummerQuest. Purchase details appear before you pay. Your mandatory consumer rights remain protected." />
+  return <LegalPage title="Terms of Use" sections={sections} summary="Please read these terms before using this website or SummerQuest. Purchase details appear before you pay. Your mandatory consumer rights remain protected." />
 }
