@@ -152,13 +152,24 @@ export default function HomePage() {
             Big Adventures for Busy Brilliant Brains!
           </p>
           <p className="text-bark text-lg leading-relaxed max-w-2xl mx-auto">
-            This K&ndash;8 learning adventure is being rebuilt and refined
-            with neurodivergent learners in mind. North and Fennick will continue guiding children
-            through engaging learning experiences that respect different learning styles and paces.
+            Learning should feel like an adventure, not a battle. Busy &amp; Brilliant Learning
+            is a K&ndash;8 learning experience created with neurodivergent minds in mind,
+            including children who learn differently or need a gentler pace.
           </p>
-          <p className="text-bark text-sm mt-5 font-semibold">
-            Currently unavailable while improvements are underway. No download or purchase is offered yet.
+          <p className="text-bark text-base leading-relaxed max-w-2xl mx-auto mt-4">
+            With North the compass and Fennick the fox as friendly guides, children can explore
+            interactive lessons, Read Along stories, and daily and weekly learning adventures.
+            Flexible learning paths and age-aware support are designed to help families make
+            learning engaging, understandable, and less overwhelming.
           </p>
+          <div className="mt-7 max-w-2xl mx-auto rounded-xl border border-amber/30 bg-parchment px-5 py-5" role="status">
+            <h3 className="font-display font-bold text-forest text-xl">Currently Under Construction</h3>
+            <p className="text-bark text-sm leading-relaxed mt-2">
+              We are carefully rebuilding and improving the learning experience.
+              Busy &amp; Brilliant Learning is not currently available to download or purchase.
+              Thank you for your patience while we prepare its next chapter.
+            </p>
+          </div>
         </div>
       </section>
 
