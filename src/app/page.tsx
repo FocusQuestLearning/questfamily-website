@@ -141,34 +141,37 @@ export default function HomePage() {
 
       {/* ── BUSY & BRILLIANT LEARNING — UNDER CONSTRUCTION ── */}
       <section id="busy-brilliant-learning" className="bg-cream border-y border-amber/20 py-14 scroll-mt-24" aria-label="Busy & Brilliant Learning — under construction">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <span className="inline-block bg-amber/15 text-bark text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-4">
-            Under Construction
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-3">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-forest mb-7 text-center">
             Busy &amp; Brilliant Learning
           </h2>
-          <p className="font-display italic text-xl text-meadow mb-5">
-            Big Adventures for Busy Brilliant Brains!
-          </p>
-          <p className="text-bark text-lg leading-relaxed max-w-2xl mx-auto">
-            Learning should feel like an adventure, not a battle. Busy &amp; Brilliant Learning
-            is a K&ndash;8 learning experience created with neurodivergent minds in mind,
-            including children who learn differently or need a gentler pace.
-          </p>
-          <p className="text-bark text-base leading-relaxed max-w-2xl mx-auto mt-4">
-            With North the compass and Fennick the fox as friendly guides, children can explore
-            interactive lessons, Read Along stories, and daily and weekly learning adventures.
-            Flexible learning paths and age-aware support are designed to help families make
-            learning engaging, understandable, and less overwhelming.
-          </p>
-          <div className="mt-7 max-w-2xl mx-auto rounded-xl border border-amber/30 bg-parchment px-5 py-5" role="status">
-            <h3 className="font-display font-bold text-forest text-xl">Currently Under Construction</h3>
-            <p className="text-bark text-sm leading-relaxed mt-2">
-              We are carefully rebuilding and improving the learning experience.
-              Busy &amp; Brilliant Learning is not currently available to download or purchase.
-              Thank you for your patience while we prepare its next chapter.
+          <div className="rounded-3xl bg-parchment border border-amber/25 px-6 py-8 md:px-10 md:py-10 shadow-sm">
+            <p className="text-bark/70 text-xs md:text-sm font-bold uppercase tracking-widest mb-5">
+              A Learning Adventure for Every Brilliant Mind
             </p>
+            <h3 className="font-display text-3xl md:text-4xl font-bold text-forest leading-tight">
+              Busy &amp; Brilliant<br className="hidden sm:block" /> Learning
+            </h3>
+            <p className="font-display text-xl md:text-2xl font-semibold text-meadow mt-5 leading-snug">
+              Big Adventures for Busy Brilliant Brains!
+            </p>
+            <p className="text-bark text-lg md:text-xl leading-relaxed mt-6">
+              An interactive K&ndash;8 learning adventure designed for neurodivergent learners
+              and families who want education to feel engaging, accessible and enjoyable.
+            </p>
+            <p className="text-bark text-base leading-relaxed mt-4">
+              Guided by North the compass and Fennick the fox, children can discover
+              Read Along stories, interactive lessons, and flexible daily and weekly
+              learning adventures at their own pace.
+            </p>
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center rounded-full bg-forest/10 text-forest px-4 py-2 text-sm font-semibold">
+                Under Construction
+              </span>
+              <span className="text-bark/70 text-sm">
+                Not yet available to download or purchase
+              </span>
+            </div>
           </div>
         </div>
       </section>
