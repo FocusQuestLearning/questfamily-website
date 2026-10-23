@@ -1,134 +1,134 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BotanicalMark, BotanicalSprig } from '@/components/quiet-grove/BotanicalMark'
-import {
-  AppleAppStoreComingSoon,
-  DesktopComingSoon,
-  GooglePlayButton,
-} from '@/components/GooglePlayButton'
-import { QUIET_GROVE_GOOGLE_PLAY_URL } from '@/lib/constants'
+import { BotanicalMark } from '@/components/quiet-grove/BotanicalMark'
 
 export const metadata: Metadata = {
   title: 'Quietly Woven — A Place for Your Thoughts | The Quest Family',
-  description: 'Quietly Woven — A Place for Your Thoughts. A mindful journal for reflection, gratitude and quiet moments, from The Quest Family.',
-  alternates: { canonical: '/quietly-woven/' },
+  description: 'Coming soon: a quiet place to reflect and grow. Discover Quietly Woven’s private journal, gentle prompts and optional Premium collections.',
+  alternates: { canonical: 'https://thequestfamily.ca/quietly-woven/' },
+  openGraph: {
+    title: 'Quietly Woven — A Place for Your Thoughts',
+    description: 'Coming soon. A quiet place to reflect and grow, with private journaling, gentle prompts and optional Premium.',
+    url: 'https://thequestfamily.ca/quietly-woven/',
+    siteName: 'The Quest Family',
+    type: 'website',
+  },
 }
 
 export default function QuietGrovePage() {
   return (
     <>
-      {/* Hero — approved Quiet Grove forest imagery */}
-      <section className="qg-hero text-[#f8f2e6]" aria-label="Quietly Woven">
-        <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 flex flex-col items-center text-center">
-          <BotanicalMark color="#f8f2e6" size={64} />
-          <h1 className="mt-6 text-4xl md:text-6xl leading-tight">Quietly Woven</h1>
+      <section className="qg-hero text-[#f8f2e6]" aria-label="Quietly Woven introduction">
+        <div className="max-w-3xl mx-auto px-6 py-14 md:py-20 flex flex-col items-center text-center">
+          <BotanicalMark color="#f8f2e6" size={40} />
+          <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-[#efe6cf]">Coming soon</p>
+          <h1 className="mt-4 text-4xl md:text-6xl leading-tight">Quietly Woven</h1>
           <p className="qg-serif italic text-lg md:text-2xl mt-2 text-[#efe6cf]">A Place for Your Thoughts</p>
-          <p className="mt-8 text-lg md:text-xl leading-relaxed max-w-xl text-[#f8f2e6]/95">
-            A mindful journal for reflection, gratitude &amp; quiet moments.
+          <p className="mt-6 text-base md:text-lg leading-relaxed max-w-xl text-[#f8f2e6]">
+            Write what&rsquo;s on your mind, check in with how you feel, and make a little room for yourself.
           </p>
-        </div>
-      </section>
-
-      {/* Philosophy — wording taken from the app&apos;s own About the Grove screen */}
-      <section className="max-w-2xl mx-auto px-6 py-16 md:py-20 text-center" aria-label="Why Quietly Woven is different">
-        <h2 className="text-3xl md:text-4xl text-[#1f3025]">Somewhere quiet to set down what you&rsquo;re carrying.</h2>
-        <div className="mt-10 space-y-6 text-lg leading-relaxed text-[#3b4a3f]">
-          <p className="qg-serif italic text-xl md:text-2xl text-[#345b43]">
-            Come when you need it. Leave when you&rsquo;re ready. Return when you want.
-          </p>
-          <p>
-            Not every day needs something from you. Some days are meant for reflection.
-            Some are meant simply to be lived.
-          </p>
-          <p>
-            Quietly Woven will be here whenever you&rsquo;re ready &mdash; no pressure,
-            no expectations, no shoulds.
-          </p>
-        </div>
-        <div className="flex justify-center mt-10">
-          <BotanicalSprig color="#64775f" size={40} />
-        </div>
-      </section>
-
-      {/* Android download and purchase path */}
-      <section className="bg-[#1f3025] text-[#f8f2e6] border-y border-[#87724f]/40" aria-label="Download Quietly Woven">
-        <div className="max-w-2xl mx-auto px-6 py-16 md:py-20 text-center flex flex-col items-center">
-          <BotanicalMark color="#e6dcc2" size={46} />
-          <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#d8c79f]">Android App</p>
-          <h2 className="mt-3 text-3xl md:text-4xl">Carry your quiet place with you.</h2>
-          <p className="qg-serif italic mt-4 text-xl text-[#efe6cf]">
-            A quiet place, whenever you need one.
-          </p>
-          <p className="mt-6 text-base md:text-lg leading-relaxed max-w-xl text-[#f8f2e6]/90">
-            Download Quietly Woven from Google Play. The core journal is free. Optional monthly
-            or annual Premium access unlocks deeper personal patterns and is purchased securely
-            inside the app through Google Play.
-          </p>
-          <div className="mt-9 flex w-full flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
-            <GooglePlayButton
-              appName="Quietly Woven"
-              href={QUIET_GROVE_GOOGLE_PLAY_URL}
-              className="!bg-[#f3eee2] !text-[#1f3025] hover:!bg-[#e6dcc2] [&_span_span:first-child]:!text-[#64775f]"
-            />
-            <AppleAppStoreComingSoon
-              appName="Quietly Woven"
-              className="!border-[#e6dcc2]/40 !bg-[#16241b]/80"
-            />
-          </div>
-          <p className="mt-5 text-sm leading-relaxed text-[#d9d0bb] max-w-lg">
-            Google Play shows the final price before confirmation. Subscriptions can be managed or cancelled in Google Play.
-          </p>
-        </div>
-      </section>
-
-      {/* Paid desktop edition — the app itself remains a separate, review-only workstream */}
-      <section className="bg-[#faf6ed] border-b border-[#ddd6c8]" aria-label="Quietly Woven for desktop">
-        <div className="max-w-2xl mx-auto px-6 py-14 md:py-16 text-center flex flex-col items-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#87724f]">Desktop Edition</p>
-          <h2 className="mt-3 text-3xl md:text-4xl text-[#1f3025]">More room to write.</h2>
-          <p className="qg-serif italic mt-4 text-xl text-[#64775f]">
-            The same quiet place, at your keyboard.
-          </p>
-          <p className="mt-6 text-base md:text-lg leading-relaxed max-w-xl text-[#3b4a3f]">
-            A browser-based desktop edition is in preparation, with access through an active
-            Quietly Woven Premium monthly or annual membership. Available plans and supported
-            platforms will be explained before purchase.
-          </p>
-          <DesktopComingSoon
-            appName="Quietly Woven"
-            className="mt-8 !border-[#345b43]/25 !bg-[#345b43]"
-          />
-          <p className="mt-5 text-sm leading-relaxed text-[#627064] max-w-lg">
-            Desktop access is not available yet. Payment and sign-in details will be shown before launch.
-          </p>
-        </div>
-      </section>
-
-      {/* Privacy summary + link */}
-      <section className="bg-[#faf6ed] border-y border-[#ddd6c8]" aria-label="Your journal belongs to you">
-        <div className="max-w-2xl mx-auto px-6 py-14 text-center">
-          <h2 className="text-2xl md:text-3xl text-[#1f3025]">Your journal belongs to you</h2>
-          <p className="mt-5 text-lg leading-relaxed text-[#3b4a3f]">
-            Your reflections, moods and personal questions are saved on your own device.
-            Quietly Woven does not upload your writing to our servers. Browser membership uses
-            a separate email sign-in; it does not back up or transfer your journal.
-          </p>
-          <Link
-            href="/quietly-woven/privacy/"
-            className="inline-block mt-8 px-7 py-3 rounded-full bg-[#345b43] text-[#fffaf0] font-semibold hover:bg-[#294a37] transition-colors"
-          >
-            Read Quietly Woven Privacy Policy
+          <Link href="#inside" className="mt-8 inline-block rounded-full bg-[#f3eee2] px-8 py-3.5 font-semibold text-[#1f3025] shadow-md transition-colors hover:bg-[#e6dcc2]">
+            See what&rsquo;s coming &rarr;
+          </Link>
+          <Link href="#availability" className="mt-5 py-1 text-sm text-[#efe6cf] underline underline-offset-4 hover:text-white">
+            View launch plans
           </Link>
         </div>
       </section>
 
-      <section className="max-w-2xl mx-auto px-6 py-12 text-center text-sm text-[#627064]" aria-label="About">
-        <p>
-          Quietly Woven is made by{' '}
-          <Link href="/" className="underline underline-offset-2 hover:text-[#87724f]">The Quest Family</Link>.
-        </p>
-        <nav aria-label="Quietly Woven legal and support" className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-3">
-          <Link href="/quietly-woven/privacy/" className="underline underline-offset-4">Privacy Policy</Link>
+      <section id="inside" className="max-w-5xl mx-auto px-5 md:px-6 py-14 md:py-20 scroll-mt-24" aria-labelledby="inside-heading">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 id="inside-heading" className="text-3xl md:text-4xl text-[#1f3025]">A quiet place to reflect and grow.</h2>
+          <p className="mt-5 text-base md:text-lg leading-relaxed text-[#3b4a3f]">
+            Some days call for a few words. Others need a little guidance. Begin with your journal,
+            a mood check-in or a gentle prompt, and choose what feels useful to you.
+          </p>
+          <p className="qg-serif italic mt-6 text-xl text-[#345b43]">
+            Come when you need it. Leave when you&rsquo;re ready. Return when you want.
+          </p>
+        </div>
+
+        <div className="mt-10 grid md:grid-cols-2 gap-6 items-start">
+          <section className="rounded-2xl border border-[#ddd6c8] bg-[#faf6ed] p-6 md:p-8" aria-labelledby="free-heading">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64775f]">Free mobile journal at launch</p>
+            <h3 id="free-heading" className="mt-3 text-2xl text-[#1f3025]">A place to begin.</h3>
+            <p className="mt-4 text-base leading-relaxed text-[#3b4a3f]">A few words can be enough. Keep a thought, a feeling or a moment you want to remember.</p>
+            <ul className="mt-5 list-disc pl-5 space-y-3 text-base leading-relaxed text-[#3b4a3f] marker:text-[#64775f]">
+              <li>Personal journaling and gratitude.</li>
+              <li>Mood check-ins and a daily writing prompt.</li>
+              <li>Your own reflection questions.</li>
+              <li>A small selection of Rituals and reflection content.</li>
+            </ul>
+          </section>
+
+          <section className="rounded-2xl border border-[#c8b68c] bg-[#ece7da] p-6 md:p-8" aria-labelledby="premium-heading">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#705c35]">Optional Quietly Woven Premium</p>
+            <h3 id="premium-heading" className="mt-3 text-2xl text-[#1f3025]">Room to explore more.</h3>
+            <p className="mt-4 text-base leading-relaxed text-[#3b4a3f]">Follow your curiosity with more ways to reflect and notice the patterns in your days.</p>
+            <ul className="mt-5 list-disc pl-5 space-y-3 text-base leading-relaxed text-[#3b4a3f] marker:text-[#87724f]">
+              <li>The complete Ritual collections.</li>
+              <li>The full Reflection Library.</li>
+              <li>A wider collection of quotes.</li>
+              <li>Personal Insights, writing patterns and reflection themes.</li>
+              <li>30-day mood history.</li>
+            </ul>
+            <p className="mt-6 pt-5 border-t border-[#c8b68c]/50 text-sm leading-relaxed text-[#4c5a4d]">
+              Monthly or annual membership. The exact price, billing period and renewal terms will be shown before purchase.
+            </p>
+            <Link href="#availability" className="inline-block mt-4 py-1 text-[#345b43] font-semibold underline underline-offset-4">
+              View launch plans &rarr;
+            </Link>
+          </section>
+        </div>
+      </section>
+
+      <section id="availability" className="bg-[#faf6ed] border-y border-[#ddd6c8] scroll-mt-24" aria-labelledby="availability-heading">
+        <div className="max-w-5xl mx-auto px-5 md:px-6 py-14 md:py-16">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 id="availability-heading" className="text-3xl md:text-4xl text-[#1f3025]">Your quiet place is on its way.</h2>
+            <p className="mt-5 text-base md:text-lg leading-relaxed text-[#3b4a3f]">
+              Quietly Woven is coming soon. We&rsquo;re preparing the mobile and desktop editions;
+              launch details will be shared here.
+            </p>
+          </div>
+          <div className="mt-9 grid md:grid-cols-3 gap-6">
+            <section className="rounded-2xl border border-[#ddd6c8] bg-[#f3eee2] p-6" aria-labelledby="android-heading">
+              <h3 id="android-heading" className="text-xl text-[#1f3025]">Android</h3>
+              <p className="mt-3 text-base leading-relaxed text-[#3b4a3f]">Coming soon</p>
+            </section>
+            <section className="rounded-2xl border border-[#ddd6c8] bg-[#f3eee2] p-6" aria-labelledby="apple-heading">
+              <h3 id="apple-heading" className="text-xl text-[#1f3025]">iPhone &amp; iPad</h3>
+              <p className="mt-3 text-base leading-relaxed text-[#3b4a3f]">Coming soon</p>
+            </section>
+            <section className="rounded-2xl border border-[#ddd6c8] bg-[#f3eee2] p-6" aria-labelledby="desktop-heading">
+              <h3 id="desktop-heading" className="text-xl text-[#1f3025]">Desktop browser</h3>
+              <p className="mt-3 text-base leading-relaxed text-[#3b4a3f]">Coming soon with Premium access</p>
+            </section>
+          </div>
+          <div className="mt-9 text-center">
+            <Link href="/support/" className="inline-block py-2 text-[#345b43] font-semibold underline underline-offset-4">
+              A question before launch? Get in touch &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#1f3025] text-[#f8f2e6]" aria-labelledby="journal-privacy-heading">
+        <div className="max-w-2xl mx-auto px-6 py-14 md:py-16 text-center">
+          <h2 id="journal-privacy-heading" className="text-2xl md:text-3xl">Your words will stay on your device.</h2>
+          <p className="mt-5 text-base md:text-lg leading-relaxed text-[#efe6cf]">
+            Your entries, moods and personal questions will be stored locally. Quietly Woven will not upload
+            your writing to our servers. A subscription will not create cloud backup or sync.
+          </p>
+          <Link href="/quietly-woven/privacy/" className="inline-block mt-6 py-2 text-[#f8f2e6] underline underline-offset-4 hover:text-[#e6dcc2]">
+            Read Quietly Woven&rsquo;s Privacy Policy &rarr;
+          </Link>
+        </div>
+      </section>
+
+      <section className="max-w-2xl mx-auto px-6 py-10 text-center text-sm text-[#4c5a4d]" aria-label="About Quietly Woven">
+        <p>Quietly Woven is made by <Link href="/" className="underline underline-offset-4 hover:text-[#345b43]">The Quest Family</Link>.</p>
+        <nav aria-label="Quietly Woven terms and support" className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-3">
           <Link href="/quietly-woven/terms/" className="underline underline-offset-4">Terms of Use</Link>
           <Link href="/support/" className="underline underline-offset-4">Support</Link>
         </nav>

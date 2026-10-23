@@ -1,12 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { QUIET_GROVE_GOOGLE_PLAY_URL, SUMMERQUEST_APP_URL } from '@/lib/constants'
+import { QUIETLY_WOVEN_INFO_URL, SUMMERQUEST_APP_URL } from '@/lib/constants'
 import { BotanicalMark } from '@/components/quiet-grove/BotanicalMark'
-import {
-  AppleAppStoreComingSoon,
-  DesktopComingSoon,
-  GooglePlayButton,
-} from '@/components/GooglePlayButton'
 
 export default function HomePage() {
   return (
@@ -263,7 +258,7 @@ export default function HomePage() {
       </section>
 
       {/* ── QUIETLY WOVEN FEATURE ── */}
-      <section className="qg-home-feature relative isolate overflow-hidden border-y border-[#87724f]/40" aria-label="Quietly Woven — A Place for Your Thoughts">
+      <section id="quietly-woven" className="qg-home-feature relative isolate overflow-hidden border-y border-[#87724f]/40 scroll-mt-20" aria-label="Quietly Woven — A Place for Your Thoughts">
         <picture className="absolute inset-0 block" aria-hidden="true">
           <source
             media="(max-width: 640px)"
@@ -288,7 +283,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-3xl mx-auto px-6 py-20 md:py-24 text-center text-[#f8f2e6] flex flex-col items-center">
           <BotanicalMark color="#f8f2e6" size={56} />
           <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#e6dcc2]">
-            For Quiet Reflection
+            Coming soon
           </p>
           <h2 className="qg-home-serif mt-3 text-4xl md:text-6xl leading-tight">Quietly Woven</h2>
           <p className="qg-home-serif italic text-xl md:text-2xl mt-1 text-[#efe6cf]">A Place for Your Thoughts</p>
@@ -296,36 +291,26 @@ export default function HomePage() {
             Somewhere quiet to set down what you&rsquo;re carrying.
           </p>
           <p className="mt-6 text-base md:text-lg leading-relaxed max-w-2xl text-[#f8f2e6]/95">
-            A mindful journal for reflection, gratitude and quiet moments, with gentle rituals and writing
-            that stays private on your own device.
+            Write through a busy day, check in with how you feel, and keep the moments you want to remember.
+            Gentle prompts offer a starting point; your own words set the pace.
           </p>
           <p className="qg-home-serif italic mt-5 text-lg text-[#efe6cf]">
             Come when you need it. Leave when you&rsquo;re ready. Return when you want.
           </p>
-          <div className="mt-9 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-4">
+          <div className="mt-9 flex flex-col items-center justify-center gap-5">
             <Link
-              href="/quietly-woven/"
-              className="inline-block rounded-full bg-[#f3eee2] px-8 py-3.5 font-semibold text-[#1f3025] shadow-md transition-colors hover:bg-[#e6dcc2]"
+              href={QUIETLY_WOVEN_INFO_URL}
+              className="inline-block w-full sm:w-auto rounded-full bg-[#f3eee2] px-4 sm:px-8 py-3.5 font-semibold text-[#1f3025] shadow-md transition-colors hover:bg-[#e6dcc2]"
             >
-              Enter Quietly Woven &rarr;
+              Discover Quietly Woven &rarr;
             </Link>
-            <GooglePlayButton
-              appName="Quietly Woven"
-              href={QUIET_GROVE_GOOGLE_PLAY_URL}
-              className="!bg-[#1f3025]/90 ring-1 ring-[#e6dcc2]/50 hover:!bg-[#294a37]"
-            />
-            <AppleAppStoreComingSoon
-              appName="Quietly Woven"
-              className="ring-1 ring-[#e6dcc2]/35"
-            />
-            <DesktopComingSoon
-              appName="Quietly Woven"
-              className="ring-1 ring-[#e6dcc2]/35"
-            />
+            <Link href={QUIETLY_WOVEN_INFO_URL + '#availability'} className="text-sm text-[#e6dcc2] underline underline-offset-4 hover:text-[#fffaf0]">
+              View launch plans
+            </Link>
           </div>
-          <p className="mt-4 text-sm leading-relaxed text-[#e6dcc2] max-w-xl">
-            Android journal use currently requires no account. The paid desktop edition will be included
-            with an active Quietly Woven Premium membership.
+          <p className="mt-6 text-sm leading-relaxed text-[#e6dcc2] max-w-xl">
+            Your writing will stay on your device. Optional Premium will add the complete Ritual collections,
+            Reflection Library and personal Insights.
           </p>
         </div>
       </section>
@@ -374,10 +359,10 @@ export default function HomePage() {
             Get SummerQuest &rarr;
           </Link>
           <Link
-            href="/quietly-woven/"
+            href={QUIETLY_WOVEN_INFO_URL}
             className="inline-block rounded-full bg-[#345b43] px-8 py-4 text-lg font-semibold text-[#fffaf0] shadow-md transition-colors hover:bg-[#294a37] active:scale-95"
           >
-            Enter Quietly Woven &rarr;
+            Discover Quietly Woven &rarr;
           </Link>
         </div>
         <p className="text-bark/60 text-sm mt-6 italic">
