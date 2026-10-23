@@ -30,6 +30,11 @@ export default function Footer() {
               <p className="text-amber font-semibold text-xs uppercase tracking-widest mb-3">Apps</p>
               <ul className="space-y-2">
                 <li>
+                  <Link href="/#busy-brilliant-learning" className="text-cream/80 hover:text-amber transition-colors text-sm">
+                    Busy &amp; Brilliant Learning (Under Construction)
+                  </Link>
+                </li>
+                <li>
                   <Link href="/summerquest/" className="text-cream/80 hover:text-amber transition-colors text-sm">
                     SummerQuest
                   </Link>
