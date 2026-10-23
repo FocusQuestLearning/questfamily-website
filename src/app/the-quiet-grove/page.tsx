@@ -12,6 +12,22 @@ export const metadata: Metadata = {
     url: 'https://thequestfamily.ca/quietly-woven/',
     siteName: 'The Quest Family',
     type: 'website',
+    images: [{
+      url: 'https://thequestfamily.ca/quietly-woven/quietly-woven-coming-soon.png',
+      width: 1200,
+      height: 630,
+      type: 'image/png',
+      alt: 'Quietly Woven — A Place for Your Thoughts. Coming soon from The Quest Family, over the approved sunlit forest.',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Quietly Woven — Coming soon',
+    description: 'A Place for Your Thoughts. Discover a quiet place to reflect and grow, with private journaling and optional Premium.',
+    images: [{
+      url: 'https://thequestfamily.ca/quietly-woven/quietly-woven-coming-soon.png',
+      alt: 'Quietly Woven — A Place for Your Thoughts. Coming soon from The Quest Family.',
+    }],
   },
 }
 
@@ -79,6 +95,41 @@ export default function QuietGrovePage() {
               View launch plans &rarr;
             </Link>
           </section>
+        </div>
+      </section>
+
+      <section className="max-w-3xl mx-auto px-5 md:px-6 pb-14 md:pb-20" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" className="text-3xl md:text-4xl text-center text-[#1f3025]">Questions before launch</h2>
+        <div className="mt-8 space-y-3">
+          <details className="rounded-2xl border border-[#ddd6c8] bg-[#faf6ed]">
+            <summary className="cursor-pointer rounded-2xl px-5 py-5 text-base font-semibold text-[#1f3025] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#345b43]">
+              What will be free?
+            </summary>
+            <p className="px-5 pb-6 text-base leading-relaxed text-[#3b4a3f]">
+              At launch, the free mobile journal will include personal journaling, gratitude, mood check-ins,
+              a daily writing prompt and your own reflection questions. You&rsquo;ll also have a small selection
+              of Rituals and reflection content. Premium will be optional.
+            </p>
+          </details>
+          <details className="rounded-2xl border border-[#ddd6c8] bg-[#faf6ed]">
+            <summary className="cursor-pointer rounded-2xl px-5 py-5 text-base font-semibold text-[#1f3025] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#345b43]">
+              What does Premium include?
+            </summary>
+            <p className="px-5 pb-6 text-base leading-relaxed text-[#3b4a3f]">
+              Premium will include the complete Ritual collections, the full Reflection Library, a wider collection
+              of quotes, personal Insights and 30-day mood history. Monthly or annual membership will be optional,
+              with the exact price and renewal terms shown before purchase.
+            </p>
+          </details>
+          <details className="rounded-2xl border border-[#ddd6c8] bg-[#faf6ed]">
+            <summary className="cursor-pointer rounded-2xl px-5 py-5 text-base font-semibold text-[#1f3025] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#345b43]">
+              Where will my writing be stored?
+            </summary>
+            <p className="px-5 pb-6 text-base leading-relaxed text-[#3b4a3f]">
+              Your entries, moods and personal questions will be stored locally on your device. Quietly Woven
+              will not upload your writing to our servers. A subscription will not create cloud backup or sync.
+            </p>
+          </details>
         </div>
       </section>
 

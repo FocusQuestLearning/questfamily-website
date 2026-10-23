@@ -262,8 +262,21 @@ export default function HomePage() {
         <picture className="absolute inset-0 block" aria-hidden="true">
           <source
             media="(max-width: 640px)"
+            type="image/avif"
+            srcSet="/the-quiet-grove/quiet-grove-forest-approved-mobile.avif"
+          />
+          <source
+            media="(max-width: 640px)"
+            type="image/webp"
+            srcSet="/the-quiet-grove/quiet-grove-forest-approved-mobile.webp"
+          />
+          <source
+            media="(max-width: 640px)"
+            type="image/jpeg"
             srcSet="/the-quiet-grove/quiet-grove-forest-approved-mobile.jpg"
           />
+          <source type="image/avif" srcSet="/the-quiet-grove/quiet-grove-forest-approved-desktop.avif" />
+          <source type="image/webp" srcSet="/the-quiet-grove/quiet-grove-forest-approved-desktop.webp" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/the-quiet-grove/quiet-grove-forest-approved-desktop.jpg"
