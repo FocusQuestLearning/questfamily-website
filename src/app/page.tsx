@@ -132,11 +132,34 @@ export default function HomePage() {
           Our Apps
         </span>
         <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-4">
-          Two ways to return to what matters.
+          Three thoughtful ways to learn, explore and reflect.
         </h2>
         <p className="text-bark text-lg leading-relaxed max-w-2xl mx-auto">
-          One invites families outside. One offers somewhere quiet within.
+          Learning adventures for busy brilliant brains, outdoor discoveries for families, and a quiet space for personal reflection.
         </p>
+      </section>
+
+      {/* ── BUSY & BRILLIANT LEARNING — UNDER CONSTRUCTION ── */}
+      <section id="busy-brilliant-learning" className="bg-cream border-y border-amber/20 py-14 scroll-mt-24" aria-label="Busy & Brilliant Learning — under construction">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <span className="inline-block bg-amber/15 text-bark text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-4">
+            Under Construction
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-3">
+            Busy &amp; Brilliant Learning
+          </h2>
+          <p className="font-display italic text-xl text-meadow mb-5">
+            Big Adventures for Busy Brilliant Brains!
+          </p>
+          <p className="text-bark text-lg leading-relaxed max-w-2xl mx-auto">
+            Formerly FocusQuest, this K&ndash;8 learning adventure is being rebuilt and refined
+            with neurodivergent learners in mind. North and Fennick will continue guiding children
+            through engaging learning experiences that respect different learning styles and paces.
+          </p>
+          <p className="text-bark text-sm mt-5 font-semibold">
+            Currently unavailable while improvements are underway. No download or purchase is offered yet.
+          </p>
+        </div>
       </section>
 
       {/* ── SUMMERQUEST FEATURE ── */}
