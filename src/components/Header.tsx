@@ -12,14 +12,14 @@ export default function Header() {
         {/* Logo + Brand */}
         <Link href="/" className="flex items-center gap-3 group" aria-label="The Quest Family — Home">
           <Image
-            src="/images/logo-circle-sm.png"
-            alt="The Quest Family circular logo — Fennick, Aria, Birch, and Moss with a compass"
+            src="/images/the-quest-family-icon.webp"
+            alt="The Quest Family — mountains, forest, river and sunrise"
             width={48}
             height={48}
-            className="rounded-full ring-2 ring-amber/40 group-hover:ring-amber transition-all duration-200"
+            className="shrink-0 object-contain group-hover:opacity-90 transition-opacity duration-200"
             priority
           />
-          <span className="font-display text-cream font-bold text-lg leading-tight hidden sm:block">
+          <span className="font-display text-cream font-bold text-base sm:text-lg leading-tight">
             The Quest Family
           </span>
         </Link>

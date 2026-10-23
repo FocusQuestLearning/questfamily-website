@@ -12,11 +12,11 @@ export default function NotFound() {
   return (
     <div className="flex-1 flex flex-col items-center justify-center py-24 px-4 text-center">
       <Image
-        src="/images/logo-circle-sm.png"
-        alt="The Quest Family logo"
+        src="/images/the-quest-family-icon.webp"
+        alt="The Quest Family — mountains, forest, river and sunrise"
         width={72}
         height={72}
-        className="rounded-full ring-2 ring-amber/40 mb-6"
+        className="object-contain mb-6"
       />
       <p className="text-amber font-semibold text-sm uppercase tracking-widest mb-2">
         404 — Page Not Found
