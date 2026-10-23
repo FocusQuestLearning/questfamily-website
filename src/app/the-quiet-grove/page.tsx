@@ -90,8 +90,9 @@ export default function QuietGrovePage() {
             The same quiet place, at your keyboard.
           </p>
           <p className="mt-6 text-base md:text-lg leading-relaxed max-w-xl text-[#3b4a3f]">
-            A browser-based desktop edition is in preparation. It will be available only with an
-            active Quietly Woven Premium monthly or annual membership, with no separate desktop purchase.
+            A browser-based desktop edition is in preparation, with access through an active
+            Quietly Woven Premium monthly or annual membership. Available plans and supported
+            platforms will be explained before purchase.
           </p>
           <DesktopComingSoon
             appName="Quietly Woven"
@@ -109,7 +110,8 @@ export default function QuietGrovePage() {
           <h2 className="text-2xl md:text-3xl text-[#1f3025]">Your journal belongs to you</h2>
           <p className="mt-5 text-lg leading-relaxed text-[#3b4a3f]">
             Your reflections, moods and personal questions are saved on your own device.
-            There is no account to create, and Quietly Woven does not upload your writing to our servers.
+            Quietly Woven does not upload your writing to our servers. Browser membership uses
+            a separate email sign-in; it does not back up or transfer your journal.
           </p>
           <Link
             href="/quietly-woven/privacy/"
@@ -125,6 +127,11 @@ export default function QuietGrovePage() {
           Quietly Woven is made by{' '}
           <Link href="/" className="underline underline-offset-2 hover:text-[#87724f]">The Quest Family</Link>.
         </p>
+        <nav aria-label="Quietly Woven legal and support" className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-3">
+          <Link href="/quietly-woven/privacy/" className="underline underline-offset-4">Privacy Policy</Link>
+          <Link href="/quietly-woven/terms/" className="underline underline-offset-4">Terms of Use</Link>
+          <Link href="/support/" className="underline underline-offset-4">Support</Link>
+        </nav>
       </section>
     </>
   )

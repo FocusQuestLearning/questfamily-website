@@ -1,148 +1,81 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import LegalPage, { type LegalSection } from '@/components/LegalPage'
 
 export const metadata: Metadata = {
   title: 'Terms of Use | The Quest Family',
-  description: 'Terms of Use for The Quest Family and SummerQuest apps.',
+  description: 'Terms for The Quest Family website and SummerQuest, including purchases, cancellation and local data.',
 }
 
+const sections: LegalSection[] = [
+  {
+    id: 'scope',
+    title: 'Using our website and SummerQuest',
+    body: <>
+      <p>These terms cover The Quest Family website and SummerQuest. By using these services, you agree to these terms. Quietly Woven has separate <Link href="/quietly-woven/terms/">Terms of Use</Link> and a <Link href="/quietly-woven/privacy/">Privacy Policy</Link>.</p>
+      <p>SummerQuest is for personal, non-commercial family use. A parent or guardian should supervise a child’s use and authorize purchases. Use the services lawfully and do not interfere with their operation or harm others.</p>
+    </>,
+  },
+  {
+    id: 'content',
+    title: 'App content and your journal',
+    body: <>
+      <p>Our app content, including characters, illustrations, photography, quest text and badge designs, is owned by or licensed to The Quest Family. These terms give you permission to use that content within the app for its intended purpose. They do not transfer ownership or permit redistribution, except where the law or a separate licence allows it.</p>
+      <p>You retain ownership of the journal entries and discovery notes you write. SummerQuest saves these locally on your device. Using the app does not give us permission to publish your private writing.</p>
+    </>,
+  },
+  {
+    id: 'subscriptions',
+    title: 'Explorer Membership and renewal',
+    body: <>
+      <p>SummerQuest includes free features and an optional Explorer Membership. The purchase screen and app-store confirmation show the features, exact price, currency, billing period, applicable taxes and any offer terms before you pay. Availability can vary by platform and region.</p>
+      <p>Purchases made in the Apple or Google Play app are billed through that store. An auto-renewing subscription renews at the disclosed interval unless cancelled before renewal under the store’s terms. Review any trial or introductory offer’s duration, renewal price and cancellation deadline on the purchase screen.</p>
+      <p>For Quietly Woven’s mobile and browser membership options, read the <Link href="/quietly-woven/terms/#subscriptions">Quietly Woven subscription terms</Link>.</p>
+    </>,
+  },
+  {
+    id: 'cancel-restore-refunds',
+    title: 'Cancellation, restores and refunds',
+    body: <>
+      <p>Use <em>Manage Subscription</em> in SummerQuest Settings or the subscription settings for the Apple or Google account used to purchase. Cancellation stops future renewals; access continues for the paid period confirmed by the store.</p>
+      <p>To restore eligible membership access, use <em>Restore Purchases</em> with the same store account. A purchase restore does not recover journal entries or progress saved only on a previous device.</p>
+      <p>Removing the app, resetting its data or requesting data deletion does not cancel a subscription. Refund requests for app-store purchases follow Apple’s or Google Play’s process. Contact <a href="mailto:support.questfamily@gmail.com">support.questfamily@gmail.com</a> if you need help identifying where you purchased. Applicable consumer rights continue to apply.</p>
+    </>,
+  },
+  {
+    id: 'local-data',
+    title: 'Your local data',
+    body: <>
+      <p>SummerQuest does not provide a Quest Family cloud backup or sync service for your journal and progress. Resetting progress, clearing storage or removing the app can permanently remove local data. We cannot retrieve information stored only on your device.</p>
+      <p>Our <Link href="/privacy/">Privacy Policy</Link> explains local storage, support messages, service providers and privacy requests.</p>
+    </>,
+  },
+  {
+    id: 'safety',
+    title: 'Outdoor safety and educational content',
+    body: <>
+      <p>Adults should supervise outdoor activities, choose suitable locations and follow local rules, weather advice and access restrictions. Respect wildlife and private property. Nature descriptions and photographs are for learning; do not rely on an app to decide whether a plant, animal, food or activity is safe.</p>
+      <p>We work to keep the services useful and accurate, but availability and content can contain errors or interruptions. To the extent permitted by applicable law, the services are provided as available, without a guarantee of uninterrupted access or error-free content.</p>
+    </>,
+  },
+  {
+    id: 'rights',
+    title: 'Your legal rights',
+    body: <>
+      <p>Nothing in these terms excludes or limits a warranty, remedy, cancellation right, refund right or liability that cannot lawfully be excluded or limited. Any limitation applies only to the extent permitted by applicable law.</p>
+      <p>Ontario law and the federal laws of Canada applicable there govern these terms, subject to any mandatory protections and rights available where you live. These terms do not require you to waive those protections.</p>
+    </>,
+  },
+  {
+    id: 'changes-contact',
+    title: 'Changes and contact',
+    body: <>
+      <p>We will update this page and its date when the terms change, and give any notice or obtain any agreement required by applicable law. The terms shown when you purchase and applicable law govern your transaction.</p>
+      <p>The Quest Family is based in Canada. Send questions about these terms or billing support to <a href="mailto:support.questfamily@gmail.com">support.questfamily@gmail.com</a>.</p>
+    </>,
+  },
+]
+
 export default function TermsPage() {
-  return (
-    <article className="max-w-3xl mx-auto px-4 py-14" aria-label="Terms of Use">
-      {/* Header */}
-      <div className="text-center mb-10">
-        <div className="text-5xl mb-4" aria-hidden="true">📜</div>
-        <h1 className="font-display text-4xl text-forest font-bold mb-2">Terms of Use</h1>
-        <p className="text-bark text-sm italic">The Quest Family · Last updated: June 2026</p>
-      </div>
-
-      <div className="nature-card bg-amber/5 border-amber/30 mb-8">
-        <p className="text-bark text-base font-medium">
-          By downloading or using SummerQuest or any app by The Quest Family, you agree to these Terms of Use. 
-          Please read them carefully. If you do not agree, please do not use our apps.
-        </p>
-      </div>
-
-      <div className="space-y-8 text-bark leading-relaxed">
-        {[
-          {
-            id: '1',
-            title: '1. Acceptance of Terms',
-            content: `By accessing or using SummerQuest or any The Quest Family app, website, or service 
-            ("Services"), you agree to be bound by these Terms of Use. These terms apply to all users, 
-            including parents, guardians, and children using the app under adult supervision.`,
-          },
-          {
-            id: '2',
-            title: '2. Use of Our Services',
-            content: null,
-            list: [
-              'You must be 13 years of age or older to create an account, or have parental/guardian consent.',
-              'SummerQuest is intended for personal, non-commercial family use.',
-              'You may not use our services to harm, harass, or mislead others.',
-              'You are responsible for keeping your account credentials secure.',
-            ],
-          },
-          {
-            id: '3',
-            title: '3. Content & Intellectual Property',
-            content: `All content within SummerQuest — including characters, illustrations, photography, 
-            quest text, badge designs, and guide artwork — is owned by or licensed to The Quest Family 
-            and is protected by copyright law. You may not copy, reproduce, distribute, or create 
-            derivative works from our content without written permission.`,
-          },
-          {
-            id: '4',
-            title: '4. User-Generated Content',
-            content: `Journal entries, discovery notes, and family photographs you add within the app belong 
-            to you. You grant The Quest Family a limited licence to store and display this content solely 
-            for the purpose of providing the Services. We will never publicly share your family's 
-            private journal content without explicit consent.`,
-          },
-          {
-            id: '5',
-            title: '5. Subscriptions & Purchases',
-            content: `SummerQuest offers a free tier and an optional Explorer Membership subscription. 
-            Subscription terms, pricing, and cancellation are managed through the relevant app store 
-            (Apple App Store or Google Play). All purchases are subject to the applicable app store's 
-            terms and refund policy. The Quest Family does not process payments directly.`,
-          },
-          {
-            id: '6',
-            title: '6. Disclaimer of Warranties',
-            content: `SummerQuest is provided "as is" without warranty of any kind. We do our best to 
-            keep the app available and accurate, but we cannot guarantee uninterrupted access or 
-            error-free content. Nature content (species descriptions, ranges, etc.) is provided 
-            for educational and inspirational purposes — always verify critical information with 
-            local experts or authorities.`,
-          },
-          {
-            id: '7',
-            title: '7. Outdoor Safety',
-            content: `SummerQuest encourages outdoor exploration. Families are responsible for their own 
-            safety when engaging in outdoor activities. Always supervise children in nature, follow 
-            local park rules, and use appropriate gear. The Quest Family is not responsible for any 
-            injury or harm that occurs during outdoor activities.`,
-          },
-          {
-            id: '8',
-            title: '8. Limitation of Liability',
-            content: `To the maximum extent permitted by law, The Quest Family shall not be liable for 
-            any indirect, incidental, or consequential damages arising from your use of our Services.`,
-          },
-          {
-            id: '9',
-            title: '9. Changes to These Terms',
-            content: `We may update these Terms from time to time. Continued use of our Services after 
-            changes are posted constitutes your acceptance of the updated Terms. We will notify you of 
-            significant changes through the app.`,
-          },
-          {
-            id: '10',
-            title: '10. Governing Law',
-            content: `These Terms are governed by the laws of the Province of Ontario and the federal 
-            laws of Canada applicable therein, without regard to conflict of law principles.`,
-          },
-          {
-            id: '11',
-            title: '11. Contact Us',
-            content: `Questions about these Terms? Contact us:`,
-            contact: true,
-          },
-        ].map((section) => (
-          <section key={section.id} aria-labelledby={`term-${section.id}`}>
-            <h2
-              id={`term-${section.id}`}
-              className="font-display text-xl text-forest font-bold mb-3 border-b border-amber/20 pb-2"
-            >
-              {section.title}
-            </h2>
-            {section.content && (
-              <p className="text-bark text-base">{section.content}</p>
-            )}
-            {section.list && (
-              <ul className="space-y-2 mt-3">
-                {section.list.map((item, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-bark">
-                    <span className="text-meadow mt-0.5 shrink-0">•</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-            {section.contact && (
-              <div className="nature-card mt-3 text-sm">
-                <p className="font-bold text-forest">The Quest Family</p>
-                <p>Email:{' '}
-                  <a href="mailto:support.questfamily@gmail.com" className="text-amber hover:underline">
-                    support.questfamily@gmail.com
-                  </a>
-                </p>
-                <p className="text-bark/60 mt-2">Canada 🍁</p>
-              </div>
-            )}
-          </section>
-        ))}
-      </div>
-    </article>
-  )
+  return <LegalPage title="Terms of Use" icon="📜" sections={sections} summary="Please read these terms before using this website or SummerQuest. Purchase details appear before you pay. Your mandatory consumer rights remain protected." />
 }

@@ -1,151 +1,98 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import LegalPage, { type LegalSection } from '@/components/LegalPage'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | The Quest Family',
-  description: 'Privacy Policy for The Quest Family and SummerQuest apps.',
+  description: 'How The Quest Family website and SummerQuest handle information, local app data and privacy requests.',
 }
 
+const sections: LegalSection[] = [
+  {
+    id: 'scope',
+    title: 'Who this policy covers',
+    body: <>
+      <p>The Quest Family is a family-run studio based in Canada. This policy covers this website and SummerQuest. Privacy questions and requests can be sent to <a href="mailto:support.questfamily@gmail.com">support.questfamily@gmail.com</a>.</p>
+      <p>Quietly Woven has a separate <Link href="/quietly-woven/privacy/">Privacy Policy</Link> explaining its local journal, optional App Lock recovery and browser subscription account.</p>
+    </>,
+  },
+  {
+    id: 'website',
+    title: 'Visiting this website',
+    body: <>
+      <p>This website provides information about our apps and links to app stores. It has no family-account registration or payment form. We have not added advertising trackers or analytics scripts to this website.</p>
+      <p>Our website host, Netlify, processes the network information needed to deliver and secure pages, such as your IP address, requested page, browser information and request time. See <a href="https://www.netlify.com/privacy/" rel="noopener noreferrer">Netlify’s Privacy Policy</a>. Opening an app-store or other external link takes you to a service with its own privacy practices.</p>
+    </>,
+  },
+  {
+    id: 'summerquest',
+    title: 'SummerQuest information on your device',
+    body: <>
+      <p>SummerQuest saves your explorer name, chosen region, completed quests, discoveries, badges, points, activity dates and journal entries in the app’s local storage on your device. You can also type an optional note about where you found a discovery. That note is saved with your discovery record.</p>
+      <p>The current app does not require a family email account or provide a Quest Family cloud backup or sync service for this information. We do not receive your local journal entries or progress through those app features.</p>
+      <p>Use a nickname for an explorer name, especially when a child uses the app. Avoid putting a child’s full name, home address or other identifying details in discovery notes or support messages. You can review and change app permissions in your device settings.</p>
+    </>,
+  },
+  {
+    id: 'purchases',
+    title: 'SummerQuest purchases and external content',
+    body: <>
+      <p>Optional Explorer Membership purchases and restores use Apple’s App Store or Google Play, depending on where you purchased. The store processes payment and transaction information; the app uses purchase status to determine membership access. The app does not receive your full payment-card number.</p>
+      <p>Some nature images can load from external image hosts. When an image is requested, that host receives network information such as your IP address and the image requested. This is separate from the journal and progress saved on your device.</p>
+      <ul>
+        <li><a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple Privacy Policy</a></li>
+        <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a></li>
+      </ul>
+    </>,
+  },
+  {
+    id: 'support',
+    title: 'When you contact us',
+    body: <>
+      <p>If you email support, we receive your email address, message and anything you attach. We use this information to answer your question, investigate the issue and handle your request. Email delivery and storage are provided through our support email service.</p>
+      <p>Send only what is needed to explain the issue. We do not need your password, verification code, full card number or private journal to help with a billing question. We do not sell your personal information or use private journal content for advertising.</p>
+    </>,
+  },
+  {
+    id: 'families',
+    title: 'Families and children',
+    body: <>
+      <p>SummerQuest is intended for families exploring together. Parents and guardians should supervise children’s app use, outdoor activities, permissions and purchases. The app’s local journal and progress features do not require a child’s email address or a public profile.</p>
+      <p>A parent or guardian can contact us about information sent to support by a child or to make a privacy request. We may ask for enough information to verify a request without collecting unnecessary details about the child.</p>
+    </>,
+  },
+  {
+    id: 'storage',
+    title: 'Storage, security and retention',
+    body: <>
+      <p>Your device and operating-system security protect SummerQuest’s local storage. Keep your device secure and current. A purchase restore restores eligible membership access; it does not restore a lost local journal or progress.</p>
+      <p>Support correspondence is kept as needed to resolve the request and meet applicable recordkeeping obligations. Hosting, email and app-store providers keep their service records under their own policies. Service providers may process information outside Canada, where it may be subject to that country’s laws.</p>
+      <p>No storage or transmission method can guarantee complete security. SummerQuest does not provide separate encryption of journal entries or a cloud backup service.</p>
+    </>,
+  },
+  {
+    id: 'choices',
+    title: 'Your choices and privacy requests',
+    body: <>
+      <ul>
+        <li><strong>SummerQuest journal:</strong> delete an individual entry in the journal, or use <em>Reset All Progress</em> in Settings to remove the app’s saved journal and progress from that device. Resetting is permanent.</li>
+        <li><strong>Device storage:</strong> clearing app storage or removing the app can permanently remove local information. Any separate device backups or copies you have made are managed separately.</li>
+        <li><strong>Membership:</strong> manage or cancel it through the store where you purchased. Resetting progress, removing the app or emailing a privacy request does not cancel a subscription.</li>
+        <li><strong>Information we hold:</strong> contact support to request access, correction or deletion, withdraw consent where applicable, or raise a privacy concern. We will explain any verification needed and any information we must retain under applicable law.</li>
+      </ul>
+      <p>We cannot remotely retrieve or erase a journal stored only on your device. Please do not send us the journal itself to request deletion.</p>
+    </>,
+  },
+  {
+    id: 'changes',
+    title: 'Changes and contact',
+    body: <>
+      <p>We will update this page and its date when these practices change, and provide any additional notice or consent required by applicable law.</p>
+      <p>Contact The Quest Family at <a href="mailto:support.questfamily@gmail.com?subject=Privacy%20request">support.questfamily@gmail.com</a> for privacy questions or requests.</p>
+    </>,
+  },
+]
+
 export default function PrivacyPage() {
-  return (
-    <article className="max-w-3xl mx-auto px-4 py-14" aria-label="Privacy Policy">
-      {/* Header */}
-      <div className="text-center mb-10">
-        <div className="text-5xl mb-4" aria-hidden="true">🔒</div>
-        <h1 className="font-display text-4xl text-forest font-bold mb-2">Privacy Policy</h1>
-        <p className="text-bark text-sm italic">The Quest Family · Last updated: June 2026</p>
-      </div>
-
-      <div className="prose prose-stone max-w-none space-y-8 text-bark leading-relaxed">
-
-        <section aria-labelledby="intro">
-          <div className="nature-card bg-amber/5 border-amber/30 mb-8">
-            <p className="text-bark font-medium text-base">
-              The Quest Family is a small, family-run studio. We take your trust seriously. 
-              This policy explains what information SummerQuest and our apps collect, how we use it, 
-              and how we protect your family's privacy.
-            </p>
-          </div>
-        </section>
-
-        {[
-          {
-            id: '1',
-            title: '1. Who We Are',
-            content: `The Quest Family operates SummerQuest and related apps. We are based in Canada. 
-            You can reach us at any time at support.questfamily@gmail.com.`,
-          },
-          {
-            id: '2',
-            title: '2. Information We Collect',
-            content: null,
-            list: [
-              '<strong>Account information:</strong> Optional email address if you create a family account.',
-              '<strong>App activity:</strong> Quests completed, discoveries made, badges earned, journal entries created. Journal entries remain private to your family.',
-              '<strong>Device information:</strong> Basic device type and operating system version for app compatibility.',
-              '<strong>Camera access:</strong> Entirely optional. Used only if you choose to photograph a discovery. Photos are stored locally on your device and are not transmitted to our servers.',
-              '<strong>We do not collect:</strong> Location data, precise GPS coordinates, real names of children, or any data we do not need.',
-            ],
-          },
-          {
-            id: '3',
-            title: '3. How We Use Your Information',
-            content: null,
-            list: [
-              'To provide and improve SummerQuest and future Quest Family apps.',
-              'To save your progress, journal, badges, and discoveries.',
-              'To respond to support requests.',
-              'We do not use your information for advertising.',
-              'We do not sell your information to any third party.',
-            ],
-          },
-          {
-            id: '4',
-            title: '4. Children\'s Privacy',
-            content: `SummerQuest is designed for use by families with children. We comply with PIPEDA (Canada's 
-            Personal Information Protection and Electronic Documents Act) and applicable children's privacy 
-            standards. We do not knowingly collect personal information from children under 13 without 
-            verifiable parental consent. Journal entries and family discovery records are private to your 
-            account and are never made public.`,
-          },
-          {
-            id: '5',
-            title: '5. Data Storage & Security',
-            content: `Your data is stored securely using industry-standard encryption. We use reputable 
-            cloud infrastructure providers. We retain your data only as long as your account is active 
-            or as needed to provide services.`,
-          },
-          {
-            id: '6',
-            title: '6. Your Rights',
-            content: null,
-            list: [
-              'Access the personal information we hold about you.',
-              'Request correction of inaccurate information.',
-              'Request deletion of your account and all associated data.',
-              'Withdraw consent at any time.',
-            ],
-            suffix: 'To exercise any of these rights, contact us at support.questfamily@gmail.com.',
-          },
-          {
-            id: '7',
-            title: '7. Third-Party Services',
-            content: `SummerQuest may use a small number of trusted third-party services (such as app 
-            analytics or cloud storage). Any third-party service we use is subject to its own privacy 
-            policy and is selected based on alignment with our privacy-first values.`,
-          },
-          {
-            id: '8',
-            title: '8. Changes to This Policy',
-            content: `We may update this Privacy Policy from time to time. We will notify users of 
-            significant changes through the app or by email if you have provided one. The date at 
-            the top of this page reflects the most recent update.`,
-          },
-          {
-            id: '9',
-            title: '9. Contact Us',
-            content: `If you have any questions about this Privacy Policy or how we handle your information, 
-            please contact us at:`,
-            contact: true,
-          },
-        ].map((section) => (
-          <section key={section.id} aria-labelledby={`section-${section.id}`}>
-            <h2
-              id={`section-${section.id}`}
-              className="font-display text-xl text-forest font-bold mb-3 mt-8 border-b border-amber/20 pb-2"
-            >
-              {section.title}
-            </h2>
-            {section.content && (
-              <p className="text-bark text-base leading-relaxed">{section.content}</p>
-            )}
-            {section.list && (
-              <ul className="space-y-2 mt-3">
-                {section.list.map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex gap-2 text-sm text-bark"
-                    dangerouslySetInnerHTML={{ __html: `<span class="text-meadow mt-0.5">•</span> <span>${item}</span>` }}
-                  />
-                ))}
-              </ul>
-            )}
-            {section.suffix && (
-              <p className="text-bark text-sm mt-3 italic">{section.suffix}</p>
-            )}
-            {section.contact && (
-              <div className="nature-card mt-3 text-sm">
-                <p className="font-bold text-forest">The Quest Family</p>
-                <p>Email:{' '}
-                  <a href="mailto:support.questfamily@gmail.com" className="text-amber hover:underline">
-                    support.questfamily@gmail.com
-                  </a>
-                </p>
-                <p className="text-bark/60 mt-2">Canada 🍁</p>
-              </div>
-            )}
-          </section>
-        ))}
-      </div>
-    </article>
-  )
+  return <LegalPage title="Privacy Policy" icon="🔒" sections={sections} summary="SummerQuest saves your journal and progress on your device. This website, support email and app-store purchases each handle different information. The sections below explain those differences." />
 }

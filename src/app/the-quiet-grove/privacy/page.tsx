@@ -5,13 +5,13 @@ import { BotanicalMark, BotanicalSprig } from '@/components/quiet-grove/Botanica
 /*
  * Quietly Woven — A Place for Your Thoughts: public Privacy Policy.
  *
- * Every statement below was checked against the current app source
- * (FocusQuestLearning/Mindful-Journal, main). If the app's data handling
+ * Source review: FocusQuestLearning/Mindful-Journal at
+ * 0407ed73c714af3da2223850267557db7e559660. If the app's data handling
  * changes, update this page to match the app — not the other way round.
  */
 
 const PRIVACY_EMAIL = 'support.questfamily@gmail.com'
-const LAST_UPDATED = 'October 4, 2026'
+const LAST_UPDATED = 'October 23, 2026'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy — Quietly Woven',
@@ -27,7 +27,7 @@ const sections: Section[] = [
     title: 'What information Quietly Woven handles',
     body: (
       <>
-        <p>Quietly Woven handles only what you choose to write or select inside the app:</p>
+        <p>Your local journal includes what you choose to write or select inside the app:</p>
         <ul>
           <li>journal entries and reflections you write;</li>
           <li>moods you log;</li>
@@ -36,7 +36,9 @@ const sections: Section[] = [
           <li>a simple note of when you last opened the app, used only to show a gentle welcome back after time away.</li>
         </ul>
         <p>
-          The app does not ask for your name, phone number, age, contacts, photos or location. If you choose App Lock, it asks for a recovery email address and verifies it before enabling the lock.
+          The journal does not ask for your name, phone number, age, contacts, photos or location.
+          Optional App Lock recovery uses a verified recovery email. Browser membership uses a separate
+          email sign-in, and billing providers process purchase information, as described below.
         </p>
       </>
     ),
@@ -60,8 +62,12 @@ const sections: Section[] = [
   },
   {
     id: 'accounts',
-    title: 'Accounts',
-    body: <p>Quietly Woven does not have user accounts. There is no account sign-up or login. Optional App Lock email verification registers a recovery address for that device; it does not create a journal account or cloud backup.</p>,
+    title: 'Browser subscription account',
+    body: <>
+      <p>Browser membership uses an email account provided through Neon Auth. A one-time code verifies your email so you can find your browser purchase again. Neon processes your email address, account identifier and session information. RevenueCat receives an opaque account identifier to associate your subscription with that account.</p>
+      <p>The browser uses a secure session cookie to keep you signed in. This authentication cookie is separate from the browser storage that holds your journal. Signing out or signing in on another device does not transfer your writing.</p>
+      <p>Your subscription account and App Lock recovery registration are separate. Neither creates a cloud backup. App Lock recovery restores access to an existing local journal; it cannot restore deleted entries or a purchase.</p>
+    </>,
   },
   {
     id: 'app-lock',
@@ -94,13 +100,17 @@ const sections: Section[] = [
     body: (
       <>
         <p>
-          Quietly Woven Premium is an optional monthly or annual subscription. Core journaling does not
-          require a purchase.
+          Quietly Woven Premium is offered as a monthly or annual subscription. Core journaling in the
+          mobile app does not require a purchase. The browser edition’s membership requirements and
+          available plans are shown before purchase.
         </p>
         <p>
-          Payments are processed entirely by <strong>Apple (App Store)</strong> or <strong>Google (Google Play)</strong>,
-          using your store account. We never receive your payment-card details.
+          Mobile purchases are processed by <strong>Apple (App Store)</strong> or <strong>Google (Google Play)</strong>,
+          using your store account. Browser purchases are processed through <strong>RevenueCat Billing and Stripe</strong>.
+          These services process the payment, billing and transaction information needed to complete and manage a purchase.
+          The app does not receive your full payment-card number. Journal entries are not included in billing or sign-in requests.
         </p>
+        <p>See the <Link href="/quietly-woven/terms/">Quietly Woven Terms of Use</Link> for renewal, cancellation, purchase restoration and refund information.</p>
       </>
     ),
   },
@@ -111,17 +121,19 @@ const sections: Section[] = [
       <>
         <p>
           The app uses <strong>RevenueCat</strong>, a subscription-management service, to show available
-          subscription options, process purchases and restores through the App Store or Google Play, and confirm
-          whether Premium is active.
+          subscription options, manage purchases and restores, and confirm whether Premium is active.
+          RevenueCat Billing manages browser subscriptions with Stripe as the payment processor.
         </p>
         <p>
-          The app connects to RevenueCat when it starts, whether or not you ever make a purchase, so it can check
-          subscription status. RevenueCat uses an anonymous app user identifier; the app does not send your name,
-          email or journal content to RevenueCat. RevenueCat, Apple and Google may process purchase, transaction,
+          The app can connect to RevenueCat to check subscription status even if you have not purchased.
+          Mobile subscription checks use an app user identifier; verified browser accounts use an opaque account
+          identifier. These checks do not include your journal content. Checkout may ask for billing and contact
+          details needed for payment. RevenueCat, Stripe, Apple and Google may process purchase, transaction,
           device and diagnostic information under their own privacy policies:
         </p>
         <ul>
           <li><a href="https://www.revenuecat.com/privacy/" rel="noopener noreferrer">RevenueCat Privacy Policy</a></li>
+          <li><a href="https://stripe.com/privacy" rel="noopener noreferrer">Stripe Privacy Policy</a></li>
           <li><a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple Privacy Policy</a></li>
           <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a></li>
         </ul>
@@ -142,13 +154,21 @@ const sections: Section[] = [
     id: 'third-parties',
     title: 'Third-party services',
     body: (
+      <>
       <p>
-        For subscriptions, the app communicates with RevenueCat and the Apple App Store or Google Play.
+        Subscription services use RevenueCat, Stripe, Apple or Google, according to your purchase platform.
+        Browser subscription sign-in uses Neon Auth. Website and browser hosting use Netlify.
         Optional email recovery also uses an API host, a PostgreSQL database provider and an authorized email
         provider to register recovery addresses, check verification codes and deliver recovery messages.
         These services receive recovery details, not journal content. The app&rsquo;s typefaces
         and images are built into the app and are not loaded from outside services.
       </p>
+      <p>These providers may process information outside Canada, where it may be subject to that country’s laws. Hosting and security services may process IP addresses, request times, browser information and service logs needed to deliver and protect the service.</p>
+      <ul>
+        <li><a href="https://neon.com/privacy-policy" rel="noopener noreferrer">Neon Privacy Policy</a></li>
+        <li><a href="https://www.netlify.com/privacy/" rel="noopener noreferrer">Netlify Privacy Policy</a></li>
+      </ul>
+      </>
     ),
   },
   {
@@ -171,7 +191,7 @@ const sections: Section[] = [
     body: (
       <p>
         Quietly Woven does not request access to your camera, microphone, location, photos or files.
-        It uses the internet for subscription services and optional email recovery, and may use your device&rsquo;s vibration
+        It uses the internet for subscriptions, browser sign-in and optional email recovery, and may use your device&rsquo;s vibration
         for gentle haptic feedback when you save. If you choose biometric App Lock, the operating system handles fingerprint
         or Face ID authentication. Quietly Woven receives the authentication result and does not receive or store biometric templates.
       </p>
@@ -189,11 +209,12 @@ const sections: Section[] = [
             use <em>Delete all journal data</em> on the in-app Privacy screen to permanently remove every saved
             reflection, mood and personal question from that device;
           </li>
-          <li>clear the app&rsquo;s storage or uninstall the app, which removes all of its locally stored data.</li>
+          <li>clear the app&rsquo;s storage or remove the app, which can permanently remove local journal data.</li>
         </ul>
         <p>
           Because there is no cloud backup, deleted data and data removed by uninstalling cannot be recovered by us.
           Export a backup first if you want to keep a copy.
+          Any exported copies or separate device backups are managed separately.
         </p>
         <p>
           Verified recovery registrations are retained until you request deletion through the contact address below.
@@ -202,8 +223,14 @@ const sections: Section[] = [
           maintenance. Abandoned unverified registrations become eligible for deletion after 24 hours.
         </p>
         <p>
-          Subscription records held by Apple, Google or RevenueCat are kept under their own policies.
-          Subscriptions are managed or cancelled in your App Store or Google Play subscription settings.
+          Contact support to request access, correction or deletion of your subscription account or recovery
+          records. We may need to verify your request and retain information required by law. Support email
+          correspondence is retained as needed to handle your request and meet applicable recordkeeping obligations.
+        </p>
+        <p>
+          Billing and transaction records held by Apple, Google, RevenueCat or Stripe are kept under their own
+          policies and legal obligations. Cancel through Settings → Manage subscription or the store where you
+          purchased. Clearing local data, removing the app or deleting an account does not cancel a subscription.
         </p>
       </>
     ),
@@ -226,9 +253,10 @@ const sections: Section[] = [
     title: 'Children\u2019s privacy',
     body: (
       <p>
-        Quietly Woven does not ask for a name or age, and journal content stays on the device. If optional App Lock is used,
-        a recovery email address and device registration are processed as described above. A parent or guardian can use
-        the contact address below for questions or a recovery-registration deletion request.
+        The local journal does not ask for a name or age, and journal content stays on the device. Optional App Lock
+        recovery and browser membership process email and account information as described above. Parents or guardians
+        should supervise a child’s use, permissions and purchases. They can contact us with questions or privacy requests
+        about information a child has provided.
       </p>
     ),
   },
@@ -238,7 +266,7 @@ const sections: Section[] = [
     body: (
       <p>
         If the way Quietly Woven handles information changes, we will update this page and the
-        &ldquo;Last updated&rdquo; date above.
+        &ldquo;Last updated&rdquo; date above, and provide any additional notice or consent required by applicable law.
       </p>
     ),
   },
@@ -247,7 +275,7 @@ const sections: Section[] = [
     title: 'Contact',
     body: (
       <p>
-        Questions or privacy requests can be sent to The Quest Family at{' '}
+        Questions, requests for access, correction or deletion, and privacy concerns can be sent to The Quest Family at{' '}
         <a href={`mailto:${PRIVACY_EMAIL}?subject=Quietly%20Woven%20Privacy`}>{PRIVACY_EMAIL}</a>.
       </p>
     ),
@@ -268,13 +296,13 @@ export default function QuietGrovePrivacyPage() {
         </div>
       </header>
 
-      <article className="qg-legal max-w-3xl mx-auto px-5 md:px-6 py-12 md:py-16" aria-label="Quietly Woven Privacy Policy">
+      <article className="qg-legal max-w-3xl mx-auto px-5 md:px-6 py-12 md:py-16 [&_a]:break-words" aria-label="Quietly Woven Privacy Policy">
         <div className="rounded-2xl border border-[#ddd6c8] bg-[#faf6ed] p-6 md:p-8">
           <p className="qg-serif text-xl md:text-2xl text-[#1f3025] !leading-snug">Your journal belongs to you.</p>
           <p className="mt-3">
             This policy explains how Quietly Woven, an app by The Quest Family, handles
-            information. Your writing stays on your device. There are no user accounts, ads, analytics or trackers.
-            Optional App Lock uses a verified email address to help you recover access without erasing your journal.
+            information. Your writing stays on your device. Browser membership and optional App Lock recovery
+            use separate email services. Neither backs up or transfers your journal. There are no advertising trackers.
           </p>
         </div>
 
@@ -305,6 +333,7 @@ export default function QuietGrovePrivacyPage() {
           <Link href="/quietly-woven/" className="qg-serif text-[#345b43] hover:text-[#87724f]">
             Return to Quietly Woven &rarr;
           </Link>
+          <Link href="/quietly-woven/terms/">Quietly Woven Terms of Use</Link>
         </div>
       </article>
     </>

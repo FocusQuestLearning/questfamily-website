@@ -74,6 +74,11 @@ export default function Footer() {
                     Quietly Woven Privacy
                   </Link>
                 </li>
+                <li>
+                  <Link href="/quietly-woven/terms/" className="text-cream/80 hover:text-amber transition-colors text-sm">
+                    Quietly Woven Terms
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
