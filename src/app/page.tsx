@@ -1,12 +1,7 @@
 import Link from 'next/link'
-import { QUEST_FAMILY_SLOGAN, UPCOMING_APPS } from '@/lib/brand'
-import { QUIET_GROVE_GOOGLE_PLAY_URL, SUMMERQUEST_APP_URL } from '@/lib/constants'
+import Image from 'next/image'
+import { QUIETLY_WOVEN_INFO_URL, SUMMERQUEST_APP_URL } from '@/lib/constants'
 import { BotanicalMark } from '@/components/quiet-grove/BotanicalMark'
-import {
-  AppleAppStoreComingSoon,
-  DesktopComingSoon,
-  GooglePlayButton,
-} from '@/components/GooglePlayButton'
 
 export default function HomePage() {
   return (
@@ -50,15 +45,15 @@ export default function HomePage() {
               The wider aspect ratio lets the banner fill the browser width
               while naturally reducing vertical height — the entire artwork
               remains 100% visible with no cropping.
-                Retina 1440p (1440×2 = 2880px)  → hero-wide-3840.webp  ✅
-                4K display  (3840×1 = 3840px)   → hero-wide-3840.webp  ✅
-                1440p std   (1440×1 = 1440px)   → hero-wide-1920.webp  ✅
-                1280p std   (1280×1 = 1280px)   → hero-wide-1280.webp  ✅
+                Retina 1440p (1440×2 = 2880px)  → hero-wide-3840.webp
+                4K display  (3840×1 = 3840px)   → hero-wide-3840.webp
+                1440p std   (1440×1 = 1440px)   → hero-wide-1920.webp
+                1280p std   (1280×1 = 1280px)   → hero-wide-1280.webp
 
               Mobile/Tablet (<1024px): original 3:2 artwork — unchanged.
-                iPhone 15   (390×3  = 1170px)   → hero-1280.webp  ✅
-                Android     (360×3  = 1080px)   → hero-1280.webp  ✅
-                iPad        (768×2  = 1536px)   → hero-1920.webp  ✅
+                iPhone 15   (390×3  = 1170px)   → hero-1280.webp
+                Android     (360×3  = 1080px)   → hero-1280.webp
+                iPad        (768×2  = 1536px)   → hero-1920.webp
             */}
 
             {/* Desktop — wide 16:9 — WebP */}
@@ -113,8 +108,7 @@ export default function HomePage() {
 
       {/* ── MISSION ── */}
       <section className="max-w-3xl mx-auto px-4 py-14 text-center" aria-label="Our mission">
-        <div className="leaf-divider" aria-hidden="true">🍃</div>
-        <h1 className="font-display text-3xl md:text-4xl text-forest font-bold mt-4 mb-5 leading-snug">
+        <h1 className="font-display text-3xl md:text-4xl text-forest font-bold mb-5 leading-snug">
           Apps for the Moments That Matter
         </h1>
         <p className="text-bark text-lg leading-relaxed max-w-2xl mx-auto">
@@ -122,9 +116,8 @@ export default function HomePage() {
           &mdash; from outdoor adventures together to quiet moments of your own.
         </p>
         <p className="text-meadow font-display italic text-xl mt-4">
-          {QUEST_FAMILY_SLOGAN}
+          Nature. Reflection. Connection.
         </p>
-        <div className="leaf-divider mt-6" aria-hidden="true">🍃</div>
       </section>
 
       {/* ── OUR APPS ── */}
@@ -133,30 +126,30 @@ export default function HomePage() {
           Our Apps
         </span>
         <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-4">
-          Find your next small adventure.
+          Two ways to return to what matters.
         </h2>
         <p className="text-bark text-lg leading-relaxed max-w-2xl mx-auto">
-          Explore outside, make room to reflect, and discover what we’re building for learning together.
+          One invites families outside. One offers somewhere quiet within.
         </p>
       </section>
 
       {/* ── SUMMERQUEST FEATURE ── */}
-      <section className="bg-parchment border-y border-amber/20 py-14" aria-label="SummerQuest — our featured app">
+      <section className="bg-parchment border-y border-amber/20 py-14" aria-label="Sun & Fern — our featured app">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="inline-block bg-amber/15 text-bark text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-3">
               For Family Adventure
             </span>
             <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-3">
-              SummerQuest
+              Sun & Fern
             </h2>
-            <p className="text-bark text-lg italic font-display">&quot;Every Day Is a New Quest!&quot;</p>
+            <p className="text-bark text-lg italic font-display">&quot;Wild Adventures. Wonderful Discoveries.&quot;</p>
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="md:w-1/2 space-y-5">
               <p className="text-bark text-base leading-relaxed">
-                SummerQuest is a Canadian outdoor adventure app for families and K&ndash;8 learners.
+                Sun & Fern is a Canadian outdoor adventure app for families and K&ndash;8 learners.
                 Guided by four storybook friends &mdash; <strong className="text-forest">Fennick</strong>,{' '}
                 <strong className="text-forest">Aria</strong>, <strong className="text-forest">Birch</strong>,
                 and <strong className="text-forest">Moss</strong> &mdash; children explore local parks,
@@ -166,41 +159,42 @@ export default function HomePage() {
                 Choose a quest, explore a Canadian landscape, and keep a note of what your family notices.
               </p>
 
-              <ul className="space-y-2 text-bark">
+              <ul className="space-y-3 text-bark">
                 {[
-                  '🧭 Complete gentle outdoor quests',
-                  '🦊 Meet your four adventure guides',
-                  '📖 Build a private family nature journal',
-                  '🏅 Earn collectible badges & Leaf Points',
-                  '🍁 Discover Canada by province & territory',
-                  '🐦 Explore wildlife, trees, wildflowers & more',
+                  { artwork: 'compass', text: 'Complete gentle outdoor quests' },
+                  { artwork: 'signpost', text: 'Meet your four adventure guides' },
+                  { artwork: 'notebook', text: 'Build a private family nature journal' },
+                  { artwork: 'leaf', text: 'Earn collectible badges & Leaf Points' },
+                  { artwork: 'book', text: 'Discover Canada by province & territory' },
+                  { artwork: 'binoculars', text: 'Explore wildlife, trees, wildflowers & more' },
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm leading-relaxed">
-                    <span>{item}</span>
+                  <li key={item.text} className="flex items-center gap-3 text-sm leading-relaxed">
+                    <Image src={'/images/icon-' + item.artwork + '.webp'} alt="" width={36} height={36} loading="eager" className="shrink-0 object-contain" />
+                    <span>{item.text}</span>
                   </li>
                 ))}
               </ul>
 
               <div className="pt-4 flex flex-col sm:flex-row gap-3">
                 <Link href="/summerquest/" className="btn-primary">
-                  Learn About SummerQuest &rarr;
+                  Learn About Sun & Fern &rarr;
                 </Link>
                 <Link href={SUMMERQUEST_APP_URL} className="btn-outline">
-                  Get SummerQuest
+                  Get Sun & Fern
                 </Link>
               </div>
             </div>
 
-            {/* Feature icons grid */}
+            {/* Feature cards */}
             <div className="md:w-1/2 grid grid-cols-2 gap-4">
               {[
-                { icon: '🧭', title: 'Daily Quests', desc: 'Gentle outdoor adventures for every age' },
-                { icon: '🌿', title: 'Nature Library', desc: "Canada's nature, coast to coast to coast" },
-                { icon: '📔', title: 'Family Journal', desc: 'Private, yours forever, no pressure' },
-                { icon: '🏅', title: 'Badges & Rewards', desc: 'Celebrate every discovery made together' },
+                { artwork: 'compass', title: 'Daily Quests', desc: 'Gentle outdoor adventures for every age' },
+                { artwork: 'book', title: 'Nature Library', desc: "Canada's nature, coast to coast to coast" },
+                { artwork: 'notebook', title: 'Family Journal', desc: 'Private, yours forever, no pressure' },
+                { artwork: 'leaf', title: 'Badges & Rewards', desc: 'Celebrate every discovery made together' },
               ].map((card) => (
                 <div key={card.title} className="nature-card text-center">
-                  <div className="text-3xl mb-2" aria-hidden="true">{card.icon}</div>
+                  <Image src={'/images/icon-' + card.artwork + '.webp'} alt="" width={72} height={72} className="mx-auto mb-3 object-contain" />
                   <h3 className="font-display font-bold text-forest text-sm mb-1">{card.title}</h3>
                   <p className="text-bark text-xs leading-snug">{card.desc}</p>
                 </div>
@@ -210,29 +204,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-4 py-14" aria-labelledby="in-development-heading">
-        <div className="max-w-2xl mb-8">
-          <p className="text-meadow text-sm font-semibold mb-2">Growing with your family</p>
-          <h2 id="in-development-heading" className="font-display text-3xl text-forest font-bold">More ways to learn and discover.</h2>
-          <p className="text-bark mt-3 leading-relaxed">Two apps in development, with familiar guides and room to explore at your own pace.</p>
-        </div>
-        <div className="grid gap-6 md:grid-cols-2">
-          {UPCOMING_APPS.map(app => (
-            <article key={app.name} className="nature-card flex flex-col items-start">
-              <p className="text-sm font-semibold text-bark mb-3">In development</p>
-              <h3 className="font-display text-2xl text-forest font-bold leading-tight">{app.name}</h3>
-              <p className="text-bark mt-3 mb-6 leading-relaxed">{app.description}</p>
-              <Link href={app.href} className="btn-outline mt-auto">About {app.name} &rarr;</Link>
-            </article>
-          ))}
-        </div>
-      </section>
-
       {/* ── WHY FAMILIES LOVE IT ── */}
-      <section className="max-w-5xl mx-auto px-4 py-14" aria-label="Why families love SummerQuest">
+      <section className="max-w-5xl mx-auto px-4 py-14" aria-label="Why families love Sun & Fern">
         <div className="text-center mb-10">
           <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-3">
-            Why Families Love SummerQuest
+            Why Families Love Sun & Fern
           </h2>
           <p className="text-bark text-base max-w-xl mx-auto">
             Built around one simple question: would this naturally come up around the campfire?
@@ -241,38 +217,38 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[
             {
-              icon: '🌲',
+              artwork: 'compass',
               title: 'Adventure First',
               desc: 'The app is the guide. The adventure is real life. We encourage families to put the phone away and go explore.',
             },
             {
-              icon: '🇨🇦',
+              artwork: 'leaf',
               title: 'Built for Canada',
               desc: 'Every quest, discovery, and guide reflects the real landscapes, wildlife, and seasons of Canada.',
             },
             {
-              icon: '👨‍👩‍👧‍👦',
+              artwork: 'signpost',
               title: 'Family-Centred',
               desc: 'No pressure timers, no school-style testing, no stressful countdowns. Just gentle wonder and discovery.',
             },
             {
-              icon: '🔒',
+              artwork: 'notebook',
               title: 'Privacy & Safety',
               desc: 'Camera access is optional. Family journals are private. We collect only what we need — nothing more.',
             },
             {
-              icon: '📚',
+              artwork: 'book',
               title: 'Nature is the Teacher',
               desc: "Storybook characters inspire curiosity. Real Canadian nature photography teaches, connects, and amazes.",
             },
             {
-              icon: '✨',
+              artwork: 'binoculars',
               title: 'Wonder Every Day',
               desc: '"I wonder what I\'ll discover next?" — not "I have another worksheet to finish." That\'s the feeling we build toward.',
             },
           ].map((card) => (
             <div key={card.title} className="nature-card">
-              <div className="text-3xl mb-3" aria-hidden="true">{card.icon}</div>
+              <Image src={'/images/icon-' + card.artwork + '.webp'} alt="" width={64} height={64} className="mb-3 object-contain" />
               <h3 className="font-display font-bold text-forest text-base mb-2">{card.title}</h3>
               <p className="text-bark text-sm leading-relaxed">{card.desc}</p>
             </div>
@@ -281,12 +257,25 @@ export default function HomePage() {
       </section>
 
       {/* ── QUIETLY WOVEN FEATURE ── */}
-      <section className="qg-home-feature relative isolate overflow-hidden border-y border-[#87724f]/40" aria-label="Quietly Woven — A Place for Your Thoughts">
+      <section id="quietly-woven" className="qg-home-feature relative isolate overflow-hidden border-y border-[#87724f]/40 scroll-mt-20" aria-label="Quietly Woven — A Place for Your Thoughts">
         <picture className="absolute inset-0 block" aria-hidden="true">
           <source
             media="(max-width: 640px)"
+            type="image/avif"
+            srcSet="/the-quiet-grove/quiet-grove-forest-approved-mobile.avif"
+          />
+          <source
+            media="(max-width: 640px)"
+            type="image/webp"
+            srcSet="/the-quiet-grove/quiet-grove-forest-approved-mobile.webp"
+          />
+          <source
+            media="(max-width: 640px)"
+            type="image/jpeg"
             srcSet="/the-quiet-grove/quiet-grove-forest-approved-mobile.jpg"
           />
+          <source type="image/avif" srcSet="/the-quiet-grove/quiet-grove-forest-approved-desktop.avif" />
+          <source type="image/webp" srcSet="/the-quiet-grove/quiet-grove-forest-approved-desktop.webp" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/the-quiet-grove/quiet-grove-forest-approved-desktop.jpg"
@@ -306,7 +295,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-3xl mx-auto px-6 py-20 md:py-24 text-center text-[#f8f2e6] flex flex-col items-center">
           <BotanicalMark color="#f8f2e6" size={56} />
           <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#e6dcc2]">
-            For Quiet Reflection
+            Coming soon
           </p>
           <h2 className="qg-home-serif mt-3 text-4xl md:text-6xl leading-tight">Quietly Woven</h2>
           <p className="qg-home-serif italic text-xl md:text-2xl mt-1 text-[#efe6cf]">A Place for Your Thoughts</p>
@@ -314,36 +303,26 @@ export default function HomePage() {
             Somewhere quiet to set down what you&rsquo;re carrying.
           </p>
           <p className="mt-6 text-base md:text-lg leading-relaxed max-w-2xl text-[#f8f2e6]/95">
-            A mindful journal for reflection, gratitude and quiet moments, with gentle rituals and writing
-            that stays private on your own device.
+            Write through a busy day, check in with how you feel, and keep the moments you want to remember.
+            Gentle prompts offer a starting point; your own words set the pace.
           </p>
           <p className="qg-home-serif italic mt-5 text-lg text-[#efe6cf]">
             Come when you need it. Leave when you&rsquo;re ready. Return when you want.
           </p>
-          <div className="mt-9 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-4">
+          <div className="mt-9 flex flex-col items-center justify-center gap-5">
             <Link
-              href="/quietly-woven/"
-              className="inline-block rounded-full bg-[#f3eee2] px-8 py-3.5 font-semibold text-[#1f3025] shadow-md transition-colors hover:bg-[#e6dcc2]"
+              href={QUIETLY_WOVEN_INFO_URL}
+              className="inline-block w-full sm:w-auto rounded-full bg-[#f3eee2] px-4 sm:px-8 py-3.5 font-semibold text-[#1f3025] shadow-md transition-colors hover:bg-[#e6dcc2]"
             >
-              Enter Quietly Woven &rarr;
+              Discover Quietly Woven &rarr;
             </Link>
-            <GooglePlayButton
-              appName="Quietly Woven"
-              href={QUIET_GROVE_GOOGLE_PLAY_URL}
-              className="!bg-[#1f3025]/90 ring-1 ring-[#e6dcc2]/50 hover:!bg-[#294a37]"
-            />
-            <AppleAppStoreComingSoon
-              appName="Quietly Woven"
-              className="ring-1 ring-[#e6dcc2]/35"
-            />
-            <DesktopComingSoon
-              appName="Quietly Woven"
-              className="ring-1 ring-[#e6dcc2]/35"
-            />
+            <Link href={QUIETLY_WOVEN_INFO_URL + '#availability'} className="text-sm text-[#e6dcc2] underline underline-offset-4 hover:text-[#fffaf0]">
+              View launch plans
+            </Link>
           </div>
-          <p className="mt-4 text-sm leading-relaxed text-[#e6dcc2] max-w-xl">
-            Android journal use currently requires no account. The paid desktop edition will be included
-            with an active Quietly Woven Premium membership.
+          <p className="mt-6 text-sm leading-relaxed text-[#e6dcc2] max-w-xl">
+            Your writing will stay on your device. Optional Premium will add the complete Ritual collections,
+            Reflection Library and personal Insights.
           </p>
         </div>
       </section>
@@ -351,12 +330,11 @@ export default function HomePage() {
       {/* ── TRUST / PRIVACY NOTE ── */}
       <section className="bg-forest text-cream py-12 px-4" aria-label="Privacy and trust commitment">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="text-4xl mb-4" aria-hidden="true">🔒</div>
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
             Your Privacy Comes First
           </h2>
           <p className="text-cream/80 text-base leading-relaxed max-w-2xl mx-auto mb-6">
-            We are a small family-run team and we take your trust seriously. SummerQuest keeps family
+            We are a small family-run team and we take your trust seriously. Sun & Fern keeps family
             journals private, while Quietly Woven stores personal journal content on your own device.
             We do not sell journal content or use it for advertising.
           </p>
@@ -386,17 +364,17 @@ export default function HomePage() {
           Where Will You Begin?
         </h2>
         <p className="text-bark text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-          Step outside together with SummerQuest, or step into somewhere quiet with Quietly Woven.
+          Step outside together with Sun & Fern, or step into somewhere quiet with Quietly Woven.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href={SUMMERQUEST_APP_URL} className="btn-primary text-lg px-8 py-4">
-            Get SummerQuest &rarr;
+            Get Sun & Fern &rarr;
           </Link>
           <Link
-            href="/quietly-woven/"
+            href={QUIETLY_WOVEN_INFO_URL}
             className="inline-block rounded-full bg-[#345b43] px-8 py-4 text-lg font-semibold text-[#fffaf0] shadow-md transition-colors hover:bg-[#294a37] active:scale-95"
           >
-            Enter Quietly Woven &rarr;
+            Discover Quietly Woven &rarr;
           </Link>
         </div>
         <p className="text-bark/60 text-sm mt-6 italic">

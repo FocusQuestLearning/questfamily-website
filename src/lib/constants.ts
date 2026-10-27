@@ -10,8 +10,11 @@
  */
 export const SUMMERQUEST_APP_URL = '/get-summerquest/'
 
-/** Canonical Google Play destinations. They resolve once each production
- * listing is public; keep the website PR in draft until both are verified. */
+/** The public introduction page, rather than an app launch or checkout. */
+export const QUIETLY_WOVEN_INFO_URL = '/quietly-woven/'
+
+/** Verify public listing and regional availability before showing a download CTA.
+ * A configured package URL is not evidence that its store listing is public. */
 export const SUMMERQUEST_GOOGLE_PLAY_URL =
   'https://play.google.com/store/apps/details?id=com.focusquestlearning.summerquest'
 

@@ -74,11 +74,6 @@ h1, h2, h3 {
   @apply bg-parchment rounded-2xl p-6 shadow-sm border border-amber/20;
 }
 
-/* Section dividers */
-.leaf-divider {
-  @apply text-center text-meadow text-2xl my-2;
-}
-
 /* Homepage preview for Quietly Woven; typography remains isolated from the rest of the site. */
 .qg-home-feature {
   font-family: 'Quiet Grove Inter', Inter, Arial, sans-serif;

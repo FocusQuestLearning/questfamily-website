@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { QUEST_FAMILY_SLOGAN } from '@/lib/brand'
 import Image from 'next/image'
 
 export default function Footer() {
@@ -7,32 +6,31 @@ export default function Footer() {
   return (
     <footer className="bg-forest text-cream mt-16">
       <div className="max-w-5xl mx-auto px-4 py-12">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10">
           {/* Logo + tagline */}
-          <div className="flex flex-col items-center md:items-start gap-4 md:max-w-xs">
-            <Image
-              src="/images/logo-circle-sm.png"
-              alt="The Quest Family logo — Fennick, Aria, Birch, and Moss adventure guides"
-              width={72}
-              height={72}
-              className="rounded-full ring-2 ring-amber/40"
-            />
-            <div>
-              <p className="font-display font-bold text-lg text-cream leading-tight">The Quest Family</p>
-              <p className="text-cream/70 text-sm mt-1 italic leading-snug">
-                {QUEST_FAMILY_SLOGAN}
-              </p>
+          <div className="flex flex-col items-center lg:items-start gap-4 w-full max-w-xs">
+            <div className="w-full max-w-[288px] rounded-2xl bg-cream p-4">
+              <Image
+                src="/images/the-quest-family-logo.webp"
+                alt="The Quest Family logo — sunlit mountains, forest and river in a gold circle beside the name"
+                width={768}
+                height={256}
+                className="w-full h-auto object-contain"
+              />
             </div>
+            <p className="text-cream/70 text-sm italic leading-snug text-center lg:text-left">
+              Helping families rediscover the wonder<br />that's been there all along.
+            </p>
           </div>
 
           {/* Links */}
-          <div className="flex flex-col sm:flex-row gap-8 md:gap-16 flex-1 md:justify-end">
+          <div className="flex flex-col sm:flex-row gap-8 lg:gap-10 flex-1 lg:justify-end">
             <div>
               <p className="text-amber font-semibold text-xs uppercase tracking-widest mb-3">Apps</p>
               <ul className="space-y-2">
                 <li>
                   <Link href="/summerquest/" className="text-cream/80 hover:text-amber transition-colors text-sm">
-                    SummerQuest
+                    Sun & Fern
                   </Link>
                 </li>
                 <li>
@@ -75,6 +73,11 @@ export default function Footer() {
                     Quietly Woven Privacy
                   </Link>
                 </li>
+                <li>
+                  <Link href="/quietly-woven/terms/" className="text-cream/80 hover:text-amber transition-colors text-sm">
+                    Quietly Woven Terms
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -83,7 +86,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-cream/50">
           <p>© {year} The Quest Family. All rights reserved.</p>
-          <p className="text-xs italic">Made with 🍁 for Canadian families</p>
+          <p className="text-xs italic">Made for Canadian families</p>
         </div>
       </div>
     </footer>

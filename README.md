@@ -44,8 +44,11 @@ All site images live in `public/images/`:
 |------|-------|---------|
 | `hero-banner.jpg` | Homepage hero | 521KB (from 3MB PNG) |
 | `summerquest-promo.jpg` | SummerQuest page | 454KB (from 2.7MB PNG) |
-| `logo-circle.png` | Footer (full size) | 2.3MB |
-| `logo-circle-sm.png` | Header/navbar | 81KB |
+| `the-quest-family-icon.webp` | Shared header and 404 page | Approved mountain/river/sunrise circle from 2026-10-22 |
+| `the-quest-family-logo.webp` | Shared footer | Approved full Quest Family logo from 2026-10-22 |
+| `logo-circle-sm.png` | Reserved for SummerQuest and other apps featuring the four guides | Character badge preserved unchanged; not the umbrella logo |
+
+Approved brand masters and usage rules are documented in `docs/brand-assets.md`.
 
 ## Strict Rules
 
