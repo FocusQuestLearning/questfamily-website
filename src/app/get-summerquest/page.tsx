@@ -5,12 +5,12 @@ import { AppleAppStoreComingSoon, GooglePlayButton } from '@/components/GooglePl
 import { SUMMERQUEST_GOOGLE_PLAY_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Get SummerQuest | The Quest Family',
+  title: 'Get Sun & Fern | The Quest Family',
   description:
-    'Download SummerQuest for Android on Google Play. Explore free and choose an optional Explorer Membership inside the app.',
+    'Download Sun & Fern for Android on Google Play. Explore free and choose an optional Explorer Membership inside the app.',
   openGraph: {
-    title: 'Get SummerQuest',
-    description: 'Download SummerQuest for Android on Google Play.',
+    title: 'Get Sun & Fern',
+    description: 'Download Sun & Fern for Android on Google Play.',
     siteName: 'The Quest Family',
     type: 'website',
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function GetSummerQuestPage() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 text-center" aria-label="Get SummerQuest">
+    <article className="max-w-3xl mx-auto px-4 py-16 text-center" aria-label="Get Sun & Fern">
       <Image
         src="/images/icon-compass.webp"
         alt=""
@@ -32,19 +32,19 @@ export default function GetSummerQuestPage() {
       </span>
 
       <h1 className="font-display text-4xl md:text-5xl text-forest font-bold mb-4 leading-tight">
-        Take SummerQuest Outside
+        Take Sun & Fern Outside
       </h1>
 
       <p className="text-bark text-lg leading-relaxed max-w-xl mx-auto mb-10">
-        Download SummerQuest from Google Play and begin with a free collection of
+        Download Sun & Fern from Google Play and begin with a free collection of
         quests and discoveries. Fennick, Aria, Birch, and Moss are ready for your
         family&apos;s first adventure.
       </p>
 
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mb-8">
-        <GooglePlayButton appName="SummerQuest" href={SUMMERQUEST_GOOGLE_PLAY_URL} />
+        <GooglePlayButton appName="Sun & Fern" href={SUMMERQUEST_GOOGLE_PLAY_URL} />
         <AppleAppStoreComingSoon
-          appName="SummerQuest"
+          appName="Sun & Fern"
           className="!border-forest/20 !bg-forest/5 !text-forest"
         />
       </div>
@@ -52,7 +52,7 @@ export default function GetSummerQuestPage() {
       <div className="nature-card bg-forest/5 border-forest/20 max-w-xl mx-auto mb-10 text-left">
         <h2 className="font-display text-xl font-bold text-forest mb-3">Start free. Choose more when you&rsquo;re ready.</h2>
         <p className="text-bark leading-relaxed">
-          SummerQuest includes a free preview. The optional annual Explorer Membership unlocks the
+          Sun & Fern includes a free preview. The optional annual Explorer Membership unlocks the
           broader adventure library and is purchased securely inside the app through Google Play.
           Google Play shows the final price before you confirm, and you can manage or cancel the
           membership from your Google Play subscriptions.
@@ -66,7 +66,7 @@ export default function GetSummerQuestPage() {
       {/* Secondary navigation */}
       <div className="mt-4 pt-8 border-t border-amber/20 flex flex-col sm:flex-row gap-4 justify-center">
         <Link href="/summerquest/" className="btn-outline text-sm px-6 py-2">
-          Learn About SummerQuest
+          Learn About Sun & Fern
         </Link>
         <Link href="/support/" className="btn-outline text-sm px-6 py-2">
           Contact Support

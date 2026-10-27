@@ -30,7 +30,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link href="/summerquest/" className="text-cream/80 hover:text-amber transition-colors text-sm">
-                    SummerQuest
+                    Sun & Fern
                   </Link>
                 </li>
                 <li>

@@ -134,30 +134,29 @@ export default function HomePage() {
       </section>
 
       {/* ── SUMMERQUEST FEATURE ── */}
-      <section className="bg-parchment border-y border-amber/20 py-14" aria-label="SummerQuest — our featured app">
+      <section className="bg-parchment border-y border-amber/20 py-14" aria-label="Sun & Fern — our featured app">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="inline-block bg-amber/15 text-bark text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-3">
               For Family Adventure
             </span>
             <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-3">
-              SummerQuest
+              Sun & Fern
             </h2>
-            <p className="text-bark text-lg italic font-display">&quot;Every Day is a New Quest.&quot;</p>
+            <p className="text-bark text-lg italic font-display">&quot;Wild Adventures. Wonderful Discoveries.&quot;</p>
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="md:w-1/2 space-y-5">
               <p className="text-bark text-base leading-relaxed">
-                SummerQuest is a Canadian outdoor adventure app for families and K&ndash;8 learners.
+                Sun & Fern is a Canadian outdoor adventure app for families and K&ndash;8 learners.
                 Guided by four storybook friends &mdash; <strong className="text-forest">Fennick</strong>,{' '}
                 <strong className="text-forest">Aria</strong>, <strong className="text-forest">Birch</strong>,
                 and <strong className="text-forest">Moss</strong> &mdash; children explore local parks,
                 discover wildlife, earn badges, and build a family nature journal.
               </p>
               <p className="text-bark text-base leading-relaxed">
-                From coast to coast to coast, SummerQuest is growing into Canada&apos;s most
-                comprehensive interactive nature and exploration library for children.
+                Choose a quest, explore a Canadian landscape, and keep a note of what your family notices.
               </p>
 
               <ul className="space-y-3 text-bark">
@@ -178,10 +177,10 @@ export default function HomePage() {
 
               <div className="pt-4 flex flex-col sm:flex-row gap-3">
                 <Link href="/summerquest/" className="btn-primary">
-                  Learn About SummerQuest &rarr;
+                  Learn About Sun & Fern &rarr;
                 </Link>
                 <Link href={SUMMERQUEST_APP_URL} className="btn-outline">
-                  Get SummerQuest
+                  Get Sun & Fern
                 </Link>
               </div>
             </div>
@@ -206,10 +205,10 @@ export default function HomePage() {
       </section>
 
       {/* ── WHY FAMILIES LOVE IT ── */}
-      <section className="max-w-5xl mx-auto px-4 py-14" aria-label="Why families love SummerQuest">
+      <section className="max-w-5xl mx-auto px-4 py-14" aria-label="Why families love Sun & Fern">
         <div className="text-center mb-10">
           <h2 className="font-display text-3xl md:text-4xl text-forest font-bold mb-3">
-            Why Families Love SummerQuest
+            Why Families Love Sun & Fern
           </h2>
           <p className="text-bark text-base max-w-xl mx-auto">
             Built around one simple question: would this naturally come up around the campfire?
@@ -335,7 +334,7 @@ export default function HomePage() {
             Your Privacy Comes First
           </h2>
           <p className="text-cream/80 text-base leading-relaxed max-w-2xl mx-auto mb-6">
-            We are a small family-run team and we take your trust seriously. SummerQuest keeps family
+            We are a small family-run team and we take your trust seriously. Sun & Fern keeps family
             journals private, while Quietly Woven stores personal journal content on your own device.
             We do not sell journal content or use it for advertising.
           </p>
@@ -365,11 +364,11 @@ export default function HomePage() {
           Where Will You Begin?
         </h2>
         <p className="text-bark text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-          Step outside together with SummerQuest, or step into somewhere quiet with Quietly Woven.
+          Step outside together with Sun & Fern, or step into somewhere quiet with Quietly Woven.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href={SUMMERQUEST_APP_URL} className="btn-primary text-lg px-8 py-4">
-            Get SummerQuest &rarr;
+            Get Sun & Fern &rarr;
           </Link>
           <Link
             href={QUIETLY_WOVEN_INFO_URL}

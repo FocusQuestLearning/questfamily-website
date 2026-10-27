@@ -30,7 +30,7 @@ export default function Header() {
             Home
           </Link>
           <Link href="/summerquest/" className="text-cream/90 hover:text-amber transition-colors duration-200 font-medium text-sm">
-            SummerQuest
+            Sun & Fern
           </Link>
           <Link href="/quietly-woven/" className="text-cream/90 hover:text-amber transition-colors duration-200 font-medium text-sm">
             Quietly Woven
@@ -75,7 +75,7 @@ export default function Header() {
             Home
           </Link>
           <Link href="/summerquest/" className="text-cream/90 hover:text-amber py-2 font-medium" onClick={() => setMenuOpen(false)}>
-            SummerQuest
+            Sun & Fern
           </Link>
           <Link href="/quietly-woven/" className="text-cream/90 hover:text-amber py-2 font-medium" onClick={() => setMenuOpen(false)}>
             Quietly Woven

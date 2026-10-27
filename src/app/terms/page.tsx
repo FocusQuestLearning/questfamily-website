@@ -4,16 +4,16 @@ import LegalPage, { type LegalSection } from '@/components/LegalPage'
 
 export const metadata: Metadata = {
   title: 'Terms of Use | The Quest Family',
-  description: 'Terms for The Quest Family website and SummerQuest, including purchases, cancellation and local data.',
+  description: 'Terms for The Quest Family website and Sun & Fern, including purchases, cancellation and local data.',
 }
 
 const sections: LegalSection[] = [
   {
     id: 'scope',
-    title: 'Using our website and SummerQuest',
+    title: 'Using our website and Sun & Fern',
     body: <>
-      <p>These terms cover The Quest Family website and SummerQuest. By using these services, you agree to these terms. Quietly Woven has separate <Link href="/quietly-woven/terms/">Terms of Use</Link> and a <Link href="/quietly-woven/privacy/">Privacy Policy</Link>.</p>
-      <p>SummerQuest is for personal, non-commercial family use. A parent or guardian should supervise a child’s use and authorize purchases. Use the services lawfully and do not interfere with their operation or harm others.</p>
+      <p>These terms cover The Quest Family website and Sun & Fern. By using these services, you agree to these terms. Quietly Woven has separate <Link href="/quietly-woven/terms/">Terms of Use</Link> and a <Link href="/quietly-woven/privacy/">Privacy Policy</Link>.</p>
+      <p>Sun & Fern is for personal, non-commercial family use. A parent or guardian should supervise a child’s use and authorize purchases. Use the services lawfully and do not interfere with their operation or harm others.</p>
     </>,
   },
   {
@@ -21,14 +21,14 @@ const sections: LegalSection[] = [
     title: 'App content and your journal',
     body: <>
       <p>Our app content, including characters, illustrations, photography, quest text and badge designs, is owned by or licensed to The Quest Family. These terms give you permission to use that content within the app for its intended purpose. They do not transfer ownership or permit redistribution, except where the law or a separate licence allows it.</p>
-      <p>You retain ownership of the journal entries and discovery notes you write. SummerQuest saves these locally on your device. Using the app does not give us permission to publish your private writing.</p>
+      <p>You retain ownership of the journal entries and discovery notes you write. Sun & Fern saves these locally on your device. Using the app does not give us permission to publish your private writing.</p>
     </>,
   },
   {
     id: 'subscriptions',
     title: 'Explorer Membership and renewal',
     body: <>
-      <p>SummerQuest includes free features and an optional Explorer Membership. The purchase screen and app-store confirmation show the features, exact price, currency, billing period, applicable taxes and any offer terms before you pay. Availability can vary by platform and region.</p>
+      <p>Sun & Fern includes free features and an optional Explorer Membership. The purchase screen and app-store confirmation show the features, exact price, currency, billing period, applicable taxes and any offer terms before you pay. Availability can vary by platform and region.</p>
       <p>Purchases made in the Apple or Google Play app are billed through that store. An auto-renewing subscription renews at the disclosed interval unless cancelled before renewal under the store’s terms. Review any trial or introductory offer’s duration, renewal price and cancellation deadline on the purchase screen.</p>
       <p>For Quietly Woven’s mobile and browser membership options, read the <Link href="/quietly-woven/terms/#subscriptions">Quietly Woven subscription terms</Link>.</p>
     </>,
@@ -37,7 +37,7 @@ const sections: LegalSection[] = [
     id: 'cancel-restore-refunds',
     title: 'Cancellation, restores and refunds',
     body: <>
-      <p>Use <em>Manage Subscription</em> in SummerQuest Settings or the subscription settings for the Apple or Google account used to purchase. Cancellation stops future renewals; access continues for the paid period confirmed by the store.</p>
+      <p>Use <em>Manage Subscription</em> in Sun & Fern Settings or the subscription settings for the Apple or Google account used to purchase. Cancellation stops future renewals; access continues for the paid period confirmed by the store.</p>
       <p>To restore eligible membership access, use <em>Restore Purchases</em> with the same store account. A purchase restore does not recover journal entries or progress saved only on a previous device.</p>
       <p>Removing the app, resetting its data or requesting data deletion does not cancel a subscription. Refund requests for app-store purchases follow Apple’s or Google Play’s process. Contact <a href="mailto:support.questfamily@gmail.com">support.questfamily@gmail.com</a> if you need help identifying where you purchased. Applicable consumer rights continue to apply.</p>
     </>,
@@ -46,7 +46,7 @@ const sections: LegalSection[] = [
     id: 'local-data',
     title: 'Your local data',
     body: <>
-      <p>SummerQuest does not provide a Quest Family cloud backup or sync service for your journal and progress. Resetting progress, clearing storage or removing the app can permanently remove local data. We cannot retrieve information stored only on your device.</p>
+      <p>Sun & Fern does not provide a Quest Family cloud backup or sync service for your journal and progress. Resetting progress, clearing storage or removing the app can permanently remove local data. We cannot retrieve information stored only on your device.</p>
       <p>Our <Link href="/privacy/">Privacy Policy</Link> explains local storage, support messages, service providers and privacy requests.</p>
     </>,
   },
@@ -77,5 +77,5 @@ const sections: LegalSection[] = [
 ]
 
 export default function TermsPage() {
-  return <LegalPage title="Terms of Use" sections={sections} summary="Please read these terms before using this website or SummerQuest. Purchase details appear before you pay. Your mandatory consumer rights remain protected." />
+  return <LegalPage title="Terms of Use" sections={sections} summary="Please read these terms before using this website or Sun & Fern. Purchase details appear before you pay. Your mandatory consumer rights remain protected." />
 }

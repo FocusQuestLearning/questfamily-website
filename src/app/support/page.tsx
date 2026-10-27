@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Support | The Quest Family',
-  description: 'Get help with SummerQuest and Quietly Woven, including subscriptions, purchase restores and local data.',
+  description: 'Get help with Sun & Fern and Quietly Woven, including subscriptions, purchase restores and local data.',
 }
 
 export default function SupportPage() {
@@ -44,24 +44,24 @@ export default function SupportPage() {
         <div className="space-y-4">
           {[
             {
-              q: 'What is SummerQuest?',
-              a: 'SummerQuest is a Canadian outdoor adventure app for families and K–8 learners. Guided by four storybook animal friends, children complete daily quests, discover wildlife, build a nature journal, and explore Canada coast to coast.',
+              q: 'What is Sun & Fern?',
+              a: 'Sun & Fern is a Canadian outdoor adventure app for families and K–8 learners. Guided by four storybook animal friends, children complete daily quests, discover wildlife, build a nature journal, and explore Canada coast to coast.',
             },
             {
-              q: 'Is SummerQuest free?',
-              a: 'SummerQuest includes free features and an optional Explorer Membership. The app shows which content is included and the store confirms the current plan, price and billing period before you purchase.',
+              q: 'Is Sun & Fern free?',
+              a: 'Sun & Fern includes free features and an optional Explorer Membership. The app shows which content is included and the store confirms the current plan, price and billing period before you purchase.',
             },
             {
-              q: 'What devices does SummerQuest support?',
-              a: 'SummerQuest is designed for phones and tablets. Use the download links on its app page to check current availability, compatible devices and operating-system requirements in your region.',
+              q: 'What devices does Sun & Fern support?',
+              a: 'Sun & Fern is designed for phones and tablets. Use the download links on its app page to check current availability, compatible devices and operating-system requirements in your region.',
             },
             {
-              q: 'Is SummerQuest safe for my child?',
-              a: 'SummerQuest is designed for families exploring together. Adults should supervise children, permissions, purchases and outdoor activities. Journal entries and progress are saved on the device. Use a nickname for an explorer name and avoid entering identifying details about a child.',
+              q: 'Is Sun & Fern safe for my child?',
+              a: 'Sun & Fern is designed for families exploring together. Adults should supervise children, permissions, purchases and outdoor activities. Journal entries and progress are saved on the device. Use a nickname for an explorer name and avoid entering identifying details about a child.',
             },
             {
               q: 'How do I cancel my Explorer Membership?',
-              a: 'Use Manage Subscription in SummerQuest Settings, or the subscription settings for the Apple or Google account used to purchase. Cancel before the next renewal. Access continues for the paid period confirmed by the store. Removing the app or resetting progress does not cancel a subscription.',
+              a: 'Use Manage Subscription in Sun & Fern Settings, or the subscription settings for the Apple or Google account used to purchase. Cancel before the next renewal. Access continues for the paid period confirmed by the store. Removing the app or resetting progress does not cancel a subscription.',
             },
             {
               q: 'How do I manage or cancel Quietly Woven Premium?',
@@ -73,11 +73,11 @@ export default function SupportPage() {
             },
             {
               q: 'How do I delete local journal data?',
-              a: 'In SummerQuest, delete individual journal entries or use Settings → Reset All Progress to remove the saved journal and progress from that device. In Quietly Woven, use Delete all journal data on the Privacy screen; export a journal backup first if you want a copy. These actions are permanent. We cannot remotely retrieve or erase writing stored only on your device. Separate exported copies or device backups are managed separately.',
+              a: 'In Sun & Fern, delete individual journal entries or use Settings → Reset All Progress to remove the saved journal and progress from that device. In Quietly Woven, use Delete all journal data on the Privacy screen; export a journal backup first if you want a copy. These actions are permanent. We cannot remotely retrieve or erase writing stored only on your device. Separate exported copies or device backups are managed separately.',
             },
             {
               q: 'How do I request account or privacy-record deletion?',
-              a: 'Email support.questfamily@gmail.com and say which app and records your request concerns. SummerQuest’s local journal and progress do not require a family email account. Quietly Woven browser membership and App Lock recovery have separate records, so specify which you want removed. We may need to verify your request or retain records required by law. A deletion request does not cancel a subscription.',
+              a: 'Email support.questfamily@gmail.com and say which app and records your request concerns. Sun & Fern’s local journal and progress do not require a family email account. Quietly Woven browser membership and App Lock recovery have separate records, so specify which you want removed. We may need to verify your request or retain records required by law. A deletion request does not cancel a subscription.',
             },
             {
               q: 'How do I request a refund?',
