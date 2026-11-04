@@ -123,9 +123,135 @@
     "mobileMenuNavigatedToSunAndFern": true,
     "cancellationFAQOpenedWithKeyboard": true
   },
-  "productionPublished": false,
-  "netlifyRedirectsLiveTested": false,
+  "productionPublished": true,
+  "netlifyRedirectsLiveTested": true,
   "nativeBuildCreated": false,
   "appStorePrivacyChanged": false,
-  "nativeAcceptance": "Owner reports Build 22 being tested in another session; no results imported or claimed here."
+  "nativeAcceptance": "Owner reports Build 22 being tested in another session; no results imported or claimed here.",
+  "deployment": {
+    "sourceCommit": "f9cfbf69e6bc3c967ca328c520012a2ce2d68b47",
+    "project": "thequestfamilyca",
+    "team": "TheQuestFamily",
+    "id": "6aeb69d37b0f598f2a7e0be5",
+    "state": "published",
+    "durationSeconds": 27,
+    "publishedTimeToronto": "2026-11-04 12:22",
+    "automaticFromAuthorizedMerge": true
+  },
+  "liveChecks": [
+    {
+      "requested": "https://thequestfamily.ca/",
+      "url": "https://thequestfamily.ca/",
+      "status": 200,
+      "heading": "Apps for the Moments That Matter",
+      "oldBrandVisible": false,
+      "currentBrandVisible": true,
+      "canonical": [],
+      "bytes": 54168
+    },
+    {
+      "requested": "https://thequestfamily.ca/privacy/",
+      "url": "https://thequestfamily.ca/privacy/",
+      "status": 200,
+      "heading": "Sun & Fern Privacy Policy",
+      "oldBrandVisible": false,
+      "currentBrandVisible": true,
+      "canonical": [
+        "https://thequestfamily.ca/privacy/"
+      ],
+      "bytes": 40746
+    },
+    {
+      "requested": "https://thequestfamily.ca/support/",
+      "url": "https://thequestfamily.ca/support/",
+      "status": 200,
+      "heading": "We're Here to Help",
+      "oldBrandVisible": false,
+      "currentBrandVisible": true,
+      "canonical": [],
+      "bytes": 41553
+    },
+    {
+      "requested": "https://thequestfamily.ca/terms/",
+      "url": "https://thequestfamily.ca/terms/",
+      "status": 200,
+      "heading": "Sun & Fern Terms of Use",
+      "oldBrandVisible": false,
+      "currentBrandVisible": true,
+      "canonical": [
+        "https://thequestfamily.ca/terms/"
+      ],
+      "bytes": 35840
+    },
+    {
+      "requested": "https://thequestfamily.ca/sun-and-fern/",
+      "url": "https://thequestfamily.ca/sun-and-fern/",
+      "status": 200,
+      "heading": "Sun & Fern",
+      "oldBrandVisible": false,
+      "currentBrandVisible": true,
+      "canonical": [
+        "https://thequestfamily.ca/sun-and-fern/"
+      ],
+      "bytes": 26370
+    },
+    {
+      "requested": "https://thequestfamily.ca/get-sun-and-fern/",
+      "url": "https://thequestfamily.ca/get-sun-and-fern/",
+      "status": 200,
+      "heading": "Take Sun & Fern Outside",
+      "oldBrandVisible": false,
+      "currentBrandVisible": true,
+      "canonical": [
+        "https://thequestfamily.ca/get-sun-and-fern/"
+      ],
+      "bytes": 24477
+    },
+    {
+      "requested": "https://thequestfamily.ca/summerquest/",
+      "url": "https://thequestfamily.ca/sun-and-fern/",
+      "status": 200,
+      "heading": "Sun & Fern",
+      "oldBrandVisible": false,
+      "currentBrandVisible": true,
+      "canonical": [
+        "https://thequestfamily.ca/sun-and-fern/"
+      ],
+      "bytes": 26370
+    },
+    {
+      "requested": "https://thequestfamily.ca/get-summerquest/",
+      "url": "https://thequestfamily.ca/get-sun-and-fern/",
+      "status": 200,
+      "heading": "Take Sun & Fern Outside",
+      "oldBrandVisible": false,
+      "currentBrandVisible": true,
+      "canonical": [
+        "https://thequestfamily.ca/get-sun-and-fern/"
+      ],
+      "bytes": 24477
+    }
+  ],
+  "liveRedirects": [
+    {
+      "from": "/summerquest",
+      "status": 301,
+      "to": "/sun-and-fern/"
+    },
+    {
+      "from": "/summerquest/",
+      "status": 301,
+      "to": "/sun-and-fern/"
+    },
+    {
+      "from": "/get-summerquest",
+      "status": 301,
+      "to": "/get-sun-and-fern/"
+    },
+    {
+      "from": "/get-summerquest/",
+      "status": 301,
+      "to": "/get-sun-and-fern/"
+    }
+  ]
 }

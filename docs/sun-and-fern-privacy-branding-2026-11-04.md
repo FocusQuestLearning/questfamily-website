@@ -1,3 +1,17 @@
+# Publication complete — 4 November 2026 (Toronto)
+
+The owner approved merging PR7, production publication and owner-account sign-in if needed. [PR7](https://github.com/FocusQuestLearning/questfamily-website/pull/7) is merged at `f9cfbf69e6bc3c967ca328c520012a2ce2d68b47`, whose tree exactly matches the reviewed source `b97ee7d497358bbd57cba950a4ceddace6f78b72`.
+
+The existing TheQuestFamily Netlify project **thequestfamilyca** shows this source as **Published**, deployed in 27 seconds at 12:22 PM. [Deploy details](https://app.netlify.com/projects/thequestfamilyca/deploys/6aeb69d37b0f598f2a7e0be5). Publication followed the authorized merge automatically; no replacement project, manual duplicate deploy or mobile build was created.
+
+Live verification passed on the homepage, Privacy, Support, Terms, product, download and both old URLs: all final responses were HTTP200, current Sun & Fern branding was present, no former name appeared in visible text/alt labels, and the canonical routes matched. All four old-route variants returned actual HTTP301 responses to the new branded paths. The live privacy page was also inspected in the browser.
+
+![Published Sun & Fern privacy page](evidence/sun-and-fern-privacy-live-2026-11-04.jpg)
+
+This closes the website publication/branding gate. App Store privacy-label reconciliation and native/store/artwork acceptance remain separate; this does not claim full release acceptance. The preparation-only publishing holds below are historical and superseded by this owner-approved, verified publication.
+
+---
+
 # Sun & Fern privacy and website branding — 4 November 2026 (Toronto)
 
 ## Requested result
