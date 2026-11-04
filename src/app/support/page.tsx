@@ -45,7 +45,7 @@ export default function SupportPage() {
           {[
             {
               q: 'What is Sun & Fern?',
-              a: 'Sun & Fern is a Canadian outdoor adventure app for families and K–8 learners. Guided by four storybook animal friends, children complete daily quests, discover wildlife, build a nature journal, and explore Canada coast to coast.',
+              a: 'Sun & Fern is a Canadian outdoor adventure app for families and K–8 learners. Guided by four storybook guides, children complete quests, discover wildlife, build a nature journal, and explore Canada coast to coast.',
             },
             {
               q: 'Is Sun & Fern free?',

@@ -3,8 +3,9 @@ import Link from 'next/link'
 import LegalPage, { type LegalSection } from '@/components/LegalPage'
 
 export const metadata: Metadata = {
-  title: 'Terms of Use | The Quest Family',
+  title: 'Sun & Fern Terms of Use | The Quest Family',
   description: 'Terms for The Quest Family website and Sun & Fern, including purchases, cancellation and local data.',
+  alternates: { canonical: '/terms/' },
 }
 
 const sections: LegalSection[] = [
@@ -77,5 +78,5 @@ const sections: LegalSection[] = [
 ]
 
 export default function TermsPage() {
-  return <LegalPage title="Terms of Use" sections={sections} summary="Please read these terms before using this website or Sun & Fern. Purchase details appear before you pay. Your mandatory consumer rights remain protected." />
+  return <LegalPage title="Sun & Fern Terms of Use" updated="November 4, 2026" sections={sections} summary="Please read these terms before using this website or Sun & Fern. Purchase details appear before you pay. Your mandatory consumer rights remain protected." />
 }

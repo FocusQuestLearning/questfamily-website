@@ -4,6 +4,7 @@ import HeaderConditional from '@/components/HeaderConditional'
 import FooterConditional from '@/components/FooterConditional'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://thequestfamily.ca'),
   title: 'The Quest Family — Helping Families Rediscover Wonder',
   description: 'The Quest Family creates thoughtful apps for exploration, reflection and everyday life, including Sun & Fern and Quietly Woven.',
   keywords: 'family adventure, nature app, mindful journal, Sun & Fern, Quietly Woven, Canadian families, outdoor exploration, reflection',
