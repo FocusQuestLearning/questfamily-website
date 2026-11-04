@@ -1,0 +1,131 @@
+{
+  "html_pages": 15,
+  "internal_links": 305,
+  "images": 63,
+  "visible_legacy_brand": [],
+  "canonical_pages": [
+    {
+      "path": "/sun-and-fern/",
+      "canonical": [
+        "https://thequestfamily.ca/sun-and-fern/"
+      ]
+    },
+    {
+      "path": "/summerquest/",
+      "canonical": [
+        "https://thequestfamily.ca/sun-and-fern/"
+      ]
+    },
+    {
+      "path": "/get-sun-and-fern/",
+      "canonical": [
+        "https://thequestfamily.ca/get-sun-and-fern/"
+      ]
+    },
+    {
+      "path": "/get-summerquest/",
+      "canonical": [
+        "https://thequestfamily.ca/get-sun-and-fern/"
+      ]
+    },
+    {
+      "path": "/privacy/",
+      "canonical": [
+        "https://thequestfamily.ca/privacy/"
+      ]
+    },
+    {
+      "path": "/terms/",
+      "canonical": [
+        "https://thequestfamily.ca/terms/"
+      ]
+    }
+  ],
+  "errors": [],
+  "dateToronto": "2026-11-04",
+  "baseCommit": "c6aa506722e00f6bbf15dc45062d5deab76b8ed0",
+  "sourceBranch": "fix/sun-and-fern-privacy-branding-20261104",
+  "productionBuild": "passed: Next.js compilation, built-in type validation and static export",
+  "mobileBrowserChecks": [
+    {
+      "page": "privacy",
+      "frameWidth": 320,
+      "viewportWidth": 305,
+      "contentWidth": 305,
+      "visibleOldBrand": false
+    },
+    {
+      "page": "privacy",
+      "frameWidth": 390,
+      "viewportWidth": 375,
+      "contentWidth": 375,
+      "visibleOldBrand": false
+    },
+    {
+      "page": "terms",
+      "frameWidth": 320,
+      "viewportWidth": 305,
+      "contentWidth": 305,
+      "visibleOldBrand": false
+    },
+    {
+      "page": "terms",
+      "frameWidth": 390,
+      "viewportWidth": 375,
+      "contentWidth": 375,
+      "visibleOldBrand": false
+    },
+    {
+      "page": "support",
+      "frameWidth": 320,
+      "viewportWidth": 305,
+      "contentWidth": 305,
+      "visibleOldBrand": false
+    },
+    {
+      "page": "support",
+      "frameWidth": 390,
+      "viewportWidth": 375,
+      "contentWidth": 375,
+      "visibleOldBrand": false
+    },
+    {
+      "page": "sun-and-fern",
+      "frameWidth": 320,
+      "viewportWidth": 305,
+      "contentWidth": 305,
+      "visibleOldBrand": false
+    },
+    {
+      "page": "sun-and-fern",
+      "frameWidth": 390,
+      "viewportWidth": 375,
+      "contentWidth": 375,
+      "visibleOldBrand": false
+    },
+    {
+      "page": "get-sun-and-fern",
+      "frameWidth": 320,
+      "viewportWidth": 305,
+      "contentWidth": 305,
+      "visibleOldBrand": false
+    },
+    {
+      "page": "get-sun-and-fern",
+      "frameWidth": 390,
+      "viewportWidth": 375,
+      "contentWidth": 375,
+      "visibleOldBrand": false
+    }
+  ],
+  "interactionChecks": {
+    "mobileMenuOpenedWithKeyboard": true,
+    "mobileMenuNavigatedToSunAndFern": true,
+    "cancellationFAQOpenedWithKeyboard": true
+  },
+  "productionPublished": false,
+  "netlifyRedirectsLiveTested": false,
+  "nativeBuildCreated": false,
+  "appStorePrivacyChanged": false,
+  "nativeAcceptance": "Owner reports Build 22 being tested in another session; no results imported or claimed here."
+}

@@ -3,6 +3,30 @@
   publish = "out"
 
 [[redirects]]
+  from = "/summerquest"
+  to = "/sun-and-fern/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/summerquest/"
+  to = "/sun-and-fern/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/get-summerquest"
+  to = "/get-sun-and-fern/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/get-summerquest/"
+  to = "/get-sun-and-fern/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404

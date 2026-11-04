@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { QUIETLY_WOVEN_INFO_URL, SUMMERQUEST_APP_URL } from '@/lib/constants'
+import { QUIETLY_WOVEN_INFO_URL, SUN_AND_FERN_APP_URL } from '@/lib/constants'
 import { BotanicalMark } from '@/components/quiet-grove/BotanicalMark'
 
 export default function HomePage() {
@@ -133,7 +133,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* ── SUMMERQUEST FEATURE ── */}
+      {/* ── SUN & FERN FEATURE ── */}
       <section className="bg-parchment border-y border-amber/20 py-14" aria-label="Sun & Fern — our featured app">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -176,10 +176,10 @@ export default function HomePage() {
               </ul>
 
               <div className="pt-4 flex flex-col sm:flex-row gap-3">
-                <Link href="/summerquest/" className="btn-primary">
+                <Link href="/sun-and-fern/" className="btn-primary">
                   Learn About Sun & Fern &rarr;
                 </Link>
-                <Link href={SUMMERQUEST_APP_URL} className="btn-outline">
+                <Link href={SUN_AND_FERN_APP_URL} className="btn-outline">
                   Get Sun & Fern
                 </Link>
               </div>
@@ -367,7 +367,7 @@ export default function HomePage() {
           Step outside together with Sun & Fern, or step into somewhere quiet with Quietly Woven.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href={SUMMERQUEST_APP_URL} className="btn-primary text-lg px-8 py-4">
+          <Link href={SUN_AND_FERN_APP_URL} className="btn-primary text-lg px-8 py-4">
             Get Sun & Fern &rarr;
           </Link>
           <Link

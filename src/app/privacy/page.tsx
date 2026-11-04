@@ -3,8 +3,9 @@ import Link from 'next/link'
 import LegalPage, { type LegalSection } from '@/components/LegalPage'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | The Quest Family',
+  title: 'Sun & Fern Privacy Policy | The Quest Family',
   description: 'How The Quest Family website and Sun & Fern handle information, local app data and privacy requests.',
+  alternates: { canonical: '/privacy/' },
 }
 
 const sections: LegalSection[] = [
@@ -25,12 +26,14 @@ const sections: LegalSection[] = [
     </>,
   },
   {
-    id: 'summerquest',
+    id: 'sun-and-fern',
     title: 'Sun & Fern information on your device',
     body: <>
+      <span id="summerquest" aria-hidden="true" className="sr-only" />
       <p>Sun & Fern saves your explorer name, chosen region, completed quests, discoveries, badges, points, activity dates and journal entries in the app’s local storage on your device. You can also type an optional note about where you found a discovery. That note is saved with your discovery record.</p>
       <p>The current app does not require a family email account or provide a Quest Family cloud backup or sync service for this information. We do not receive your local journal entries or progress through those app features.</p>
       <p>Use a nickname for an explorer name, especially when a child uses the app. Avoid putting a child’s full name, home address or other identifying details in discovery notes or support messages. You can review and change app permissions in your device settings.</p>
+      <p>Choosing a favourite region or typing a discovery location does not request your device’s GPS location. The current app’s journal and discovery features do not request camera, microphone or photo-library access.</p>
     </>,
   },
   {
@@ -38,6 +41,7 @@ const sections: LegalSection[] = [
     title: 'Sun & Fern purchases and external content',
     body: <>
       <p>Optional Explorer Membership purchases and restores use Apple’s App Store or Google Play, depending on where you purchased. The store processes payment and transaction information; the app uses purchase status to determine membership access. The app does not receive your full payment-card number.</p>
+      <p>The app keeps a local membership-status record so it can manage access between store checks. This is separate from your journal and trail progress. There is no Quest Family email account to create for a Sun & Fern membership.</p>
       <p>Some nature images can load from external image hosts. When an image is requested, that host receives network information such as your IP address and the image requested. This is separate from the journal and progress saved on your device.</p>
       <ul>
         <li><a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple Privacy Policy</a></li>
@@ -94,5 +98,5 @@ const sections: LegalSection[] = [
 ]
 
 export default function PrivacyPage() {
-  return <LegalPage title="Privacy Policy" sections={sections} summary="Sun & Fern saves your journal and progress on your device. This website, support email and app-store purchases each handle different information. The sections below explain those differences." />
+  return <LegalPage title="Sun & Fern Privacy Policy" updated="November 4, 2026" sections={sections} summary="Sun & Fern saves your journal and progress on your device. This website, support email and app-store purchases each handle different information. The sections below explain those differences." />
 }
