@@ -54,7 +54,7 @@ export default function QuietGrovePage() {
               <a href={QUIETLY_WOVEN_WEB_URL} className="qg-button qg-button-light">Open Quietly Woven <span aria-hidden="true">&rarr;</span></a>
               <Link href="#inside" className="py-3 text-[#efe6cf] underline underline-offset-4 hover:text-white">Take a look inside</Link>
             </div>
-            <p className="mt-4 text-sm text-[#efe6cf]">Opens in your browser. <Link href="#availability" className="underline underline-offset-4">View mobile availability</Link></p>
+            <p className="mt-4 text-sm text-[#efe6cf]">Opens the free browser journal. <Link href="#availability" className="underline underline-offset-4">View Premium and mobile availability</Link></p>
           </div>
           <figure className="mx-auto w-full max-w-[300px] md:max-w-[310px]">
             <div className="overflow-hidden rounded-[2rem] border-[6px] border-[#f3eee2] bg-[#f3eee2] shadow-2xl">
@@ -92,7 +92,7 @@ export default function QuietGrovePage() {
               <li>Personal journaling and gratitude.</li>
               <li>Mood check-ins and a daily writing prompt.</li>
               <li>Your own reflection questions.</li>
-              <li>A small selection of Rituals and reflection content.</li>
+              <li>Three Ritual samples and five Reflection Library sample questions.</li>
             </ul>
           </section>
 
@@ -101,14 +101,17 @@ export default function QuietGrovePage() {
             <h3 id="premium-heading" className="mt-3 text-2xl text-[#1f3025]">Room to explore more.</h3>
             <p className="mt-4 text-base leading-relaxed text-[#3b4a3f]">Follow your curiosity with more ways to reflect and notice the patterns in your days.</p>
             <ul className="mt-5 list-disc pl-5 space-y-3 text-base leading-relaxed text-[#3b4a3f] marker:text-[#87724f]">
-              <li>The complete Ritual collections.</li>
-              <li>The full Reflection Library.</li>
+              <li>The complete collection of 114 Rituals.</li>
+              <li>The full Reflection Library with 150 questions.</li>
               <li>A wider collection of quotes.</li>
               <li>Personal Insights, writing patterns and reflection themes.</li>
-              <li>30-day mood history.</li>
+              <li>The Mood Calendar and 30-day mood history.</li>
             </ul>
-            <p className="mt-6 pt-5 border-t border-[#c8b68c]/50 text-sm leading-relaxed text-[#4c5a4d]">
-              Monthly or annual membership. The exact price, billing period and renewal terms will be shown before purchase.
+            <p className="mt-6 pt-5 border-t border-[#c8b68c]/50 text-lg font-semibold leading-relaxed text-[#1f3025]">
+              Canadian Premium price preview: $9.99/month or $79.99/year.
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[#4c5a4d]">
+              Prices in CAD; the annual plan is billed once a year. Premium purchases are not currently available in the browser. Final pricing and renewal terms are confirmed before purchase.
             </p>
             <Link href="#availability" className="inline-block mt-4 py-1 text-[#345b43] font-semibold underline underline-offset-4">
               Explore access options &rarr;
@@ -126,8 +129,8 @@ export default function QuietGrovePage() {
             </summary>
             <p className="px-5 pb-6 text-base leading-relaxed text-[#3b4a3f]">
               Begin with personal journaling, gratitude, mood check-ins, a daily writing prompt and your own
-              reflection questions. Explore a selection of Rituals and reflection content.
-              The app explains what is included and which collections require optional Premium.
+              reflection questions. The free selection includes three Rituals and five Reflection Library questions.
+              The full collections, Mood Calendar and personal Insights require Premium.
             </p>
           </details>
           <details className="rounded-2xl border border-[#ddd6c8] bg-[#faf6ed]">
@@ -136,8 +139,9 @@ export default function QuietGrovePage() {
             </summary>
             <p className="px-5 pb-6 text-base leading-relaxed text-[#3b4a3f]">
               Premium includes the complete Ritual collections, the full Reflection Library, a wider collection
-              of quotes, personal Insights and 30-day mood history. Monthly or annual membership is optional,
-              with the exact price and renewal terms shown before purchase.
+              of quotes, personal Insights, the Mood Calendar and 30-day mood history. Canadian price preview:
+              CAD $9.99/month or $79.99/year, billed annually. Premium purchases are not currently available
+              in the browser. Final pricing and renewal terms are shown before purchase.
             </p>
           </details>
           <details className="rounded-2xl border border-[#ddd6c8] bg-[#faf6ed]">
@@ -162,7 +166,7 @@ export default function QuietGrovePage() {
               Explore Quietly Woven in your browser. Choose a prompt, look around the journal and find a place to begin.
             </p>
             <a href={QUIETLY_WOVEN_WEB_URL} className="qg-button qg-button-dark mt-7">Open the browser journal <span aria-hidden="true">&rarr;</span></a>
-            <p className="mt-4 text-sm leading-relaxed text-[#4c5a4d]">Premium options and purchase terms are shown in the app.</p>
+            <p className="mt-4 text-sm leading-relaxed text-[#4c5a4d]">The free browser journal is available now. Premium purchases are not currently available in the browser.</p>
           </div>
           <div className="mt-10 grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
             <section className="rounded-2xl border border-[#ddd6c8] bg-[#f3eee2] p-6" aria-labelledby="apple-heading">
