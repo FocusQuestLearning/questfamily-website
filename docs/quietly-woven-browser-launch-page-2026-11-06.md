@@ -44,3 +44,13 @@ The canonical marketing address stays `https://thequestfamily.ca/quietly-woven/`
 ## Outstanding mobile availability
 
 Sign in to App Store Connect to verify iOS status and supply a public listing only when it resolves. The website and browser journal are live; this checkpoint does not certify a mobile-store launch or subscription purchase test.
+
+## Owner-requested accuracy and Premium audit
+
+On November 6, the owner confirmed $9.99/month and $79.99/year, requested an accuracy audit, and explicitly required Premium content to stay Premium. The source and recorded provider currency are CAD. The website now labels these as Canadian preview prices because a current provider transaction has not been verified.
+
+The live browser app's Premium purchase controls were disabled, and its old October 24 deployment (`195ba56`) exposed the Mood Calendar to free visitors. Mindful-Journal main `44e4dc1` already contains the required Calendar gate and fixed free samples. Browser correction PR #50 brings the tested protections forward, aligns preview prices, and explains unavailable purchases. No billing-provider price or existing subscription was changed.
+
+Website copy now discloses unavailable browser Premium purchases beside the primary journey and pricing. Free access is explicitly three Ritual samples and five Reflection Library questions. Premium includes all 114 Rituals, all 150 Library questions, the Mood Calendar, wider quotes, personal Insights and 30-day mood history. The existing genuine screenshot contains no price and remains labelled as an example.
+
+Source validation: all 113 app source tests passed, including fixed samples across dates, direct-question links, Calendar gating during free/checking/error states, confirmed expiry, and preserved saved writing. Full app CI and deployed-browser acceptance are tracked in https://github.com/FocusQuestLearning/Mindful-Journal/pull/50. The actual provider checkout/restore/receipt flow and native device tests remain unverified by this website audit.

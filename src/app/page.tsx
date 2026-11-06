@@ -322,7 +322,8 @@ export default function HomePage() {
           </div>
           <p className="mt-6 text-sm leading-relaxed text-[#e6dcc2] max-w-xl">
             Your writing stays on your device. Optional Premium includes the complete Ritual collections,
-            Reflection Library and personal Insights.
+            Reflection Library and personal Insights. The free browser journal is available now;
+            browser Premium purchases are not yet available.
           </p>
         </div>
       </section>
