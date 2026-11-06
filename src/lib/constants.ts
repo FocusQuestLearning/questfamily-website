@@ -21,3 +21,6 @@ export const SUN_AND_FERN_GOOGLE_PLAY_URL =
 
 export const QUIET_GROVE_GOOGLE_PLAY_URL =
   'https://play.google.com/store/apps/details?id=com.focusquestlearning.mindfuljournal'
+
+/** Existing browser app, verified on 2026-11-06. Store links remain gated on public availability. */
+export const QUIETLY_WOVEN_WEB_URL = 'https://quietly-woven.netlify.app/'

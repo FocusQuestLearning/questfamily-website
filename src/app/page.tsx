@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { QUIETLY_WOVEN_INFO_URL, SUN_AND_FERN_APP_URL } from '@/lib/constants'
+import { QUIETLY_WOVEN_INFO_URL, QUIETLY_WOVEN_WEB_URL, SUN_AND_FERN_APP_URL } from '@/lib/constants'
 import { BotanicalMark } from '@/components/quiet-grove/BotanicalMark'
 
 export default function HomePage() {
@@ -295,7 +295,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-3xl mx-auto px-6 py-20 md:py-24 text-center text-[#f8f2e6] flex flex-col items-center">
           <BotanicalMark color="#f8f2e6" size={56} />
           <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#e6dcc2]">
-            Coming soon
+            Mindful journaling
           </p>
           <h2 className="qg-home-serif mt-3 text-4xl md:text-6xl leading-tight">Quietly Woven</h2>
           <p className="qg-home-serif italic text-xl md:text-2xl mt-1 text-[#efe6cf]">A Place for Your Thoughts</p>
@@ -316,12 +316,12 @@ export default function HomePage() {
             >
               Discover Quietly Woven &rarr;
             </Link>
-            <Link href={QUIETLY_WOVEN_INFO_URL + '#availability'} className="text-sm text-[#e6dcc2] underline underline-offset-4 hover:text-[#fffaf0]">
-              View launch plans
-            </Link>
+            <a href={QUIETLY_WOVEN_WEB_URL} className="text-sm text-[#e6dcc2] underline underline-offset-4 hover:text-[#fffaf0]">
+              Open the browser journal
+            </a>
           </div>
           <p className="mt-6 text-sm leading-relaxed text-[#e6dcc2] max-w-xl">
-            Your writing will stay on your device. Optional Premium will add the complete Ritual collections,
+            Your writing stays on your device. Optional Premium includes the complete Ritual collections,
             Reflection Library and personal Insights.
           </p>
         </div>
