@@ -50,7 +50,7 @@ h('div', {
     fontFamily: 'Inter', fontSize: 21, letterSpacing: 4, color: '#1f3025',
     backgroundColor: '#f3eee2', borderRadius: 999, padding: '13px 25px', marginBottom: 32,
   },
-}, 'COMING SOON'),
+}, 'MINDFUL JOURNALING'),
 h('div', { style: { fontSize: 96, lineHeight: 1.1 } }, 'Quietly Woven'),
 h('div', {
   style: { fontSize: 33, fontStyle: 'italic', color: '#efe6cf', marginTop: 18 },
@@ -70,7 +70,7 @@ const response = new ImageResponse(card, {
     { name: 'Inter', data: sans, weight: 400, style: 'normal' },
   ],
 })
-const output = resolve(root, 'public/quietly-woven/quietly-woven-coming-soon.png')
+const output = resolve(root, 'public/quietly-woven/quietly-woven-share.png')
 await mkdir(dirname(output), { recursive: true })
 const bytes = Buffer.from(await response.arrayBuffer())
 await writeFile(output, bytes)

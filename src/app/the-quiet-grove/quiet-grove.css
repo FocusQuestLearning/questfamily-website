@@ -61,3 +61,22 @@
 .quiet-grove .qg-legal a:hover {
   color: #87724f;
 }
+
+.quiet-grove .qg-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .65rem;
+  border-radius: 999px;
+  padding: .9rem 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  transition: background-color .18s ease;
+}
+.quiet-grove .qg-button-light { background: #f3eee2; color: #1f3025; }
+.quiet-grove .qg-button-light:hover { background: #e6dcc2; }
+.quiet-grove .qg-button-dark { background: #345b43; color: #faf6ed; }
+.quiet-grove .qg-button-dark:hover { background: #1f3025; }
+.quiet-grove a:focus-visible { outline: 3px solid #b59757; outline-offset: 5px; }
+.quiet-grove .qg-step { font-size: .8rem; letter-spacing: .12em; color: #64775f; }
