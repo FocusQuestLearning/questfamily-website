@@ -1,12 +1,12 @@
 # Quietly Woven browser launch page — 2026-11-06
 
-Prepared for the owner’s review. Do not merge or publish without the owner’s final approval.
+Published with the owner’s explicit approval (“yes i approve”) on 2026-11-06. Website publication and the new domain redirect are complete.
 
 ## Visitor journey
 
 The existing `/quietly-woven/` page and its legacy alias now explain the app with a genuine Home screenshot, a short three-step introduction, feature and Premium information, and two prominent links to the existing browser journal. The homepage’s Quietly Woven section links to the same browser destination. The approved forest, botanical mark, typography, colours and tagline are retained.
 
-The canonical marketing address stays `https://thequestfamily.ca/quietly-woven/`. The owner reported purchasing quietlywovenapp.com during this task; public NS records confirm Cloudflare nameservers. Proposed redirect after approval: quietlywovenapp.com and www.quietlywovenapp.com → https://thequestfamily.ca/quietly-woven/ (HTTPS, permanent redirect, preserve query parameters). No registrar, DNS, hosting, app code, checkout or billing settings were changed.
+The canonical marketing address stays `https://thequestfamily.ca/quietly-woven/`. The purchased brand address `https://quietlywovenapp.com/` and its `www` counterpart now redirect to this page. The existing Netlify production site was updated and only the new domain’s Cloudflare DNS/redirect configuration was changed. App code, checkout, billing, registration settings and unrelated domains were not changed.
 
 ## Availability evidence
 
@@ -31,6 +31,16 @@ The canonical marketing address stays `https://thequestfamily.ca/quietly-woven/`
 - Netlify deploy preview succeeded for implementation commit 7318f5e7cc2255e9e09198794ec3829b37b46fed. https://deploy-preview-8--thequestfamilyca.netlify.app/quietly-woven/ returned HTTP 200 with the correct app link and compressed Home screenshot.
 - The local preview daemon does not support Next’s dev flags. QA uses an unchanged copy of the successful static export; application scripts and hosting config are unchanged.
 
-## Before production
+## Production publication and domain verification
 
-Review the preview and approve the website merge. Sign in to App Store Connect to verify iOS status and supply a public listing only when it resolves. No merge or production deploy is part of this checkpoint.
+- Owner explicitly approved both publishing the reviewed page and connecting the new domain, including www.
+- PR #8 merged to main at `bf98d6666b1ba989cab7dec0fbbd893d2cd1d48c`, from reviewed head `e6222ce47347129cc68dbe1b445c3f806c15554e`.
+- Production `https://thequestfamily.ca/quietly-woven/` returns HTTP 200 and contains the real Home preview and `Open Quietly Woven` link to `https://quietly-woven.netlify.app/`.
+- Cloudflare: added proxied A records `@` and `www` pointing to `192.0.2.1`, TTL Auto, following Cloudflare’s documented redirect-only configuration. The domain had no DNS records before this change.
+- Enabled Single Redirect `Quietly Woven launch page`, rule ID `8792ccb084654a7086885e5f9e70f016`. Exact match: `(http.host eq "quietlywovenapp.com") or (http.host eq "www.quietlywovenapp.com")`. Static target: `https://thequestfamily.ca/quietly-woven/`. Status 301. Preserve query string enabled.
+- Verified all four HTTP/HTTPS and apex/www combinations. Each returned a single 301 to the correct HTTPS page, then HTTP 200 with the new content. HTTPS certificate verification passed with the default Python trust settings. Test parameters `utm_source=launch_check&utm_campaign=quietly_woven` survived the redirect unchanged.
+- Opened `https://quietlywovenapp.com/` in the owner’s connected browser and visually confirmed the published hero and primary app button. Left the page open as the deliverable.
+
+## Outstanding mobile availability
+
+Sign in to App Store Connect to verify iOS status and supply a public listing only when it resolves. The website and browser journal are live; this checkpoint does not certify a mobile-store launch or subscription purchase test.
