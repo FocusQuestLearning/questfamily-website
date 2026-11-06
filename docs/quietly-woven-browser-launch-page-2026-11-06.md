@@ -54,3 +54,10 @@ The live browser app's Premium purchase controls were disabled, and its old Octo
 Website copy now discloses unavailable browser Premium purchases beside the primary journey and pricing. Free access is explicitly three Ritual samples and five Reflection Library questions. Premium includes all 114 Rituals, all 150 Library questions, the Mood Calendar, wider quotes, personal Insights and 30-day mood history. The existing genuine screenshot contains no price and remains labelled as an example.
 
 Source validation: all 113 app source tests passed, including fixed samples across dates, direct-question links, Calendar gating during free/checking/error states, confirmed expiry, and preserved saved writing. Full app CI and deployed-browser acceptance are tracked in https://github.com/FocusQuestLearning/Mindful-Journal/pull/50. The actual provider checkout/restore/receipt flow and native device tests remain unverified by this website audit.
+
+
+### Publication verified
+
+PR #9 merged as `7f2a3eedd258ccd9b0918ac8b17615cd8080feea`; the corrected website is live. App PR #50 merged as `02da1491b40dbd35cb1bbfe86905096daa5c7f1f`; public production checks confirmed Calendar/direct-question gates, fixed free samples, updated Canadian preview prices and disabled browser purchasing. Branded-domain tracking parameters remain intact. Full evidence and remaining launch blockers: https://github.com/FocusQuestLearning/Mindful-Journal/blob/main/docs/quietly-woven-web-launch-audit-2026-11-06.md.
+
+App CI passed 113 app tests, 24 backend tests, TypeScript, export, 44 browser journey checks, 96 artwork views and 20 additional gate/dialog checks. The overall CI job reports failure only because its final screenshot archive upload hit GitHub's storage quota. No tests were disabled or historical artifacts deleted; published screenshots are retained in the app repository.
