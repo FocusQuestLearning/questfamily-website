@@ -111,7 +111,7 @@ export default function QuietGrovePage() {
               Canadian Premium price preview: $9.99/month or $79.99/year.
             </p>
             <p className="mt-2 text-sm leading-relaxed text-[#4c5a4d]">
-              Prices in CAD; the annual plan is billed once a year. Premium purchases are not currently available in the browser. Final pricing and renewal terms are confirmed before purchase.
+              Prices in CAD, before applicable taxes; the annual plan is billed once a year. Premium purchases are not currently available in the browser. Final pricing, taxes and renewal terms are confirmed before purchase.
             </p>
             <Link href="#availability" className="inline-block mt-4 py-1 text-[#345b43] font-semibold underline underline-offset-4">
               Explore access options &rarr;
@@ -140,8 +140,9 @@ export default function QuietGrovePage() {
             <p className="px-5 pb-6 text-base leading-relaxed text-[#3b4a3f]">
               Premium includes the complete Ritual collections, the full Reflection Library, a wider collection
               of quotes, personal Insights, the Mood Calendar and 30-day mood history. Canadian price preview:
-              CAD $9.99/month or $79.99/year, billed annually. Premium purchases are not currently available
-              in the browser. Final pricing and renewal terms are shown before purchase.
+              CAD $9.99/month or $79.99/year, before applicable taxes. The annual plan is billed once a year.
+              Premium purchases are not currently available in the browser. Final pricing, taxes and renewal
+              terms are shown before purchase.
             </p>
           </details>
           <details className="rounded-2xl border border-[#ddd6c8] bg-[#faf6ed]">
