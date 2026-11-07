@@ -108,10 +108,10 @@ export default function QuietGrovePage() {
               <li>The Mood Calendar and 30-day mood history.</li>
             </ul>
             <p className="mt-6 pt-5 border-t border-[#c8b68c]/50 text-lg font-semibold leading-relaxed text-[#1f3025]">
-              Canadian Premium price preview: $9.99/month or $79.99/year.
+              Canadian Premium pricing: $9.99/month or $79.99/year.
             </p>
             <p className="mt-2 text-sm leading-relaxed text-[#4c5a4d]">
-              Prices in CAD, before applicable taxes; the annual plan is billed once a year. Premium purchases are not currently available in the browser. Final pricing, taxes and renewal terms are confirmed before purchase.
+              Prices in CAD, before applicable taxes; the annual plan is billed once a year. Sign in with a verified email to choose a Premium plan in the browser. Final pricing, taxes and renewal terms are confirmed before purchase.
             </p>
             <Link href="#availability" className="inline-block mt-4 py-1 text-[#345b43] font-semibold underline underline-offset-4">
               Explore access options &rarr;
@@ -139,9 +139,9 @@ export default function QuietGrovePage() {
             </summary>
             <p className="px-5 pb-6 text-base leading-relaxed text-[#3b4a3f]">
               Premium includes the complete Ritual collections, the full Reflection Library, a wider collection
-              of quotes, personal Insights, the Mood Calendar and 30-day mood history. Canadian price preview:
+              of quotes, personal Insights, the Mood Calendar and 30-day mood history. Canadian Premium pricing:
               CAD $9.99/month or $79.99/year, before applicable taxes. The annual plan is billed once a year.
-              Premium purchases are not currently available in the browser. Final pricing, taxes and renewal
+              Sign in with a verified email to choose a Premium plan in the browser. Final pricing, taxes and renewal
               terms are shown before purchase.
             </p>
           </details>
@@ -167,7 +167,7 @@ export default function QuietGrovePage() {
               Explore Quietly Woven in your browser. Choose a prompt, look around the journal and find a place to begin.
             </p>
             <a href={QUIETLY_WOVEN_WEB_URL} className="qg-button qg-button-dark mt-7">Open the browser journal <span aria-hidden="true">&rarr;</span></a>
-            <p className="mt-4 text-sm leading-relaxed text-[#4c5a4d]">The free browser journal is available now. Premium purchases are not currently available in the browser.</p>
+            <p className="mt-4 text-sm leading-relaxed text-[#4c5a4d]">The free browser journal is available now. Sign in with a verified email for optional Premium.</p>
           </div>
           <div className="mt-10 grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
             <section className="rounded-2xl border border-[#ddd6c8] bg-[#f3eee2] p-6" aria-labelledby="apple-heading">
