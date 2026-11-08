@@ -78,7 +78,7 @@ export default function GetSunAndFernPage() {
       <p className="text-bark/70 text-sm leading-relaxed max-w-lg mx-auto mb-10">
         The Sun &amp; Fern update is in review on Google Play, so the store may still display
         the earlier SummerQuest name while the update is processed.
-        the iPhone and iPad download link will be available here when its public listing is ready.
+        The iPhone and iPad download link will be available here when its public listing is ready.
       </p>
 
       {/* Secondary navigation */}

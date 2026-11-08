@@ -31,3 +31,7 @@ The connected Stripe account The Quest Family (`acct_1TBK8G2I73ZcCQNK`), live mo
 The connected Neon account lists only `quiet-grove-recovery`. That is a separate app; no schema or data was changed. The existing website support content associates RevenueCat Billing/Stripe with Quietly Woven browser purchases.
 
 Do not add a Sun & Fern Stripe charge link that the submitted native apps cannot redeem. A new unified web/mobile billing flow would need the correct RevenueCat project, product/entitlement and customer identity mapping, native integration, renewal/cancellation/refund handling, applicable tax configuration and actual test purchase/unlock/restore evidence. It is not completed by changing a website button. No payment was charged and no RevenueCat/Stripe/Neon configuration was changed in this checkpoint.
+
+## RevenueCat account inspection
+
+The existing signed-in RevenueCat dashboard listed FocusQuest, project-o212bhDd and The Quiet Grove. FocusQuest's Apps page contains Android/iOS `com.focusquest.mobile`; project-o212bhDd has no app configurations; The Quiet Grove's Apps page contains Android/iOS `com.focusquestlearning.mindfuljournal`. No Sun & Fern/SummerQuest app configuration was found in these accessible projects. The Quiet Grove overview showed Quietly Woven Web Billing transactions with Sandbox data selected; these are not Sun & Fern or production payment proof. Existing populated projects report no permission to add app configurations. No keys were revealed and no configuration was changed.
