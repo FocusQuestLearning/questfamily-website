@@ -66,7 +66,9 @@ export default function GetSunAndFernPage() {
       <div className="nature-card bg-forest/5 border-forest/20 max-w-xl mx-auto mb-10 text-left">
         <h2 className="font-display text-xl font-bold text-forest mb-3">Choose your Explorer Membership</h2>
         <p className="text-bark leading-relaxed">
-          Explorer Membership offers monthly and annual options for the broader adventure library.
+          Sun &amp; Fern is free to download. Optional Explorer Membership is
+          CAD $9.99 per month or CAD $79.99 per year in Canada. Both plans unlock
+          the same broader adventure library.
           Purchases take place inside the app through Google Play on Android or Apple on iPhone
           and iPad when available. Your store confirms the available plans, local price, taxes
           and renewal terms before you pay. Manage or cancel through the store account used to purchase.
@@ -74,8 +76,8 @@ export default function GetSunAndFernPage() {
       </div>
 
       <p className="text-bark/70 text-sm leading-relaxed max-w-lg mx-auto mb-10">
-        Google Play currently displays the earlier SummerQuest edition and a paid download.
-        Check its download price before purchasing. The Sun &amp; Fern update is in review;
+        The Sun &amp; Fern update is in review on Google Play, so the store may still display
+        the earlier SummerQuest name while the update is processed.
         the iPhone and iPad download link will be available here when its public listing is ready.
       </p>
 
