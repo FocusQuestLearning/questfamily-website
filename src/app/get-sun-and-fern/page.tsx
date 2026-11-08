@@ -4,10 +4,14 @@ import Image from 'next/image'
 import { AppleAppStoreComingSoon, GooglePlayButton } from '@/components/GooglePlayButton'
 import { SUN_AND_FERN_GOOGLE_PLAY_URL } from '@/lib/constants'
 
+// Enable only after the Canadian public listing resolves to Sun & Fern.
+const APP_STORE_PUBLIC = false
+const APP_STORE_URL = 'https://apps.apple.com/ca/app/id6798818268'
+
 export const metadata: Metadata = {
   title: 'Get Sun & Fern | The Quest Family',
   description:
-    'Download Sun & Fern for Android on Google Play. Explore free and choose an optional Explorer Membership inside the app.',
+    'Find Sun & Fern for Android, check iPhone and iPad availability, and learn about Explorer Membership.',
   alternates: { canonical: '/get-sun-and-fern/' },
   openGraph: {
     url: '/get-sun-and-fern/',
@@ -30,7 +34,7 @@ export default function GetSunAndFernPage() {
         priority
       />
       <span className="inline-block bg-amber/15 text-bark text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-4">
-        Android App
+        Android · iPhone · iPad
       </span>
 
       <h1 className="font-display text-4xl md:text-5xl text-forest font-bold mb-4 leading-tight">
@@ -38,31 +42,43 @@ export default function GetSunAndFernPage() {
       </h1>
 
       <p className="text-bark text-lg leading-relaxed max-w-xl mx-auto mb-10">
-        Download Sun & Fern from Google Play and begin with a free collection of
-        quests and discoveries. Fennick, Aria, Birch, and Moss are ready for your
+        Explore Canadian quests and discoveries with Fennick, Aria, Birch, and Moss.
+        Choose your platform below and check the store listing before your
         family&apos;s first adventure.
       </p>
 
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mb-8">
         <GooglePlayButton appName="Sun & Fern" href={SUN_AND_FERN_GOOGLE_PLAY_URL} />
-        <AppleAppStoreComingSoon
-          appName="Sun & Fern"
-          className="!border-forest/20 !bg-forest/5 !text-forest"
-        />
+        {APP_STORE_PUBLIC ? (
+          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer"
+            aria-label="Download Sun & Fern on the Apple App Store (opens in a new tab)"
+            className="btn-primary min-h-14 inline-flex items-center justify-center px-6 py-3">
+            Download on the Apple App Store
+          </a>
+        ) : (
+          <AppleAppStoreComingSoon
+            appName="Sun & Fern"
+            className="!border-forest/20 !bg-forest/5 !text-forest"
+          />
+        )}
       </div>
 
       <div className="nature-card bg-forest/5 border-forest/20 max-w-xl mx-auto mb-10 text-left">
-        <h2 className="font-display text-xl font-bold text-forest mb-3">Start free. Choose more when you&rsquo;re ready.</h2>
+        <h2 className="font-display text-xl font-bold text-forest mb-3">Choose your Explorer Membership</h2>
         <p className="text-bark leading-relaxed">
-          Sun & Fern includes a free preview. The optional annual Explorer Membership unlocks the
-          broader adventure library and is purchased securely inside the app through Google Play.
-          Google Play shows the final price before you confirm, and you can manage or cancel the
-          membership from your Google Play subscriptions.
+          Sun &amp; Fern is free to download. Optional Explorer Membership is
+          CAD $9.99 per month or CAD $79.99 per year in Canada. Both plans unlock
+          the same broader adventure library.
+          Purchases take place inside the app through Google Play on Android or Apple on iPhone
+          and iPad when available. Your store confirms the available plans, local price, taxes
+          and renewal terms before you pay. Manage or cancel through the store account used to purchase.
         </p>
       </div>
 
       <p className="text-bark/70 text-sm leading-relaxed max-w-lg mx-auto mb-10">
-        Android families can use Google Play. The Apple App Store edition is in preparation.
+        The Sun &amp; Fern update is in review on Google Play, so the store may still display
+        the earlier SummerQuest name while the update is processed.
+        The iPhone and iPad download link will be available here when its public listing is ready.
       </p>
 
       {/* Secondary navigation */}
