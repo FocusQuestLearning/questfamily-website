@@ -108,7 +108,7 @@ export default function QuietGrovePage() {
               <li>The Mood Calendar and 30-day mood history.</li>
             </ul>
             <p className="mt-6 pt-5 border-t border-[#c8b68c]/50 text-lg font-semibold leading-relaxed text-[#1f3025]">
-              Canadian Premium pricing: $9.99/month or $79.99/year.
+              Canadian Premium pricing: $7.99/month or $49.99/year.
             </p>
             <p className="mt-2 text-sm leading-relaxed text-[#4c5a4d]">
               Prices in CAD, before applicable taxes; the annual plan is billed once a year. Sign in with a verified email to choose a Premium plan in the browser. Final pricing, taxes and renewal terms are confirmed before purchase.
@@ -140,7 +140,7 @@ export default function QuietGrovePage() {
             <p className="px-5 pb-6 text-base leading-relaxed text-[#3b4a3f]">
               Premium includes the complete Ritual collections, the full Reflection Library, a wider collection
               of quotes, personal Insights, the Mood Calendar and 30-day mood history. Canadian Premium pricing:
-              CAD $9.99/month or $79.99/year, before applicable taxes. The annual plan is billed once a year.
+              CAD $7.99/month or $49.99/year, before applicable taxes. The annual plan is billed once a year.
               Sign in with a verified email to choose a Premium plan in the browser. Final pricing, taxes and renewal
               terms are shown before purchase.
             </p>
