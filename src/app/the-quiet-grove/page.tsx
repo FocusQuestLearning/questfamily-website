@@ -54,6 +54,15 @@ export default function QuietGrovePage() {
               <a href={QUIETLY_WOVEN_WEB_URL} className="qg-button qg-button-light">Open Quietly Woven <span aria-hidden="true">&rarr;</span></a>
               <Link href="#inside" className="py-3 text-[#efe6cf] underline underline-offset-4 hover:text-white">Take a look inside</Link>
             </div>
+            <aside className="mt-7 max-w-xl rounded-2xl border border-[#c8b68c] bg-[#faf6ed] p-5 text-left text-[#1f3025]" aria-labelledby="christmas-offer-heading">
+              <h2 id="christmas-offer-heading" className="qg-serif text-2xl">Christmas offer</h2>
+              <p className="mt-2 font-semibold">Available December 1–31, 2026, for eligible new subscribers in Canada.</p>
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed">
+                <li><strong>CAD $49.99 for your first year</strong>, then CAD $79.99/year.</li>
+                <li><strong>CAD $7.99 for your first month</strong>, then CAD $9.99/month.</li>
+              </ul>
+              <p className="mt-3 text-sm leading-relaxed">Subscriptions renew automatically unless cancelled. Prices are before applicable taxes.</p>
+            </aside>
             <p className="mt-4 text-sm text-[#efe6cf]">Opens the free browser journal. <Link href="#availability" className="underline underline-offset-4">View Premium and mobile availability</Link></p>
           </div>
           <figure className="mx-auto w-full max-w-[300px] md:max-w-[310px]">
